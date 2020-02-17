@@ -14,6 +14,7 @@ fs.writeSync(
 	height: ${size}px;
 	display: inline-block;
 	text-indent: -9999px;
+	cursor: pointer;
 }
 `
 );
