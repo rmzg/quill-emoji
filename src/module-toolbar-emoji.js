@@ -11,46 +11,39 @@ class ToolbarEmoji extends Module {
 
 		this.quill = quill;
 		this.toolbar = quill.getModule("toolbar");
+		this.buildPalette();
+		this.hidePalette();
 		if (typeof this.toolbar !== "undefined")
-			this.toolbar.addHandler("emoji", this.checkPaletteExist.bind(this));
+			this.toolbar.addHandler("emoji", this.showPalette.bind(this));
 
+		this.quill.on("text-change", (delta, oldDelta, source) => {
+			if (source === "user") {
+				this.hidePalette();
+			}
+		});
 		var emojiBtn = document.querySelector(".ql-emoji");
 		if (emojiBtn) {
 			emojiBtn.innerHTML = options.buttonIcon;
 		}
 	}
 
-	checkPaletteExist() {
-		this.checkDialogOpen();
-		this.quill.on("text-change", (delta, oldDelta, source) => {
-			if (source === "user") {
-				this.close();
-			}
-		});
+	showPalette() {
+		//TODO this should be a toggle
+		// TODO Add code to relocate the box?
+		this.palette.style.display = "block";
 	}
 
-	close() {
+	hidePalette() {
 		document.getElementById("emoji-close-div").style.display = "none";
-		if (this.palette) {
-			//TODO display:none?
-			this.palette.remove();
-			this.palette = null;
-		}
+		this.palette.style.display = "none";
 	}
 
-	checkDialogOpen() {
-		if (this.palette) {
-			//this.palette.remove();
-			this.close();
-		} else {
-			this.showEmojiPalette();
-		}
-	}
-
-	showEmojiPalette() {
+	buildPalette() {
 		let ele_emoji_area = document.createElement("div");
-		let range = this.quill.getSelection();
-		const atSignBounds = this.quill.getBounds(range.index);
+		// This places the palette someplace
+		// TODO Figure out where to put it
+		// TODO Update max width sanely
+		const atSignBounds = { left: 100, top: 10, height: 20 };
 		this.palette = ele_emoji_area;
 
 		this.quill.container.appendChild(ele_emoji_area);
@@ -108,14 +101,13 @@ class ToolbarEmoji extends Module {
 			tabElement.dataset.filter = emojiType.type;
 			tabElementHolder.appendChild(tabElement);
 
-			let emojiFilter = document.querySelector(".filter-" + emojiType.name);
-			emojiFilter.addEventListener("click", () => {
+			tabElement.addEventListener("click", () => {
 				let tab = document.querySelector("#emoji-palette .emoji-tab.active");
 				if (tab) {
 					tab.classList.remove("active");
 				}
 				emojiFilter.classList.toggle("active");
-				updateEmojiContainer(emojiFilter, panel, this.quill);
+				this.updateEmojiContainer(emojiFilter);
 			});
 		});
 		this.emojiPanelInit();
@@ -141,9 +133,6 @@ class ToolbarEmoji extends Module {
 		let result = fuse.search(type);
 		result.sort((a, b) => a.emoji_order - b.emoji_order);
 
-		this.quill.focus();
-		let range = this.quill.getSelection();
-
 		result.forEach(emoji => {
 			let span = document.createElement("span");
 			let t = document.createTextNode(emoji.shortname);
@@ -155,9 +144,10 @@ class ToolbarEmoji extends Module {
 			this.panel.appendChild(span);
 
 			span.addEventListener("click", () => {
+				let range = this.quill.getSelection(true);
 				this.quill.insertEmbed(range.index, "emoji", emoji, Quill.sources.USER);
 				setTimeout(() => this.quill.setSelection(range.index + 1), 0);
-				this.close();
+				this.hidePalette();
 			});
 		});
 	}
