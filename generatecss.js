@@ -13,6 +13,7 @@ fs.writeSync(
 	width: ${size}px;
 	height: ${size}px;
 	display: inline-block;
+	text-indent: -999px;
 }
 `
 );
@@ -27,7 +28,11 @@ emojis.forEach(e => {
 	);
 });
 
+console.log("Created _emoji.scss");
+
 fs.copyFileSync(
-	"./node_modules/emoji-datasource/img/google/sheets/32.png",
+	"./node_modules/emoji-datasource/img/twitter/sheets/32.png",
 	"./src/sheet.png"
 );
+
+console.log("Copied sheet.png");

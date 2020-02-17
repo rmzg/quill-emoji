@@ -22,7 +22,7 @@
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "node ./generatecss.js && webpack"
   },
   "repository": {
     "type": "git",

@@ -1,5222 +1,5237 @@
-@import './variables';
 
-/*
-    Emoji styles & image sheets sourced from: https://github.com/markygriff/Website.git
-    TODO: Update with a more contemporary sprite and css
-
-*/
-
-.ap {
-    display: inline-flex;
-    height: 20px;
-    width: 20px;
-    background-image: url('../../sheet_apple_32.png');
-    background-size: 820px;
-    background-repeat: no-repeat;
-    text-indent: -999px;
-    // padding-left: 20px;
-    box-sizing: border-box;
-    // For emoji fallback
-    font-size: 20px;
-    line-height: 1;
-    overflow: hidden;
-    margin-top: -3px;
+.em {
+	background: url("../../sheet.png") no-repeat;
+	width: 34px;
+	height: 34px;
+	display: inline-block;
 }
 
-.ap-copyright {
-  background-position: -0px -0px;
-}
-    
-.ap-registered {
-  background-position: -0px -20px;
-}
-    
-.ap-bangbang {
-  background-position: -0px -40px;
-}
-    
-.ap-interrobang {
-  background-position: -0px -60px;
-}
-    
-.ap-tm {
-  background-position: -0px -80px;
-}
-    
-.ap-information_source {
-  background-position: -0px -100px;
-}
-    
-.ap-left_right_arrow {
-  background-position: -0px -120px;
-}
-    
-.ap-arrow_up_down {
-  background-position: -0px -140px;
-}
-    
-.ap-arrow_upper_left {
-  background-position: -0px -160px;
-}
-    
-.ap-arrow_upper_right {
-  background-position: -0px -180px;
-}
-    
-.ap-arrow_lower_right {
-  background-position: -0px -200px;
-}
-    
-.ap-arrow_lower_left {
-  background-position: -0px -220px;
-}
-    
-.ap-leftwards_arrow_with_hook {
-  background-position: -0px -240px;
-}
-    
-.ap-arrow_right_hook {
-  background-position: -0px -260px;
-}
-    
-.ap-watch {
-  background-position: -0px -280px;
-}
-    
-.ap-hourglass {
-  background-position: -0px -300px;
-}
-    
-.ap-keyboard {
-  background-position: -0px -320px;
-}
-    
-.ap-fast_forward {
-  background-position: -0px -360px;
-}
-    
-.ap-rewind {
-  background-position: -0px -380px;
-}
-    
-.ap-arrow_double_up {
-  background-position: -0px -400px;
-}
-    
-.ap-arrow_double_down {
-  background-position: -0px -420px;
-}
-    
-.ap-black_right_pointing_double_triangle_with_vertical_bar {
-  background-position: -0px -440px;
-}
-    
-.ap-black_left_pointing_double_triangle_with_vertical_bar {
-  background-position: -0px -460px;
-}
-    
-.ap-black_right_pointing_triangle_with_double_vertical_bar {
-  background-position: -0px -480px;
-}
-    
-.ap-alarm_clock {
-  background-position: -0px -500px;
-}
-    
-.ap-stopwatch {
-  background-position: -0px -520px;
-}
-    
-.ap-timer_clock {
-  background-position: -0px -540px;
-}
-    
-.ap-hourglass_flowing_sand {
-  background-position: -0px -560px;
-}
-    
-.ap-double_vertical_bar {
-  background-position: -0px -580px;
-}
-    
-.ap-black_square_for_stop {
-  background-position: -0px -600px;
-}
-    
-.ap-black_circle_for_record {
-  background-position: -0px -620px;
-}
-    
-.ap-m {
-  background-position: -0px -640px;
-}
-    
-.ap-black_small_square {
-  background-position: -0px -660px;
-}
-    
-.ap-white_small_square {
-  background-position: -0px -680px;
-}
-    
-.ap-arrow_forward {
-  background-position: -0px -700px;
-}
-    
-.ap-arrow_backward {
-  background-position: -0px -720px;
-}
-    
-.ap-white_medium_square {
-  background-position: -0px -740px;
-}
-    
-.ap-black_medium_square {
-  background-position: -0px -760px;
-}
-    
-.ap-white_medium_small_square {
-  background-position: -0px -780px;
-}
-    
-.ap-black_medium_small_square {
-  background-position: -0px -800px;
-}
-    
-.ap-sunny {
-  background-position: -20px -0px;
-}
-    
-.ap-cloud {
-  background-position: -20px -20px;
-}
-    
-.ap-umbrella {
-  background-position: -20px -40px;
-}
-    
-.ap-snowman {
-  background-position: -20px -60px;
-}
-    
-.ap-comet {
-  background-position: -20px -80px;
-}
-    
-.ap-phone, .ap-telephone {
-  background-position: -20px -100px;
-}
-    
-.ap-ballot_box_with_check {
-  background-position: -20px -120px;
-}
-    
-.ap-umbrella_with_rain_drops {
-  background-position: -20px -140px;
-}
-    
-.ap-coffee {
-  background-position: -20px -160px;
-}
-    
-.ap-shamrock {
-  background-position: -20px -180px;
-}
-    
-.ap-point_up {
-  background-position: -20px -200px;
-}
-    
-.ap-skull_and_crossbones {
-  background-position: -20px -320px;
-}
-    
-.ap-radioactive_sign {
-  background-position: -20px -340px;
-}
-    
-.ap-biohazard_sign {
-  background-position: -20px -360px;
-}
-    
-.ap-orthodox_cross {
-  background-position: -20px -380px;
-}
-    
-.ap-star_and_crescent {
-  background-position: -20px -400px;
-}
-    
-.ap-peace_symbol {
-  background-position: -20px -420px;
-}
-    
-.ap-yin_yang {
-  background-position: -20px -440px;
-}
-    
-.ap-wheel_of_dharma {
-  background-position: -20px -460px;
-}
-    
-.ap-white_frowning_face {
-  background-position: -20px -480px;
-}
-    
-.ap-relaxed {
-  background-position: -20px -500px;
-}
-    
-.ap-aries {
-  background-position: -20px -520px;
-}
-    
-.ap-taurus {
-  background-position: -20px -540px;
-}
-    
-.ap-gemini {
-  background-position: -20px -560px;
-}
-    
-.ap-cancer {
-  background-position: -20px -580px;
-}
-    
-.ap-leo {
-  background-position: -20px -600px;
-}
-    
-.ap-virgo {
-  background-position: -20px -620px;
-}
-    
-.ap-libra {
-  background-position: -20px -640px;
-}
-    
-.ap-scorpius {
-  background-position: -20px -660px;
-}
-    
-.ap-sagittarius {
-  background-position: -20px -680px;
-}
-    
-.ap-capricorn {
-  background-position: -20px -700px;
-}
-    
-.ap-aquarius {
-  background-position: -20px -720px;
-}
-    
-.ap-pisces {
-  background-position: -20px -740px;
-}
-    
-.ap-spades {
-  background-position: -20px -760px;
-}
-    
-.ap-clubs {
-  background-position: -20px -780px;
-}
-    
-.ap-hearts {
-  background-position: -20px -800px;
-}
-    
-.ap-diamonds {
-  background-position: -40px -0px;
-}
-    
-.ap-hotsprings {
-  background-position: -40px -20px;
-}
-    
-.ap-recycle {
-  background-position: -40px -40px;
-}
-    
-.ap-wheelchair {
-  background-position: -40px -60px;
-}
-    
-.ap-hammer_and_pick {
-  background-position: -40px -80px;
-}
-    
-.ap-anchor {
-  background-position: -40px -100px;
-}
-    
-.ap-crossed_swords {
-  background-position: -40px -120px;
-}
-    
-.ap-scales {
-  background-position: -40px -140px;
-}
-    
-.ap-alembic {
-  background-position: -40px -160px;
-}
-    
-.ap-gear {
-  background-position: -40px -180px;
-}
-    
-.ap-atom_symbol {
-  background-position: -40px -200px;
-}
-    
-.ap-fleur_de_lis {
-  background-position: -40px -220px;
-}
-    
-.ap-warning {
-  background-position: -40px -240px;
-}
-    
-.ap-zap {
-  background-position: -40px -260px;
-}
-    
-.ap-white_circle {
-  background-position: -40px -280px;
-}
-    
-.ap-black_circle {
-  background-position: -40px -300px;
-}
-    
-.ap-coffin {
-  background-position: -40px -320px;
-}
-    
-.ap-funeral_urn {
-  background-position: -40px -340px;
-}
-    
-.ap-soccer {
-  background-position: -40px -360px;
-}
-    
-.ap-baseball {
-  background-position: -40px -380px;
-}
-    
-.ap-snowman_without_snow {
-  background-position: -40px -400px;
-}
-    
-.ap-partly_sunny {
-  background-position: -40px -420px;
-}
-    
-.ap-thunder_cloud_and_rain {
-  background-position: -40px -440px;
-}
-    
-.ap-ophiuchus {
-  background-position: -40px -460px;
-}
-    
-.ap-pick {
-  background-position: -40px -480px;
-}
-    
-.ap-helmet_with_white_cross {
-  background-position: -40px -500px;
-}
-    
-.ap-chains {
-  background-position: -40px -520px;
-}
-    
-.ap-no_entry {
-  background-position: -40px -540px;
-}
-    
-.ap-shinto_shrine {
-  background-position: -40px -560px;
-}
-    
-.ap-church {
-  background-position: -40px -580px;
-}
-    
-.ap-mountain {
-  background-position: -40px -600px;
-}
-    
-.ap-umbrella_on_ground,
-.ap-beach_umbrella {
-  background-position: -40px -620px;
-}
-    
-.ap-fountain {
-  background-position: -40px -640px;
-}
-    
-.ap-golf {
-  background-position: -40px -660px;
-}
-    
-.ap-ferry {
-  background-position: -40px -680px;
-}
-    
-.ap-boat {
-  background-position: -40px -700px;
-}
-    
-.ap-skier {
-  background-position: -40px -720px;
-}
-    
-.ap-ice_skate {
-  background-position: -40px -740px;
-}
-    
-.ap-person_with_ball {
-  background-position: -40px -760px;
-}
-    
-.ap-tent {
-  background-position: -60px -60px;
-}
-    
-.ap-fuelpump {
-  background-position: -60px -80px;
-}
-    
-.ap-scissors {
-  background-position: -60px -100px;
-}
-    
-.ap-white_check_mark {
-  background-position: -60px -120px;
-}
-    
-.ap-airplane {
-  background-position: -60px -140px;
-}
-    
-.ap-email {
-  background-position: -60px -160px;
-}
-    
-.ap-fist {
-  background-position: -60px -180px;
-}
-    
-.ap-hand {
-  background-position: -60px -300px;
-}
-    
-.ap-v {
-  background-position: -60px -420px;
-}
-    
-.ap-writing_hand {
-  background-position: -60px -540px;
-}
-    
-.ap-pencil2 {
-  background-position: -60px -660px;
-}
-    
-.ap-black_nib {
-  background-position: -60px -680px;
-}
-    
-.ap-heavy_check_mark {
-  background-position: -60px -700px;
-}
-    
-.ap-heavy_multiplication_x {
-  background-position: -60px -720px;
-}
-    
-.ap-latin_cross {
-  background-position: -60px -740px;
-}
-    
-.ap-star_of_david {
-  background-position: -60px -760px;
-}
-    
-.ap-sparkles {
-  background-position: -60px -780px;
-}
-    
-.ap-eight_spoked_asterisk {
-  background-position: -60px -800px;
-}
-    
-.ap-eight_pointed_black_star {
-  background-position: -80px -0px;
-}
-    
-.ap-snowflake {
-  background-position: -80px -20px;
-}
-    
-.ap-sparkle {
-  background-position: -80px -40px;
-}
-    
-.ap-x {
-  background-position: -80px -60px;
-}
-    
-.ap-negative_squared_cross_mark {
-  background-position: -80px -80px;
-}
-    
-.ap-question {
-  background-position: -80px -100px;
-}
-    
-.ap-grey_question {
-  background-position: -80px -120px;
-}
-    
-.ap-grey_exclamation {
-  background-position: -80px -140px;
-}
-    
-.ap-exclamation {
-  background-position: -80px -160px;
-}
-    
-.ap-heavy_heart_exclamation_mark_ornament {
-  background-position: -80px -180px;
-}
-    
-.ap-heart {
-  background-position: -80px -200px;
-}
-    
-.ap-heavy_plus_sign {
-  background-position: -80px -220px;
-}
-    
-.ap-heavy_minus_sign {
-  background-position: -80px -240px;
-}
-    
-.ap-heavy_division_sign {
-  background-position: -80px -260px;
-}
-    
-.ap-arrow_right {
-  background-position: -80px -280px;
-}
-    
-.ap-curly_loop {
-  background-position: -80px -300px;
-}
-    
-.ap-loop {
-  background-position: -80px -320px;
-}
-    
-.ap-arrow_heading_up {
-  background-position: -80px -340px;
-}
-    
-.ap-arrow_heading_down {
-  background-position: -80px -360px;
-}
-    
-.ap-arrow_left {
-  background-position: -80px -380px;
-}
-    
-.ap-arrow_up {
-  background-position: -80px -400px;
-}
-    
-.ap-arrow_down {
-  background-position: -80px -420px;
-}
-    
-.ap-black_large_square {
-  background-position: -80px -440px;
-}
-    
-.ap-white_large_square {
-  background-position: -80px -460px;
-}
-    
-.ap-star {
-  background-position: -80px -480px;
-}
-    
-.ap-o {
-  background-position: -80px -500px;
-}
-    
-.ap-wavy_dash {
-  background-position: -80px -520px;
-}
-    
-.ap-part_alternation_mark {
-  background-position: -80px -540px;
-}
-    
-.ap-congratulations {
-  background-position: -80px -560px;
-}
-    
-.ap-secret {
-  background-position: -80px -580px;
-}
-    
-.ap-mahjong {
-  background-position: -80px -600px;
-}
-    
-.ap-black_joker {
-  background-position: -80px -620px;
-}
-    
-.ap-a {
-  background-position: -80px -640px;
-}
-    
-.ap-b {
-  background-position: -80px -660px;
-}
-    
-.ap-o2 {
-  background-position: -80px -680px;
-}
-    
-.ap-parking {
-  background-position: -80px -700px;
-}
-    
-.ap-ab {
-  background-position: -80px -720px;
-}
-    
-.ap-cl {
-  background-position: -80px -740px;
-}
-    
-.ap-cool {
-  background-position: -80px -760px;
-}
-    
-.ap-free {
-  background-position: -80px -780px;
-}
-    
-.ap-id {
-  background-position: -80px -800px;
-}
-    
-.ap-new {
-  background-position: -100px -0px;
-}
-    
-.ap-ng {
-  background-position: -100px -20px;
-}
-    
-.ap-ok {
-  background-position: -100px -40px;
-}
-    
-.ap-sos {
-  background-position: -100px -60px;
-}
-    
-.ap-up {
-  background-position: -100px -80px;
-}
-    
-.ap-vs {
-  background-position: -100px -100px;
-}
-    
-.ap-koko {
-  background-position: -100px -120px;
-}
-    
-.ap-sa {
-  background-position: -100px -140px;
-}
-    
-.ap-u7121 {
-  background-position: -100px -160px;
-}
-    
-.ap-u6307 {
-  background-position: -100px -180px;
-}
-    
-.ap-u7981 {
-  background-position: -100px -200px;
-}
-    
-.ap-u7a7a {
-  background-position: -100px -220px;
-}
-    
-.ap-u5408 {
-  background-position: -100px -240px;
-}
-    
-.ap-u6e80 {
-  background-position: -100px -260px;
-}
-    
-.ap-u6709 {
-  background-position: -100px -280px;
-}
-    
-.ap-u6708 {
-  background-position: -100px -300px;
-}
-    
-.ap-u7533 {
-  background-position: -100px -320px;
-}
-    
-.ap-u5272 {
-  background-position: -100px -340px;
-}
-    
-.ap-u55b6 {
-  background-position: -100px -360px;
-}
-    
-.ap-ideograph_advantage {
-  background-position: -100px -380px;
-}
-    
-.ap-accept {
-  background-position: -100px -400px;
-}
-    
-.ap-cyclone {
-  background-position: -100px -420px;
-}
-    
-.ap-foggy {
-  background-position: -100px -440px;
-}
-    
-.ap-closed_umbrella {
-  background-position: -100px -460px;
-}
-    
-.ap-night_with_stars {
-  background-position: -100px -480px;
-}
-    
-.ap-sunrise_over_mountains {
-  background-position: -100px -500px;
-}
-    
-.ap-sunrise {
-  background-position: -100px -520px;
-}
-    
-.ap-city_sunset {
-  background-position: -100px -540px;
-}
-    
-.ap-city_sunrise {
-  background-position: -100px -560px;
-}
-    
-.ap-rainbow {
-  background-position: -100px -580px;
-}
-    
-.ap-bridge_at_night {
-  background-position: -100px -600px;
-}
-    
-.ap-ocean {
-  background-position: -100px -620px;
-}
-    
-.ap-volcano {
-  background-position: -100px -640px;
-}
-    
-.ap-milky_way {
-  background-position: -100px -660px;
-}
-    
-.ap-earth_africa {
-  background-position: -100px -680px;
-}
-    
-.ap-earth_americas {
-  background-position: -100px -700px;
-}
-    
-.ap-earth_asia {
-  background-position: -100px -720px;
-}
-    
-.ap-globe_with_meridians {
-  background-position: -100px -740px;
-}
-    
-.ap-new_moon {
-  background-position: -100px -760px;
-}
-    
-.ap-waxing_crescent_moon {
-  background-position: -100px -780px;
-}
-    
-.ap-first_quarter_moon {
-  background-position: -100px -800px;
-}
-    
-.ap-moon {
-  background-position: -120px -0px;
-}
-    
-.ap-full_moon {
-  background-position: -120px -20px;
-}
-    
-.ap-waning_gibbous_moon {
-  background-position: -120px -40px;
-}
-    
-.ap-last_quarter_moon {
-  background-position: -120px -60px;
-}
-    
-.ap-waning_crescent_moon {
-  background-position: -120px -80px;
-}
-    
-.ap-crescent_moon {
-  background-position: -120px -100px;
-}
-    
-.ap-new_moon_with_face {
-  background-position: -120px -120px;
-}
-    
-.ap-first_quarter_moon_with_face {
-  background-position: -120px -140px;
-}
-    
-.ap-last_quarter_moon_with_face {
-  background-position: -120px -160px;
-}
-    
-.ap-full_moon_with_face {
-  background-position: -120px -180px;
-}
-    
-.ap-sun_with_face {
-  background-position: -120px -200px;
-}
-    
-.ap-star2 {
-  background-position: -120px -220px;
-}
-    
-.ap-stars {
-  background-position: -120px -240px;
-}
-    
-.ap-thermometer {
-  background-position: -120px -260px;
-}
-    
-.ap-mostly_sunny {
-  background-position: -120px -280px;
-}
-    
-.ap-barely_sunny {
-  background-position: -120px -300px;
-}
-    
-.ap-partly_sunny_rain {
-  background-position: -120px -320px;
-}
-    
-.ap-rain_cloud {
-  background-position: -120px -340px;
-}
-    
-.ap-snow_cloud {
-  background-position: -120px -360px;
-}
-    
-.ap-lightning {
-  background-position: -120px -380px;
-}
-    
-.ap-tornado {
-  background-position: -120px -400px;
-}
-    
-.ap-fog {
-  background-position: -120px -420px;
-}
-    
-.ap-wind_blowing_face {
-  background-position: -120px -440px;
-}
-    
-.ap-hotdog {
-  background-position: -120px -460px;
-}
-    
-.ap-taco {
-  background-position: -120px -480px;
-}
-    
-.ap-burrito {
-  background-position: -120px -500px;
-}
-    
-.ap-chestnut {
-  background-position: -120px -520px;
-}
-    
-.ap-seedling {
-  background-position: -120px -540px;
-}
-    
-.ap-evergreen_tree {
-  background-position: -120px -560px;
-}
-    
-.ap-deciduous_tree {
-  background-position: -120px -580px;
-}
-    
-.ap-palm_tree {
-  background-position: -120px -600px;
-}
-    
-.ap-cactus {
-  background-position: -120px -620px;
-}
-    
-.ap-hot_pepper {
-  background-position: -120px -640px;
-}
-    
-.ap-tulip {
-  background-position: -120px -660px;
-}
-    
-.ap-cherry_blossom {
-  background-position: -120px -680px;
-}
-    
-.ap-rose {
-  background-position: -120px -700px;
-}
-    
-.ap-hibiscus {
-  background-position: -120px -720px;
-}
-    
-.ap-sunflower {
-  background-position: -120px -740px;
-}
-    
-.ap-blossom {
-  background-position: -120px -760px;
-}
-    
-.ap-corn {
-  background-position: -120px -780px;
-}
-    
-.ap-ear_of_rice {
-  background-position: -120px -800px;
-}
-    
-.ap-herb {
-  background-position: -140px -0px;
-}
-    
-.ap-four_leaf_clover {
-  background-position: -140px -20px;
-}
-    
-.ap-maple_leaf {
-  background-position: -140px -40px;
-}
-    
-.ap-fallen_leaf {
-  background-position: -140px -60px;
-}
-    
-.ap-leaves {
-  background-position: -140px -80px;
-}
-    
-.ap-mushroom {
-  background-position: -140px -100px;
-}
-    
-.ap-tomato {
-  background-position: -140px -120px;
-}
-    
-.ap-eggplant {
-  background-position: -140px -140px;
-}
-    
-.ap-grapes {
-  background-position: -140px -160px;
-}
-    
-.ap-melon {
-  background-position: -140px -180px;
-}
-    
-.ap-watermelon {
-  background-position: -140px -200px;
-}
-    
-.ap-tangerine {
-  background-position: -140px -220px;
-}
-    
-.ap-lemon {
-  background-position: -140px -240px;
-}
-    
-.ap-banana {
-  background-position: -140px -260px;
-}
-    
-.ap-pineapple {
-  background-position: -140px -280px;
-}
-    
-.ap-apple {
-  background-position: -140px -300px;
-}
-    
-.ap-green_apple {
-  background-position: -140px -320px;
-}
-    
-.ap-pear {
-  background-position: -140px -340px;
-}
-    
-.ap-peach {
-  background-position: -140px -360px;
-}
-    
-.ap-cherries {
-  background-position: -140px -380px;
-}
-    
-.ap-strawberry {
-  background-position: -140px -400px;
-}
-    
-.ap-hamburger {
-  background-position: -140px -420px;
-}
-    
-.ap-pizza {
-  background-position: -140px -440px;
-}
-    
-.ap-meat_on_bone {
-  background-position: -140px -460px;
-}
-    
-.ap-poultry_leg {
-  background-position: -140px -480px;
-}
-    
-.ap-rice_cracker {
-  background-position: -140px -500px;
-}
-    
-.ap-rice_ball {
-  background-position: -140px -520px;
-}
-    
-.ap-rice {
-  background-position: -140px -540px;
-}
-    
-.ap-curry {
-  background-position: -140px -560px;
-}
-    
-.ap-ramen {
-  background-position: -140px -580px;
-}
-    
-.ap-spaghetti {
-  background-position: -140px -600px;
-}
-    
-.ap-bread {
-  background-position: -140px -620px;
-}
-    
-.ap-fries {
-  background-position: -140px -640px;
-}
-    
-.ap-sweet_potato {
-  background-position: -140px -660px;
-}
-    
-.ap-dango {
-  background-position: -140px -680px;
-}
-    
-.ap-oden {
-  background-position: -140px -700px;
-}
-    
-.ap-sushi {
-  background-position: -140px -720px;
-}
-    
-.ap-fried_shrimp {
-  background-position: -140px -740px;
-}
-    
-.ap-fish_cake {
-  background-position: -140px -760px;
-}
-    
-.ap-icecream {
-  background-position: -140px -780px;
-}
-    
-.ap-shaved_ice {
-  background-position: -140px -800px;
-}
-    
-.ap-ice_cream {
-  background-position: -160px -0px;
-}
-    
-.ap-doughnut {
-  background-position: -160px -20px;
-}
-    
-.ap-cookie {
-  background-position: -160px -40px;
-}
-    
-.ap-chocolate_bar {
-  background-position: -160px -60px;
-}
-    
-.ap-candy {
-  background-position: -160px -80px;
-}
-    
-.ap-lollipop {
-  background-position: -160px -100px;
-}
-    
-.ap-custard {
-  background-position: -160px -120px;
-}
-    
-.ap-honey_pot {
-  background-position: -160px -140px;
-}
-    
-.ap-cake {
-  background-position: -160px -160px;
-}
-    
-.ap-bento {
-  background-position: -160px -180px;
-}
-    
-.ap-stew {
-  background-position: -160px -200px;
-}
-    
-.ap-egg {
-  background-position: -160px -220px;
-}
-    
-.ap-fork_and_knife {
-  background-position: -160px -240px;
-}
-    
-.ap-tea {
-  background-position: -160px -260px;
-}
-    
-.ap-sake {
-  background-position: -160px -280px;
-}
-    
-.ap-wine_glass {
-  background-position: -160px -300px;
-}
-    
-.ap-cocktail {
-  background-position: -160px -320px;
-}
-    
-.ap-tropical_drink {
-  background-position: -160px -340px;
-}
-    
-.ap-beer {
-  background-position: -160px -360px;
-}
-    
-.ap-beers {
-  background-position: -160px -380px;
-}
-    
-.ap-baby_bottle {
-  background-position: -160px -400px;
-}
-    
-.ap-knife_fork_plate {
-  background-position: -160px -420px;
-}
-    
-.ap-champagne {
-  background-position: -160px -440px;
-}
-    
-.ap-popcorn {
-  background-position: -160px -460px;
-}
-    
-.ap-ribbon {
-  background-position: -160px -480px;
-}
-    
-.ap-gift {
-  background-position: -160px -500px;
-}
-    
-.ap-birthday {
-  background-position: -160px -520px;
-}
-    
-.ap-jack_o_lantern {
-  background-position: -160px -540px;
-}
-    
-.ap-christmas_tree {
-  background-position: -160px -560px;
-}
-    
-.ap-santa {
-  background-position: -160px -580px;
-}
-    
-.ap-fireworks {
-  background-position: -160px -700px;
-}
-    
-.ap-sparkler {
-  background-position: -160px -720px;
-}
-    
-.ap-balloon {
-  background-position: -160px -740px;
-}
-    
-.ap-tada {
-  background-position: -160px -760px;
-}
-    
-.ap-confetti_ball {
-  background-position: -160px -780px;
-}
-    
-.ap-tanabata_tree {
-  background-position: -160px -800px;
-}
-    
-.ap-crossed_flags {
-  background-position: -180px -0px;
-}
-    
-.ap-bamboo {
-  background-position: -180px -20px;
-}
-    
-.ap-dolls {
-  background-position: -180px -40px;
-}
-    
-.ap-flags {
-  background-position: -180px -60px;
-}
-    
-.ap-wind_chime {
-  background-position: -180px -80px;
-}
-    
-.ap-rice_scene {
-  background-position: -180px -100px;
-}
-    
-.ap-school_satchel {
-  background-position: -180px -120px;
-}
-    
-.ap-mortar_board {
-  background-position: -180px -140px;
-}
-    
-.ap-medal {
-  background-position: -180px -160px;
-}
-    
-.ap-reminder_ribbon {
-  background-position: -180px -180px;
-}
-    
-.ap-studio_microphone {
-  background-position: -180px -200px;
-}
-    
-.ap-level_slider {
-  background-position: -180px -220px;
-}
-    
-.ap-control_knobs {
-  background-position: -180px -240px;
-}
-    
-.ap-film_frames {
-  background-position: -180px -260px;
-}
-    
-.ap-admission_tickets {
-  background-position: -180px -280px;
-}
-    
-.ap-carousel_horse {
-  background-position: -180px -300px;
-}
-    
-.ap-ferris_wheel {
-  background-position: -180px -320px;
-}
-    
-.ap-roller_coaster {
-  background-position: -180px -340px;
-}
-    
-.ap-fishing_pole_and_fish {
-  background-position: -180px -360px;
-}
-    
-.ap-microphone {
-  background-position: -180px -380px;
-}
-    
-.ap-movie_camera {
-  background-position: -180px -400px;
-}
-    
-.ap-cinema {
-  background-position: -180px -420px;
-}
-    
-.ap-headphones {
-  background-position: -180px -440px;
-}
-    
-.ap-art {
-  background-position: -180px -460px;
-}
-    
-.ap-tophat {
-  background-position: -180px -480px;
-}
-    
-.ap-circus_tent {
-  background-position: -180px -500px;
-}
-    
-.ap-ticket {
-  background-position: -180px -520px;
-}
-    
-.ap-clapper {
-  background-position: -180px -540px;
-}
-    
-.ap-performing_arts {
-  background-position: -180px -560px;
-}
-    
-.ap-video_game {
-  background-position: -180px -580px;
-}
-    
-.ap-dart {
-  background-position: -180px -600px;
-}
-    
-.ap-slot_machine {
-  background-position: -180px -620px;
-}
-    
-.ap-8ball {
-  background-position: -180px -640px;
-}
-    
-.ap-game_die {
-  background-position: -180px -660px;
-}
-    
-.ap-bowling {
-  background-position: -180px -680px;
-}
-    
-.ap-flower_playing_cards {
-  background-position: -180px -700px;
-}
-    
-.ap-musical_note {
-  background-position: -180px -720px;
-}
-    
-.ap-notes {
-  background-position: -180px -740px;
-}
-    
-.ap-saxophone {
-  background-position: -180px -760px;
-}
-    
-.ap-guitar {
-  background-position: -180px -780px;
-}
-    
-.ap-musical_keyboard {
-  background-position: -180px -800px;
-}
-    
-.ap-trumpet {
-  background-position: -200px -0px;
-}
-    
-.ap-violin {
-  background-position: -200px -20px;
-}
-    
-.ap-musical_score {
-  background-position: -200px -40px;
-}
-    
-.ap-running_shirt_with_sash {
-  background-position: -200px -60px;
-}
-    
-.ap-tennis {
-  background-position: -200px -80px;
-}
-    
-.ap-ski {
-  background-position: -200px -100px;
-}
-    
-.ap-basketball {
-  background-position: -200px -120px;
-}
-    
-.ap-checkered_flag {
-  background-position: -200px -140px;
-}
-    
-.ap-snowboarder {
-  background-position: -200px -160px;
-}
-    
-.ap-runner {
-  background-position: -200px -180px;
-}
-    
-.ap-surfer {
-  background-position: -200px -300px;
-}
-    
-.ap-sports_medal {
-  background-position: -200px -420px;
-}
-    
-.ap-trophy {
-  background-position: -200px -440px;
-}
-    
-.ap-horse_racing {
-  background-position: -200px -460px;
-}
-    
-.ap-football {
-  background-position: -200px -480px;
-}
-    
-.ap-rugby_football {
-  background-position: -200px -500px;
-}
-    
-.ap-swimmer {
-  background-position: -200px -520px;
-}
-    
-.ap-weight_lifter {
-  background-position: -200px -640px;
-}
-    
-.ap-golfer {
-  background-position: -200px -760px;
-}
-    
-.ap-racing_motorcycle {
-  background-position: -200px -780px;
-}
-    
-.ap-racing_car {
-  background-position: -200px -800px;
-}
-    
-.ap-cricket_bat_and_ball {
-  background-position: -220px -0px;
-}
-    
-.ap-volleyball {
-  background-position: -220px -20px;
-}
-    
-.ap-field_hockey_stick_and_ball {
-  background-position: -220px -40px;
-}
-    
-.ap-ice_hockey_stick_and_puck {
-  background-position: -220px -60px;
-}
-    
-.ap-table_tennis_paddle_and_ball {
-  background-position: -220px -80px;
-}
-    
-.ap-snow_capped_mountain {
-  background-position: -220px -100px;
-}
-    
-.ap-camping {
-  background-position: -220px -120px;
-}
-    
-.ap-beach_with_umbrella {
-  background-position: -220px -140px;
-}
-    
-.ap-building_construction {
-  background-position: -220px -160px;
-}
-    
-.ap-house_buildings {
-  background-position: -220px -180px;
-}
-    
-.ap-cityscape {
-  background-position: -220px -200px;
-}
-    
-.ap-derelict_house_building {
-  background-position: -220px -220px;
-}
-    
-.ap-classical_building {
-  background-position: -220px -240px;
-}
-    
-.ap-desert {
-  background-position: -220px -260px;
-}
-    
-.ap-desert_island {
-  background-position: -220px -280px;
-}
-    
-.ap-national_park {
-  background-position: -220px -300px;
-}
-    
-.ap-stadium {
-  background-position: -220px -320px;
-}
-    
-.ap-house {
-  background-position: -220px -340px;
-}
-    
-.ap-house_with_garden {
-  background-position: -220px -360px;
-}
-    
-.ap-office {
-  background-position: -220px -380px;
-}
-    
-.ap-post_office {
-  background-position: -220px -400px;
-}
-    
-.ap-european_post_office {
-  background-position: -220px -420px;
-}
-    
-.ap-hospital {
-  background-position: -220px -440px;
-}
-    
-.ap-bank {
-  background-position: -220px -460px;
-}
-    
-.ap-atm {
-  background-position: -220px -480px;
-}
-    
-.ap-hotel {
-  background-position: -220px -500px;
-}
-    
-.ap-love_hotel {
-  background-position: -220px -520px;
-}
-    
-.ap-convenience_store {
-  background-position: -220px -540px;
-}
-    
-.ap-school {
-  background-position: -220px -560px;
-}
-    
-.ap-department_store {
-  background-position: -220px -580px;
-}
-    
-.ap-factory {
-  background-position: -220px -600px;
-}
-    
-.ap-izakaya_lantern {
-  background-position: -220px -620px;
-}
-    
-.ap-japanese_castle {
-  background-position: -220px -640px;
-}
-    
-.ap-european_castle {
-  background-position: -220px -660px;
-}
-    
-.ap-waving_white_flag {
-  background-position: -220px -680px;
-}
-    
-.ap-waving_black_flag {
-  background-position: -220px -700px;
-}
-    
-.ap-rosette {
-  background-position: -220px -720px;
-}
-    
-.ap-label {
-  background-position: -220px -740px;
-}
-    
-.ap-badminton_racquet_and_shuttlecock {
-  background-position: -220px -760px;
-}
-    
-.ap-bow_and_arrow {
-  background-position: -220px -780px;
-}
-    
-.ap-amphora {
-  background-position: -220px -800px;
-}
-    
-.ap-skin-tone-2 {
-  background-position: -240px -0px;
-}
-    
-.ap-skin-tone-3 {
-  background-position: -240px -20px;
-}
-    
-.ap-skin-tone-4 {
-  background-position: -240px -40px;
-}
-    
-.ap-skin-tone-5 {
-  background-position: -240px -60px;
-}
-    
-.ap-skin-tone-6 {
-  background-position: -240px -80px;
-}
-    
-.ap-rat {
-  background-position: -240px -100px;
-}
-    
-.ap-mouse2 {
-  background-position: -240px -120px;
-}
-    
-.ap-ox {
-  background-position: -240px -140px;
-}
-    
-.ap-water_buffalo {
-  background-position: -240px -160px;
-}
-    
-.ap-cow2 {
-  background-position: -240px -180px;
-}
-    
-.ap-tiger2 {
-  background-position: -240px -200px;
-}
-    
-.ap-leopard {
-  background-position: -240px -220px;
-}
-    
-.ap-rabbit2 {
-  background-position: -240px -240px;
-}
-    
-.ap-cat2 {
-  background-position: -240px -260px;
-}
-    
-.ap-dragon {
-  background-position: -240px -280px;
-}
-    
-.ap-crocodile {
-  background-position: -240px -300px;
-}
-    
-.ap-whale2 {
-  background-position: -240px -320px;
-}
-    
-.ap-snail {
-  background-position: -240px -340px;
-}
-    
-.ap-snake {
-  background-position: -240px -360px;
-}
-    
-.ap-racehorse {
-  background-position: -240px -380px;
-}
-    
-.ap-ram {
-  background-position: -240px -400px;
-}
-    
-.ap-goat {
-  background-position: -240px -420px;
-}
-    
-.ap-sheep {
-  background-position: -240px -440px;
-}
-    
-.ap-monkey {
-  background-position: -240px -460px;
-}
-    
-.ap-rooster {
-  background-position: -240px -480px;
-}
-    
-.ap-chicken {
-  background-position: -240px -500px;
-}
-    
-.ap-dog2 {
-  background-position: -240px -520px;
-}
-    
-.ap-pig2 {
-  background-position: -240px -540px;
-}
-    
-.ap-boar {
-  background-position: -240px -560px;
-}
-    
-.ap-elephant {
-  background-position: -240px -580px;
-}
-    
-.ap-octopus {
-  background-position: -240px -600px;
-}
-    
-.ap-shell {
-  background-position: -240px -620px;
-}
-    
-.ap-bug {
-  background-position: -240px -640px;
-}
-    
-.ap-ant {
-  background-position: -240px -660px;
-}
-    
-.ap-bee {
-  background-position: -240px -680px;
-}
-    
-.ap-beetle {
-  background-position: -240px -700px;
-}
-    
-.ap-fish {
-  background-position: -240px -720px;
-}
-    
-.ap-tropical_fish {
-  background-position: -240px -740px;
-}
-    
-.ap-blowfish {
-  background-position: -240px -760px;
-}
-    
-.ap-turtle {
-  background-position: -240px -780px;
-}
-    
-.ap-hatching_chick {
-  background-position: -240px -800px;
-}
-    
-.ap-baby_chick {
-  background-position: -260px -0px;
-}
-    
-.ap-hatched_chick {
-  background-position: -260px -20px;
-}
-    
-.ap-bird {
-  background-position: -260px -40px;
-}
-    
-.ap-penguin {
-  background-position: -260px -60px;
-}
-    
-.ap-koala {
-  background-position: -260px -80px;
-}
-    
-.ap-poodle {
-  background-position: -260px -100px;
-}
-    
-.ap-dromedary_camel {
-  background-position: -260px -120px;
-}
-    
-.ap-camel {
-  background-position: -260px -140px;
-}
-    
-.ap-dolphin {
-  background-position: -260px -160px;
-}
-    
-.ap-mouse {
-  background-position: -260px -180px;
-}
-    
-.ap-cow {
-  background-position: -260px -200px;
-}
-    
-.ap-tiger {
-  background-position: -260px -220px;
-}
-    
-.ap-rabbit {
-  background-position: -260px -240px;
-}
-    
-.ap-cat {
-  background-position: -260px -260px;
-}
-    
-.ap-dragon_face {
-  background-position: -260px -280px;
-}
-    
-.ap-whale {
-  background-position: -260px -300px;
-}
-    
-.ap-horse {
-  background-position: -260px -320px;
-}
-    
-.ap-monkey_face {
-  background-position: -260px -340px;
-}
-    
-.ap-dog {
-  background-position: -260px -360px;
-}
-    
-.ap-pig {
-  background-position: -260px -380px;
-}
-    
-.ap-frog {
-  background-position: -260px -400px;
-}
-    
-.ap-hamster {
-  background-position: -260px -420px;
-}
-    
-.ap-wolf {
-  background-position: -260px -440px;
-}
-    
-.ap-bear {
-  background-position: -260px -460px;
-}
-    
-.ap-panda_face {
-  background-position: -260px -480px;
-}
-    
-.ap-pig_nose {
-  background-position: -260px -500px;
-}
-    
-.ap-feet {
-  background-position: -260px -520px;
-}
-    
-.ap-chipmunk {
-  background-position: -260px -540px;
-}
-    
-.ap-eyes {
-  background-position: -260px -560px;
-}
-    
-.ap-eye {
-  background-position: -260px -580px;
-}
-    
-.ap-ear {
-  background-position: -260px -600px;
-}
-    
-.ap-nose {
-  background-position: -260px -720px;
-}
-    
-.ap-lips {
-  background-position: -280px -20px;
-}
-    
-.ap-tongue {
-  background-position: -280px -40px;
-}
-    
-.ap-point_up_2 {
-  background-position: -280px -60px;
-}
-    
-.ap-point_down {
-  background-position: -280px -180px;
-}
-    
-.ap-point_left {
-  background-position: -280px -300px;
-}
-    
-.ap-point_right {
-  background-position: -280px -420px;
-}
-    
-.ap-facepunch {
-  background-position: -280px -540px;
-}
-    
-.ap-wave {
-  background-position: -280px -660px;
-}
-    
-.ap-ok_hand {
-  background-position: -280px -780px;
-}
-    
-.ap-thumbsup {
-  background-position: -300px -80px;
-}
-    
-.ap--1, .ap-thumbsdown {
-  background-position: -300px -200px;
-}
-    
-.ap-clap {
-  background-position: -300px -320px;
-}
-    
-.ap-open_hands {
-  background-position: -300px -440px;
-}
-    
-.ap-crown {
-  background-position: -300px -560px;
-}
-    
-.ap-womans_hat {
-  background-position: -300px -580px;
-}
-    
-.ap-eyeglasses {
-  background-position: -300px -600px;
-}
-    
-.ap-necktie {
-  background-position: -300px -620px;
-}
-    
-.ap-shirt {
-  background-position: -300px -640px;
-}
-    
-.ap-jeans {
-  background-position: -300px -660px;
-}
-    
-.ap-dress {
-  background-position: -300px -680px;
-}
-    
-.ap-kimono {
-  background-position: -300px -700px;
-}
-    
-.ap-bikini {
-  background-position: -300px -720px;
-}
-    
-.ap-womans_clothes {
-  background-position: -300px -740px;
-}
-    
-.ap-purse {
-  background-position: -300px -760px;
-}
-    
-.ap-handbag {
-  background-position: -300px -780px;
-}
-    
-.ap-pouch {
-  background-position: -300px -800px;
-}
-    
-.ap-mans_shoe {
-  background-position: -320px -0px;
-}
-    
-.ap-athletic_shoe {
-  background-position: -320px -20px;
-}
-    
-.ap-high_heel {
-  background-position: -320px -40px;
-}
-    
-.ap-sandal {
-  background-position: -320px -60px;
-}
-    
-.ap-boot {
-  background-position: -320px -80px;
-}
-    
-.ap-footprints {
-  background-position: -320px -100px;
-}
-    
-.ap-bust_in_silhouette {
-  background-position: -320px -120px;
-}
-    
-.ap-busts_in_silhouette {
-  background-position: -320px -140px;
-}
-    
-.ap-boy {
-  background-position: -320px -160px;
-}
-    
-.ap-girl {
-  background-position: -320px -280px;
-}
-    
-.ap-man {
-  background-position: -320px -400px;
-}
-    
-.ap-woman {
-  background-position: -320px -520px;
-}
-    
-.ap-family {
-  background-position: -320px -640px;
-}
-    
-.ap-couple {
-  background-position: -320px -660px;
-}
-    
-.ap-two_men_holding_hands {
-  background-position: -320px -680px;
-}
-    
-.ap-two_women_holding_hands {
-  background-position: -320px -700px;
-}
-    
-.ap-cop {
-  background-position: -320px -720px;
-}
-    
-.ap-dancers {
-  background-position: -340px -20px;
-}
-    
-.ap-bride_with_veil {
-  background-position: -340px -40px;
-}
-    
-.ap-person_with_blond_hair {
-  background-position: -340px -160px;
-}
-    
-.ap-man_with_gua_pi_mao {
-  background-position: -340px -280px;
-}
-    
-.ap-man_with_turban {
-  background-position: -340px -400px;
-}
-    
-.ap-older_man {
-  background-position: -340px -520px;
-}
-    
-.ap-older_woman {
-  background-position: -340px -640px;
-}
-    
-.ap-baby {
-  background-position: -340px -760px;
-}
-    
-.ap-construction_worker {
-  background-position: -360px -60px;
-}
-    
-.ap-princess {
-  background-position: -360px -180px;
-}
-    
-.ap-japanese_ogre {
-  background-position: -360px -300px;
-}
-    
-.ap-japanese_goblin {
-  background-position: -360px -320px;
-}
-    
-.ap-ghost {
-  background-position: -360px -340px;
-}
-    
-.ap-angel {
-  background-position: -360px -360px;
-}
-    
-.ap-alien {
-  background-position: -360px -480px;
-}
-    
-.ap-space_invader {
-  background-position: -360px -500px;
-}
-    
-.ap-imp {
-  background-position: -360px -520px;
-}
-    
-.ap-skull {
-  background-position: -360px -540px;
-}
-    
-.ap-information_desk_person {
-  background-position: -360px -560px;
-}
-    
-.ap-guardsman {
-  background-position: -360px -680px;
-}
-    
-.ap-dancer {
-  background-position: -360px -800px;
-}
-    
-.ap-lipstick {
-  background-position: -380px -100px;
-}
-    
-.ap-nail_care {
-  background-position: -380px -120px;
-}
-    
-.ap-massage {
-  background-position: -380px -240px;
-}
-    
-.ap-haircut {
-  background-position: -380px -360px;
-}
-    
-.ap-barber {
-  background-position: -380px -480px;
-}
-    
-.ap-syringe {
-  background-position: -380px -500px;
-}
-    
-.ap-pill {
-  background-position: -380px -520px;
-}
-    
-.ap-kiss {
-  background-position: -380px -540px;
-}
-    
-.ap-love_letter {
-  background-position: -380px -560px;
-}
-    
-.ap-ring {
-  background-position: -380px -580px;
-}
-    
-.ap-gem {
-  background-position: -380px -600px;
-}
-    
-.ap-couplekiss {
-  background-position: -380px -620px;
-}
-    
-.ap-bouquet {
-  background-position: -380px -640px;
-}
-    
-.ap-couple_with_heart {
-  background-position: -380px -660px;
-}
-    
-.ap-wedding {
-  background-position: -380px -680px;
-}
-    
-.ap-heartbeat {
-  background-position: -380px -700px;
-}
-    
-.ap-broken_heart {
-  background-position: -380px -720px;
-}
-    
-.ap-two_hearts {
-  background-position: -380px -740px;
-}
-    
-.ap-sparkling_heart {
-  background-position: -380px -760px;
-}
-    
-.ap-heartpulse {
-  background-position: -380px -780px;
-}
-    
-.ap-cupid {
-  background-position: -380px -800px;
-}
-    
-.ap-blue_heart {
-  background-position: -400px -0px;
-}
-    
-.ap-green_heart {
-  background-position: -400px -20px;
-}
-    
-.ap-yellow_heart {
-  background-position: -400px -40px;
-}
-    
-.ap-purple_heart {
-  background-position: -400px -60px;
-}
-    
-.ap-gift_heart {
-  background-position: -400px -80px;
-}
-    
-.ap-revolving_hearts {
-  background-position: -400px -100px;
-}
-    
-.ap-heart_decoration {
-  background-position: -400px -120px;
-}
-    
-.ap-diamond_shape_with_a_dot_inside {
-  background-position: -400px -140px;
-}
-    
-.ap-bulb {
-  background-position: -400px -160px;
-}
-    
-.ap-anger {
-  background-position: -400px -180px;
-}
-    
-.ap-bomb {
-  background-position: -400px -200px;
-}
-    
-.ap-zzz {
-  background-position: -400px -220px;
-}
-    
-.ap-boom {
-  background-position: -400px -240px;
-}
-    
-.ap-sweat_drops {
-  background-position: -400px -260px;
-}
-    
-.ap-droplet {
-  background-position: -400px -280px;
-}
-    
-.ap-dash {
-  background-position: -400px -300px;
-}
-    
-.ap-hankey {
-  background-position: -400px -320px;
-}
-    
-.ap-muscle {
-  background-position: -400px -340px;
-}
-    
-.ap-dizzy {
-  background-position: -400px -460px;
-}
-    
-.ap-speech_balloon {
-  background-position: -400px -480px;
-}
-    
-.ap-thought_balloon {
-  background-position: -400px -500px;
-}
-    
-.ap-white_flower {
-  background-position: -400px -520px;
-}
-    
-.ap-100 {
-  background-position: -400px -540px;
-}
-    
-.ap-moneybag {
-  background-position: -400px -560px;
-}
-    
-.ap-currency_exchange {
-  background-position: -400px -580px;
-}
-    
-.ap-heavy_dollar_sign {
-  background-position: -400px -600px;
-}
-    
-.ap-credit_card {
-  background-position: -400px -620px;
-}
-    
-.ap-yen {
-  background-position: -400px -640px;
-}
-    
-.ap-dollar {
-  background-position: -400px -660px;
-}
-    
-.ap-euro {
-  background-position: -400px -680px;
-}
-    
-.ap-pound {
-  background-position: -400px -700px;
-}
-    
-.ap-money_with_wings {
-  background-position: -400px -720px;
-}
-    
-.ap-chart {
-  background-position: -400px -740px;
-}
-    
-.ap-seat {
-  background-position: -400px -760px;
-}
-    
-.ap-computer {
-  background-position: -400px -780px;
-}
-    
-.ap-briefcase {
-  background-position: -400px -800px;
-}
-    
-.ap-minidisc {
-  background-position: -420px -0px;
-}
-    
-.ap-floppy_disk {
-  background-position: -420px -20px;
-}
-    
-.ap-cd {
-  background-position: -420px -40px;
-}
-    
-.ap-dvd {
-  background-position: -420px -60px;
-}
-    
-.ap-file_folder {
-  background-position: -420px -80px;
-}
-    
-.ap-open_file_folder {
-  background-position: -420px -100px;
-}
-    
-.ap-page_with_curl {
-  background-position: -420px -120px;
-}
-    
-.ap-page_facing_up {
-  background-position: -420px -140px;
-}
-    
-.ap-date {
-  background-position: -420px -160px;
-}
-    
-.ap-calendar {
-  background-position: -420px -180px;
-}
-    
-.ap-card_index {
-  background-position: -420px -200px;
-}
-    
-.ap-chart_with_upwards_trend {
-  background-position: -420px -220px;
-}
-    
-.ap-chart_with_downwards_trend {
-  background-position: -420px -240px;
-}
-    
-.ap-bar_chart {
-  background-position: -420px -260px;
-}
-    
-.ap-clipboard {
-  background-position: -420px -280px;
-}
-    
-.ap-pushpin {
-  background-position: -420px -300px;
-}
-    
-.ap-round_pushpin {
-  background-position: -420px -320px;
-}
-    
-.ap-paperclip {
-  background-position: -420px -340px;
-}
-    
-.ap-straight_ruler {
-  background-position: -420px -360px;
-}
-    
-.ap-triangular_ruler {
-  background-position: -420px -380px;
-}
-    
-.ap-bookmark_tabs {
-  background-position: -420px -400px;
-}
-    
-.ap-ledger {
-  background-position: -420px -420px;
-}
-    
-.ap-notebook {
-  background-position: -420px -440px;
-}
-    
-.ap-notebook_with_decorative_cover {
-  background-position: -420px -460px;
-}
-    
-.ap-closed_book {
-  background-position: -420px -480px;
-}
-    
-.ap-book {
-  background-position: -420px -500px;
-}
-    
-.ap-green_book {
-  background-position: -420px -520px;
-}
-    
-.ap-blue_book {
-  background-position: -420px -540px;
-}
-    
-.ap-orange_book {
-  background-position: -420px -560px;
-}
-    
-.ap-books {
-  background-position: -420px -580px;
-}
-    
-.ap-name_badge {
-  background-position: -420px -600px;
-}
-    
-.ap-scroll {
-  background-position: -420px -620px;
-}
-    
-.ap-memo {
-  background-position: -420px -640px;
-}
-    
-.ap-telephone_receiver {
-  background-position: -420px -660px;
-}
-    
-.ap-pager {
-  background-position: -420px -680px;
-}
-    
-.ap-fax {
-  background-position: -420px -700px;
-}
-    
-.ap-satellite_antenna {
-  background-position: -420px -720px;
-}
-    
-.ap-loudspeaker {
-  background-position: -420px -740px;
-}
-    
-.ap-mega {
-  background-position: -420px -760px;
-}
-    
-.ap-outbox_tray {
-  background-position: -420px -780px;
-}
-    
-.ap-inbox_tray {
-  background-position: -420px -800px;
-}
-    
-.ap-package {
-  background-position: -440px -0px;
-}
-    
-.ap-e-mail {
-  background-position: -440px -20px;
-}
-    
-.ap-incoming_envelope {
-  background-position: -440px -40px;
-}
-    
-.ap-envelope_with_arrow {
-  background-position: -440px -60px;
-}
-    
-.ap-mailbox_closed {
-  background-position: -440px -80px;
-}
-    
-.ap-mailbox {
-  background-position: -440px -100px;
-}
-    
-.ap-mailbox_with_mail {
-  background-position: -440px -120px;
-}
-    
-.ap-mailbox_with_no_mail {
-  background-position: -440px -140px;
-}
-    
-.ap-postbox {
-  background-position: -440px -160px;
-}
-    
-.ap-postal_horn {
-  background-position: -440px -180px;
-}
-    
-.ap-newspaper {
-  background-position: -440px -200px;
-}
-    
-.ap-iphone {
-  background-position: -440px -220px;
-}
-    
-.ap-calling {
-  background-position: -440px -240px;
-}
-    
-.ap-vibration_mode {
-  background-position: -440px -260px;
-}
-    
-.ap-mobile_phone_off {
-  background-position: -440px -280px;
-}
-    
-.ap-no_mobile_phones {
-  background-position: -440px -300px;
-}
-    
-.ap-signal_strength {
-  background-position: -440px -320px;
-}
-    
-.ap-camera {
-  background-position: -440px -340px;
-}
-    
-.ap-camera_with_flash {
-  background-position: -440px -360px;
-}
-    
-.ap-video_camera {
-  background-position: -440px -380px;
-}
-    
-.ap-tv {
-  background-position: -440px -400px;
-}
-    
-.ap-radio {
-  background-position: -440px -420px;
-}
-    
-.ap-vhs {
-  background-position: -440px -440px;
-}
-    
-.ap-film_projector {
-  background-position: -440px -460px;
-}
-    
-.ap-prayer_beads {
-  background-position: -440px -480px;
-}
-    
-.ap-twisted_rightwards_arrows {
-  background-position: -440px -500px;
-}
-    
-.ap-repeat {
-  background-position: -440px -520px;
-}
-    
-.ap-repeat_one {
-  background-position: -440px -540px;
-}
-    
-.ap-arrows_clockwise {
-  background-position: -440px -560px;
-}
-    
-.ap-arrows_counterclockwise {
-  background-position: -440px -580px;
-}
-    
-.ap-low_brightness {
-  background-position: -440px -600px;
-}
-    
-.ap-high_brightness {
-  background-position: -440px -620px;
-}
-    
-.ap-mute {
-  background-position: -440px -640px;
-}
-    
-.ap-speaker {
-  background-position: -440px -660px;
-}
-    
-.ap-sound {
-  background-position: -440px -680px;
-}
-    
-.ap-loud_sound {
-  background-position: -440px -700px;
-}
-    
-.ap-battery {
-  background-position: -440px -720px;
-}
-    
-.ap-electric_plug {
-  background-position: -440px -740px;
-}
-    
-.ap-mag {
-  background-position: -440px -760px;
-}
-    
-.ap-mag_right {
-  background-position: -440px -780px;
-}
-    
-.ap-lock_with_ink_pen {
-  background-position: -440px -800px;
-}
-    
-.ap-closed_lock_with_key {
-  background-position: -460px -0px;
-}
-    
-.ap-key {
-  background-position: -460px -20px;
-}
-    
-.ap-lock {
-  background-position: -460px -40px;
-}
-    
-.ap-unlock {
-  background-position: -460px -60px;
-}
-    
-.ap-bell {
-  background-position: -460px -80px;
-}
-    
-.ap-no_bell {
-  background-position: -460px -100px;
-}
-    
-.ap-bookmark {
-  background-position: -460px -120px;
-}
-    
-.ap-link {
-  background-position: -460px -140px;
-}
-    
-.ap-radio_button {
-  background-position: -460px -160px;
-}
-    
-.ap-back {
-  background-position: -460px -180px;
-}
-    
-.ap-end {
-  background-position: -460px -200px;
-}
-    
-.ap-on {
-  background-position: -460px -220px;
-}
-    
-.ap-soon {
-  background-position: -460px -240px;
-}
-    
-.ap-top {
-  background-position: -460px -260px;
-}
-    
-.ap-underage {
-  background-position: -460px -280px;
-}
-    
-.ap-keycap_ten {
-  background-position: -460px -300px;
-}
-    
-.ap-capital_abcd {
-  background-position: -460px -320px;
-}
-    
-.ap-abcd {
-  background-position: -460px -340px;
-}
-    
-.ap-1234 {
-  background-position: -460px -360px;
-}
-    
-.ap-symbols {
-  background-position: -460px -380px;
-}
-    
-.ap-abc {
-  background-position: -460px -400px;
-}
-    
-.ap-fire {
-  background-position: -460px -420px;
-}
-    
-.ap-flashlight {
-  background-position: -460px -440px;
-}
-    
-.ap-wrench {
-  background-position: -460px -460px;
-}
-    
-.ap-hammer {
-  background-position: -460px -480px;
-}
-    
-.ap-nut_and_bolt {
-  background-position: -460px -500px;
-}
-    
-.ap-hocho {
-  background-position: -460px -520px;
-}
-    
-.ap-gun {
-  background-position: -460px -540px;
-}
-    
-.ap-microscope {
-  background-position: -460px -560px;
-}
-    
-.ap-telescope {
-  background-position: -460px -580px;
-}
-    
-.ap-crystal_ball {
-  background-position: -460px -600px;
-}
-    
-.ap-six_pointed_star {
-  background-position: -460px -620px;
-}
-    
-.ap-beginner {
-  background-position: -460px -640px;
-}
-    
-.ap-trident {
-  background-position: -460px -660px;
-}
-    
-.ap-black_square_button {
-  background-position: -460px -680px;
-}
-    
-.ap-white_square_button {
-  background-position: -460px -700px;
-}
-    
-.ap-red_circle {
-  background-position: -460px -720px;
-}
-    
-.ap-large_blue_circle {
-  background-position: -460px -740px;
-}
-    
-.ap-large_orange_diamond {
-  background-position: -460px -760px;
-}
-    
-.ap-large_blue_diamond {
-  background-position: -460px -780px;
-}
-    
-.ap-small_orange_diamond {
-  background-position: -460px -800px;
-}
-    
-.ap-small_blue_diamond {
-  background-position: -480px -0px;
-}
-    
-.ap-small_red_triangle {
-  background-position: -480px -20px;
-}
-    
-.ap-small_red_triangle_down {
-  background-position: -480px -40px;
-}
-    
-.ap-arrow_up_small {
-  background-position: -480px -60px;
-}
-    
-.ap-arrow_down_small {
-  background-position: -480px -80px;
-}
-    
-.ap-om_symbol {
-  background-position: -480px -100px;
-}
-    
-.ap-dove_of_peace {
-  background-position: -480px -120px;
-}
-    
-.ap-kaaba {
-  background-position: -480px -140px;
-}
-    
-.ap-mosque {
-  background-position: -480px -160px;
-}
-    
-.ap-synagogue {
-  background-position: -480px -180px;
-}
-    
-.ap-menorah_with_nine_branches {
-  background-position: -480px -200px;
-}
-    
-.ap-clock1 {
-  background-position: -480px -220px;
-}
-    
-.ap-clock2 {
-  background-position: -480px -240px;
-}
-    
-.ap-clock3 {
-  background-position: -480px -260px;
-}
-    
-.ap-clock4 {
-  background-position: -480px -280px;
-}
-    
-.ap-clock5 {
-  background-position: -480px -300px;
-}
-    
-.ap-clock6 {
-  background-position: -480px -320px;
-}
-    
-.ap-clock7 {
-  background-position: -480px -340px;
-}
-    
-.ap-clock8 {
-  background-position: -480px -360px;
-}
-    
-.ap-clock9 {
-  background-position: -480px -380px;
-}
-    
-.ap-clock10 {
-  background-position: -480px -400px;
-}
-    
-.ap-clock11 {
-  background-position: -480px -420px;
-}
-    
-.ap-clock12 {
-  background-position: -480px -440px;
-}
-    
-.ap-clock130 {
-  background-position: -480px -460px;
-}
-    
-.ap-clock230 {
-  background-position: -480px -480px;
-}
-    
-.ap-clock330 {
-  background-position: -480px -500px;
-}
-    
-.ap-clock430 {
-  background-position: -480px -520px;
-}
-    
-.ap-clock530 {
-  background-position: -480px -540px;
-}
-    
-.ap-clock630 {
-  background-position: -480px -560px;
-}
-    
-.ap-clock730 {
-  background-position: -480px -580px;
-}
-    
-.ap-clock830 {
-  background-position: -480px -600px;
-}
-    
-.ap-clock930 {
-  background-position: -480px -620px;
-}
-    
-.ap-clock1030 {
-  background-position: -480px -640px;
-}
-    
-.ap-clock1130 {
-  background-position: -480px -660px;
-}
-    
-.ap-clock1230 {
-  background-position: -480px -680px;
-}
-    
-.ap-candle {
-  background-position: -480px -700px;
-}
-    
-.ap-mantelpiece_clock {
-  background-position: -480px -720px;
-}
-    
-.ap-hole {
-  background-position: -480px -740px;
-}
-    
-.ap-man_in_business_suit_levitating {
-  background-position: -480px -760px;
-}
-    
-.ap-sleuth_or_spy {
-  background-position: -480px -780px;
-}
-    
-.ap-dark_sunglasses {
-  background-position: -500px -80px;
-}
-    
-.ap-spider {
-  background-position: -500px -100px;
-}
-    
-.ap-spider_web {
-  background-position: -500px -120px;
-}
-    
-.ap-joystick {
-  background-position: -500px -140px;
-}
-    
-.ap-linked_paperclips {
-  background-position: -500px -160px;
-}
-    
-.ap-lower_left_ballpoint_pen {
-  background-position: -500px -180px;
-}
-    
-.ap-lower_left_fountain_pen {
-  background-position: -500px -200px;
-}
-    
-.ap-lower_left_paintbrush {
-  background-position: -500px -220px;
-}
-    
-.ap-lower_left_crayon {
-  background-position: -500px -240px;
-}
-    
-.ap-raised_hand_with_fingers_splayed {
-  background-position: -500px -260px;
-}
-    
-.ap-middle_finger {
-  background-position: -500px -380px;
-}
-    
-.ap-spock-hand {
-  background-position: -500px -500px;
-}
-    
-.ap-desktop_computer {
-  background-position: -500px -620px;
-}
-    
-.ap-printer {
-  background-position: -500px -640px;
-}
-    
-.ap-three_button_mouse {
-  background-position: -500px -660px;
-}
-    
-.ap-trackball {
-  background-position: -500px -680px;
-}
-    
-.ap-frame_with_picture {
-  background-position: -500px -700px;
-}
-    
-.ap-card_index_dividers {
-  background-position: -500px -720px;
-}
-    
-.ap-card_file_box {
-  background-position: -500px -740px;
-}
-    
-.ap-file_cabinet {
-  background-position: -500px -760px;
-}
-    
-.ap-wastebasket {
-  background-position: -500px -780px;
-}
-    
-.ap-spiral_note_pad {
-  background-position: -500px -800px;
-}
-    
-.ap-spiral_calendar_pad {
-  background-position: -520px -0px;
-}
-    
-.ap-compression {
-  background-position: -520px -20px;
-}
-    
-.ap-old_key {
-  background-position: -520px -40px;
-}
-    
-.ap-rolled_up_newspaper {
-  background-position: -520px -60px;
-}
-    
-.ap-dagger_knife {
-  background-position: -520px -80px;
-}
-    
-.ap-speaking_head_in_silhouette {
-  background-position: -520px -100px;
-}
-    
-.ap-left_speech_bubble {
-  background-position: -520px -120px;
-}
-    
-.ap-right_anger_bubble {
-  background-position: -520px -140px;
-}
-    
-.ap-ballot_box_with_ballot {
-  background-position: -520px -160px;
-}
-    
-.ap-world_map {
-  background-position: -520px -180px;
-}
-    
-.ap-mount_fuji {
-  background-position: -520px -200px;
-}
-    
-.ap-tokyo_tower {
-  background-position: -520px -220px;
-}
-    
-.ap-statue_of_liberty {
-  background-position: -520px -240px;
-}
-    
-.ap-japan {
-  background-position: -520px -260px;
-}
-    
-.ap-moyai {
-  background-position: -520px -280px;
-}
-    
-.ap-grinning {
-  background-position: -520px -300px;
-}
-    
-.ap-grin {
-  background-position: -520px -320px;
-}
-    
-.ap-joy {
-  background-position: -520px -340px;
-}
-    
-.ap-smiley {
-  background-position: -520px -360px;
-}
-    
-.ap-smile {
-  background-position: -520px -380px;
-}
-    
-.ap-sweat_smile {
-  background-position: -520px -400px;
-}
-    
-.ap-laughing {
-  background-position: -520px -420px;
-}
-    
-.ap-innocent {
-  background-position: -520px -440px;
-}
-    
-.ap-smiling_imp {
-  background-position: -520px -460px;
-}
-    
-.ap-wink {
-  background-position: -520px -480px;
-}
-    
-.ap-blush {
-  background-position: -520px -500px;
-}
-    
-.ap-yum {
-  background-position: -520px -520px;
-}
-    
-.ap-relieved {
-  background-position: -520px -540px;
-}
-    
-.ap-heart_eyes {
-  background-position: -520px -560px;
-}
-    
-.ap-sunglasses {
-  background-position: -520px -580px;
-}
-    
-.ap-smirk {
-  background-position: -520px -600px;
-}
-    
-.ap-neutral_face {
-  background-position: -520px -620px;
-}
-    
-.ap-expressionless {
-  background-position: -520px -640px;
-}
-    
-.ap-unamused {
-  background-position: -520px -660px;
-}
-    
-.ap-sweat {
-  background-position: -520px -680px;
-}
-    
-.ap-pensive {
-  background-position: -520px -700px;
-}
-    
-.ap-confused {
-  background-position: -520px -720px;
-}
-    
-.ap-confounded {
-  background-position: -520px -740px;
-}
-    
-.ap-kissing {
-  background-position: -520px -760px;
-}
-    
-.ap-kissing_heart {
-  background-position: -520px -780px;
-}
-    
-.ap-kissing_smiling_eyes {
-  background-position: -520px -800px;
-}
-    
-.ap-kissing_closed_eyes {
-  background-position: -540px -0px;
-}
-    
-.ap-stuck_out_tongue {
-  background-position: -540px -20px;
-}
-    
-.ap-stuck_out_tongue_winking_eye {
-  background-position: -540px -40px;
-}
-    
-.ap-stuck_out_tongue_closed_eyes {
-  background-position: -540px -60px;
-}
-    
-.ap-disappointed {
-  background-position: -540px -80px;
-}
-    
-.ap-worried {
-  background-position: -540px -100px;
-}
-    
-.ap-angry {
-  background-position: -540px -120px;
-}
-    
-.ap-rage {
-  background-position: -540px -140px;
-}
-    
-.ap-cry {
-  background-position: -540px -160px;
-}
-    
-.ap-persevere {
-  background-position: -540px -180px;
-}
-    
-.ap-triumph {
-  background-position: -540px -200px;
-}
-    
-.ap-disappointed_relieved {
-  background-position: -540px -220px;
-}
-    
-.ap-frowning {
-  background-position: -540px -240px;
-}
-    
-.ap-anguished {
-  background-position: -540px -260px;
-}
-    
-.ap-fearful {
-  background-position: -540px -280px;
-}
-    
-.ap-weary {
-  background-position: -540px -300px;
-}
-    
-.ap-sleepy {
-  background-position: -540px -320px;
-}
-    
-.ap-tired_face {
-  background-position: -540px -340px;
-}
-    
-.ap-grimacing {
-  background-position: -540px -360px;
-}
-    
-.ap-sob {
-  background-position: -540px -380px;
-}
-    
-.ap-open_mouth {
-  background-position: -540px -400px;
-}
-    
-.ap-hushed {
-  background-position: -540px -420px;
-}
-    
-.ap-cold_sweat {
-  background-position: -540px -440px;
-}
-    
-.ap-scream {
-  background-position: -540px -460px;
-}
-    
-.ap-astonished {
-  background-position: -540px -480px;
-}
-    
-.ap-flushed {
-  background-position: -540px -500px;
-}
-    
-.ap-sleeping {
-  background-position: -540px -520px;
-}
-    
-.ap-dizzy_face {
-  background-position: -540px -540px;
-}
-    
-.ap-no_mouth {
-  background-position: -540px -560px;
-}
-    
-.ap-mask {
-  background-position: -540px -580px;
-}
-    
-.ap-smile_cat {
-  background-position: -540px -600px;
-}
-    
-.ap-joy_cat {
-  background-position: -540px -620px;
-}
-    
-.ap-smiley_cat {
-  background-position: -540px -640px;
-}
-    
-.ap-heart_eyes_cat {
-  background-position: -540px -660px;
-}
-    
-.ap-smirk_cat {
-  background-position: -540px -680px;
-}
-    
-.ap-kissing_cat {
-  background-position: -540px -700px;
-}
-    
-.ap-pouting_cat {
-  background-position: -540px -720px;
-}
-    
-.ap-crying_cat_face {
-  background-position: -540px -740px;
-}
-    
-.ap-scream_cat {
-  background-position: -540px -760px;
-}
-    
-.ap-slightly_frowning_face {
-  background-position: -540px -780px;
-}
-    
-.ap-slightly_smiling_face {
-  background-position: -540px -800px;
-}
-    
-.ap-upside_down_face {
-  background-position: -560px -0px;
-}
-    
-.ap-face_with_rolling_eyes {
-  background-position: -560px -20px;
-}
-    
-.ap-no_good {
-  background-position: -560px -40px;
-}
-    
-.ap-ok_woman {
-  background-position: -560px -160px;
-}
-    
-.ap-bow {
-  background-position: -560px -280px;
-}
-    
-.ap-see_no_evil {
-  background-position: -560px -400px;
-}
-    
-.ap-hear_no_evil {
-  background-position: -560px -420px;
-}
-    
-.ap-speak_no_evil {
-  background-position: -560px -440px;
-}
-    
-.ap-raising_hand {
-  background-position: -560px -460px;
-}
-    
-.ap-raised_hands {
-  background-position: -560px -580px;
-}
-    
-.ap-person_frowning {
-  background-position: -560px -700px;
-}
-    
-.ap-person_with_pouting_face {
-  background-position: -580px -0px;
-}
-    
-.ap-pray {
-  background-position: -580px -120px;
-}
-    
-.ap-rocket {
-  background-position: -580px -240px;
-}
-    
-.ap-helicopter {
-  background-position: -580px -260px;
-}
-    
-.ap-steam_locomotive {
-  background-position: -580px -280px;
-}
-    
-.ap-railway_car {
-  background-position: -580px -300px;
-}
-    
-.ap-bullettrain_side {
-  background-position: -580px -320px;
-}
-    
-.ap-bullettrain_front {
-  background-position: -580px -340px;
-}
-    
-.ap-train2 {
-  background-position: -580px -360px;
-}
-    
-.ap-metro {
-  background-position: -580px -380px;
-}
-    
-.ap-light_rail {
-  background-position: -580px -400px;
-}
-    
-.ap-station {
-  background-position: -580px -420px;
-}
-    
-.ap-tram {
-  background-position: -580px -440px;
-}
-    
-.ap-train {
-  background-position: -580px -460px;
-}
-    
-.ap-bus {
-  background-position: -580px -480px;
-}
-    
-.ap-oncoming_bus {
-  background-position: -580px -500px;
-}
-    
-.ap-trolleybus {
-  background-position: -580px -520px;
-}
-    
-.ap-busstop {
-  background-position: -580px -540px;
-}
-    
-.ap-minibus {
-  background-position: -580px -560px;
-}
-    
-.ap-ambulance {
-  background-position: -580px -580px;
-}
-    
-.ap-fire_engine {
-  background-position: -580px -600px;
-}
-    
-.ap-police_car {
-  background-position: -580px -620px;
-}
-    
-.ap-oncoming_police_car {
-  background-position: -580px -640px;
-}
-    
-.ap-taxi {
-  background-position: -580px -660px;
-}
-    
-.ap-oncoming_taxi {
-  background-position: -580px -680px;
-}
-    
-.ap-car {
-  background-position: -580px -700px;
-}
-    
-.ap-oncoming_automobile {
-  background-position: -580px -720px;
-}
-    
-.ap-blue_car {
-  background-position: -580px -740px;
-}
-    
-.ap-truck {
-  background-position: -580px -760px;
-}
-    
-.ap-articulated_lorry {
-  background-position: -580px -780px;
-}
-    
-.ap-tractor {
-  background-position: -580px -800px;
-}
-    
-.ap-monorail {
-  background-position: -600px -0px;
-}
-    
-.ap-mountain_railway {
-  background-position: -600px -20px;
-}
-    
-.ap-suspension_railway {
-  background-position: -600px -40px;
-}
-    
-.ap-mountain_cableway {
-  background-position: -600px -60px;
-}
-    
-.ap-aerial_tramway {
-  background-position: -600px -80px;
-}
-    
-.ap-ship {
-  background-position: -600px -100px;
-}
-    
-.ap-rowboat {
-  background-position: -600px -120px;
-}
-    
-.ap-speedboat {
-  background-position: -600px -240px;
-}
-    
-.ap-traffic_light {
-  background-position: -600px -260px;
-}
-    
-.ap-vertical_traffic_light {
-  background-position: -600px -280px;
-}
-    
-.ap-construction {
-  background-position: -600px -300px;
-}
-    
-.ap-rotating_light {
-  background-position: -600px -320px;
-}
-    
-.ap-triangular_flag_on_post {
-  background-position: -600px -340px;
-}
-    
-.ap-door {
-  background-position: -600px -360px;
-}
-    
-.ap-no_entry_sign {
-  background-position: -600px -380px;
-}
-    
-.ap-smoking {
-  background-position: -600px -400px;
-}
-    
-.ap-no_smoking {
-  background-position: -600px -420px;
-}
-    
-.ap-put_litter_in_its_place {
-  background-position: -600px -440px;
-}
-    
-.ap-do_not_litter {
-  background-position: -600px -460px;
-}
-    
-.ap-potable_water {
-  background-position: -600px -480px;
-}
-    
-.ap-non-potable_water {
-  background-position: -600px -500px;
-}
-    
-.ap-bike {
-  background-position: -600px -520px;
-}
-    
-.ap-no_bicycles {
-  background-position: -600px -540px;
-}
-    
-.ap-bicyclist {
-  background-position: -600px -560px;
-}
-    
-.ap-mountain_bicyclist {
-  background-position: -600px -680px;
-}
-    
-.ap-walking {
-  background-position: -600px -800px;
-}
-    
-.ap-no_pedestrians {
-  background-position: -620px -100px;
-}
-    
-.ap-children_crossing {
-  background-position: -620px -120px;
-}
-    
-.ap-mens {
-  background-position: -620px -140px;
-}
-    
-.ap-womens {
-  background-position: -620px -160px;
-}
-    
-.ap-restroom {
-  background-position: -620px -180px;
-}
-    
-.ap-baby_symbol {
-  background-position: -620px -200px;
-}
-    
-.ap-toilet {
-  background-position: -620px -220px;
-}
-    
-.ap-wc {
-  background-position: -620px -240px;
-}
-    
-.ap-shower {
-  background-position: -620px -260px;
-}
-    
-.ap-bath {
-  background-position: -620px -280px;
-}
-    
-.ap-bathtub {
-  background-position: -620px -400px;
-}
-    
-.ap-passport_control {
-  background-position: -620px -420px;
-}
-    
-.ap-customs {
-  background-position: -620px -440px;
-}
-    
-.ap-baggage_claim {
-  background-position: -620px -460px;
-}
-    
-.ap-left_luggage {
-  background-position: -620px -480px;
-}
-    
-.ap-couch_and_lamp {
-  background-position: -620px -500px;
-}
-    
-.ap-sleeping_accommodation {
-  background-position: -620px -520px;
-}
-    
-.ap-shopping_bags {
-  background-position: -620px -540px;
-}
-    
-.ap-bellhop_bell {
-  background-position: -620px -560px;
-}
-    
-.ap-bed {
-  background-position: -620px -580px;
-}
-    
-.ap-place_of_worship {
-  background-position: -620px -600px;
-}
-    
-.ap-hammer_and_wrench {
-  background-position: -620px -620px;
-}
-    
-.ap-shield {
-  background-position: -620px -640px;
-}
-    
-.ap-oil_drum {
-  background-position: -620px -660px;
-}
-    
-.ap-motorway {
-  background-position: -620px -680px;
-}
-    
-.ap-railway_track {
-  background-position: -620px -700px;
-}
-    
-.ap-motor_boat {
-  background-position: -620px -720px;
-}
-    
-.ap-small_airplane {
-  background-position: -620px -740px;
-}
-    
-.ap-airplane_departure {
-  background-position: -620px -760px;
-}
-    
-.ap-airplane_arriving {
-  background-position: -620px -780px;
-}
-    
-.ap-satellite {
-  background-position: -620px -800px;
-}
-    
-.ap-passenger_ship {
-  background-position: -640px -0px;
-}
-    
-.ap-zipper_mouth_face {
-  background-position: -640px -20px;
-}
-    
-.ap-money_mouth_face {
-  background-position: -640px -40px;
-}
-    
-.ap-face_with_thermometer {
-  background-position: -640px -60px;
-}
-    
-.ap-nerd_face {
-  background-position: -640px -80px;
-}
-    
-.ap-thinking_face {
-  background-position: -640px -100px;
-}
-    
-.ap-face_with_head_bandage {
-  background-position: -640px -120px;
-}
-    
-.ap-robot_face {
-  background-position: -640px -140px;
-}
-    
-.ap-hugging_face {
-  background-position: -640px -160px;
-}
-    
-.ap-the_horns {
-  background-position: -640px -180px;
-}
-    
-.ap-crab {
-  background-position: -640px -300px;
-}
-    
-.ap-lion_face {
-  background-position: -640px -320px;
-}
-    
-.ap-scorpion {
-  background-position: -640px -340px;
-}
-    
-.ap-turkey {
-  background-position: -640px -360px;
-}
-    
-.ap-unicorn_face {
-  background-position: -640px -380px;
-}
-    
-.ap-cheese_wedge {
-  background-position: -640px -400px;
-}
-    
-.ap-hash {
-  background-position: -640px -420px;
-}
-    
-.ap-keycap_star {
-  background-position: -640px -440px;
-}
-    
-.ap-zero {
-  background-position: -640px -460px;
-}
-    
-.ap-one {
-  background-position: -640px -480px;
-}
-    
-.ap-two {
-  background-position: -640px -500px;
-}
-    
-.ap-three {
-  background-position: -640px -520px;
-}
-    
-.ap-four {
-  background-position: -640px -540px;
-}
-    
-.ap-five {
-  background-position: -640px -560px;
-}
-    
-.ap-six {
-  background-position: -640px -580px;
-}
-    
-.ap-seven {
-  background-position: -640px -600px;
-}
-    
-.ap-eight {
-  background-position: -640px -620px;
-}
-    
-.ap-nine {
-  background-position: -640px -640px;
-}
-    
-.ap-flag-ac {
-  background-position: -640px -660px;
-}
-    
-.ap-flag-ad {
-  background-position: -640px -680px;
-}
-    
-.ap-flag-ae {
-  background-position: -640px -700px;
-}
-    
-.ap-flag-af {
-  background-position: -640px -720px;
-}
-    
-.ap-flag-ag {
-  background-position: -640px -740px;
-}
-    
-.ap-flag-ai {
-  background-position: -640px -760px;
-}
-    
-.ap-flag-al {
-  background-position: -640px -780px;
-}
-    
-.ap-flag-am {
-  background-position: -640px -800px;
-}
-    
-.ap-flag-ao {
-  background-position: -660px -0px;
-}
-    
-.ap-flag-aq {
-  background-position: -660px -20px;
-}
-    
-.ap-flag-ar {
-  background-position: -660px -40px;
-}
-    
-.ap-flag-as {
-  background-position: -660px -60px;
-}
-    
-.ap-flag-at {
-  background-position: -660px -80px;
-}
-    
-.ap-flag-au {
-  background-position: -660px -100px;
-}
-    
-.ap-flag-aw {
-  background-position: -660px -120px;
-}
-    
-.ap-flag-ax {
-  background-position: -660px -140px;
-}
-    
-.ap-flag-az {
-  background-position: -660px -160px;
-}
-    
-.ap-flag-ba {
-  background-position: -660px -180px;
-}
-    
-.ap-flag-bb {
-  background-position: -660px -200px;
-}
-    
-.ap-flag-bd {
-  background-position: -660px -220px;
-}
-    
-.ap-flag-be {
-  background-position: -660px -240px;
-}
-    
-.ap-flag-bf {
-  background-position: -660px -260px;
-}
-    
-.ap-flag-bg {
-  background-position: -660px -280px;
-}
-    
-.ap-flag-bh {
-  background-position: -660px -300px;
-}
-    
-.ap-flag-bi {
-  background-position: -660px -320px;
-}
-    
-.ap-flag-bj {
-  background-position: -660px -340px;
-}
-    
-.ap-flag-bl {
-  background-position: -660px -360px;
-}
-    
-.ap-flag-bm {
-  background-position: -660px -380px;
-}
-    
-.ap-flag-bn {
-  background-position: -660px -400px;
-}
-    
-.ap-flag-bo {
-  background-position: -660px -420px;
-}
-    
-.ap-flag-bq {
-  background-position: -660px -440px;
-}
-    
-.ap-flag-br {
-  background-position: -660px -460px;
-}
-    
-.ap-flag-bs {
-  background-position: -660px -480px;
-}
-    
-.ap-flag-bt {
-  background-position: -660px -500px;
-}
-    
-.ap-flag-bv {
-  background-position: -660px -520px;
-}
-    
-.ap-flag-bw {
-  background-position: -660px -540px;
-}
-    
-.ap-flag-by {
-  background-position: -660px -560px;
-}
-    
-.ap-flag-bz {
-  background-position: -660px -580px;
-}
-    
-.ap-flag-ca {
-  background-position: -660px -600px;
-}
-    
-.ap-flag-cc {
-  background-position: -660px -620px;
-}
-    
-.ap-flag-cd {
-  background-position: -660px -640px;
-}
-    
-.ap-flag-cf {
-  background-position: -660px -660px;
-}
-    
-.ap-flag-cg {
-  background-position: -660px -680px;
-}
-    
-.ap-flag-ch {
-  background-position: -660px -700px;
-}
-    
-.ap-flag-ci {
-  background-position: -660px -720px;
-}
-    
-.ap-flag-ck {
-  background-position: -660px -740px;
-}
-    
-.ap-flag-cl {
-  background-position: -660px -760px;
-}
-    
-.ap-flag-cm {
-  background-position: -660px -780px;
-}
-    
-.ap-flag-cn {
-  background-position: -660px -800px;
-}
-    
-.ap-flag-co {
-  background-position: -680px -0px;
-}
-    
-.ap-flag-cp {
-  background-position: -680px -20px;
-}
-    
-.ap-flag-cr {
-  background-position: -680px -40px;
-}
-    
-.ap-flag-cu {
-  background-position: -680px -60px;
-}
-    
-.ap-flag-cv {
-  background-position: -680px -80px;
-}
-    
-.ap-flag-cw {
-  background-position: -680px -100px;
-}
-    
-.ap-flag-cx {
-  background-position: -680px -120px;
-}
-    
-.ap-flag-cy {
-  background-position: -680px -140px;
-}
-    
-.ap-flag-cz {
-  background-position: -680px -160px;
-}
-    
-.ap-flag-de {
-  background-position: -680px -180px;
-}
-    
-.ap-flag-dg {
-  background-position: -680px -200px;
-}
-    
-.ap-flag-dj {
-  background-position: -680px -220px;
-}
-    
-.ap-flag-dk {
-  background-position: -680px -240px;
-}
-    
-.ap-flag-dm {
-  background-position: -680px -260px;
-}
-    
-.ap-flag-do {
-  background-position: -680px -280px;
-}
-    
-.ap-flag-dz {
-  background-position: -680px -300px;
-}
-    
-.ap-flag-ea {
-  background-position: -680px -320px;
-}
-    
-.ap-flag-ec {
-  background-position: -680px -340px;
-}
-    
-.ap-flag-ee {
-  background-position: -680px -360px;
-}
-    
-.ap-flag-eg {
-  background-position: -680px -380px;
-}
-    
-.ap-flag-eh {
-  background-position: -680px -400px;
-}
-    
-.ap-flag-er {
-  background-position: -680px -420px;
-}
-    
-.ap-flag-es {
-  background-position: -680px -440px;
-}
-    
-.ap-flag-et {
-  background-position: -680px -460px;
-}
-    
-.ap-flag-eu {
-  background-position: -680px -480px;
-}
-    
-.ap-flag-fi {
-  background-position: -680px -500px;
-}
-    
-.ap-flag-fj {
-  background-position: -680px -520px;
-}
-    
-.ap-flag-fk {
-  background-position: -680px -540px;
-}
-    
-.ap-flag-fm {
-  background-position: -680px -560px;
-}
-    
-.ap-flag-fo {
-  background-position: -680px -580px;
-}
-    
-.ap-flag-fr {
-  background-position: -680px -600px;
-}
-    
-.ap-flag-ga {
-  background-position: -680px -620px;
-}
-    
-.ap-flag-gb {
-  background-position: -680px -640px;
-}
-    
-.ap-flag-gd {
-  background-position: -680px -660px;
-}
-    
-.ap-flag-ge {
-  background-position: -680px -680px;
-}
-    
-.ap-flag-gf {
-  background-position: -680px -700px;
-}
-    
-.ap-flag-gg {
-  background-position: -680px -720px;
-}
-    
-.ap-flag-gh {
-  background-position: -680px -740px;
-}
-    
-.ap-flag-gi {
-  background-position: -680px -760px;
-}
-    
-.ap-flag-gl {
-  background-position: -680px -780px;
-}
-    
-.ap-flag-gm {
-  background-position: -680px -800px;
-}
-    
-.ap-flag-gn {
-  background-position: -700px -0px;
-}
-    
-.ap-flag-gp {
-  background-position: -700px -20px;
-}
-    
-.ap-flag-gq {
-  background-position: -700px -40px;
-}
-    
-.ap-flag-gr {
-  background-position: -700px -60px;
-}
-    
-.ap-flag-gs {
-  background-position: -700px -80px;
-}
-    
-.ap-flag-gt {
-  background-position: -700px -100px;
-}
-    
-.ap-flag-gu {
-  background-position: -700px -120px;
-}
-    
-.ap-flag-gw {
-  background-position: -700px -140px;
-}
-    
-.ap-flag-gy {
-  background-position: -700px -160px;
-}
-    
-.ap-flag-hk {
-  background-position: -700px -180px;
-}
-    
-.ap-flag-hm {
-  background-position: -700px -200px;
-}
-    
-.ap-flag-hn {
-  background-position: -700px -220px;
-}
-    
-.ap-flag-hr {
-  background-position: -700px -240px;
-}
-    
-.ap-flag-ht {
-  background-position: -700px -260px;
-}
-    
-.ap-flag-hu {
-  background-position: -700px -280px;
-}
-    
-.ap-flag-ic {
-  background-position: -700px -300px;
-}
-    
-.ap-flag-id {
-  background-position: -700px -320px;
-}
-    
-.ap-flag-ie {
-  background-position: -700px -340px;
-}
-    
-.ap-flag-il {
-  background-position: -700px -360px;
-}
-    
-.ap-flag-im {
-  background-position: -700px -380px;
-}
-    
-.ap-flag-in {
-  background-position: -700px -400px;
-}
-    
-.ap-flag-io {
-  background-position: -700px -420px;
-}
-    
-.ap-flag-iq {
-  background-position: -700px -440px;
-}
-    
-.ap-flag-ir {
-  background-position: -700px -460px;
-}
-    
-.ap-flag-is {
-  background-position: -700px -480px;
-}
-    
-.ap-flag-it {
-  background-position: -700px -500px;
-}
-    
-.ap-flag-je {
-  background-position: -700px -520px;
-}
-    
-.ap-flag-jm {
-  background-position: -700px -540px;
-}
-    
-.ap-flag-jo {
-  background-position: -700px -560px;
-}
-    
-.ap-flag-jp {
-  background-position: -700px -580px;
-}
-    
-.ap-flag-ke {
-  background-position: -700px -600px;
-}
-    
-.ap-flag-kg {
-  background-position: -700px -620px;
-}
-    
-.ap-flag-kh {
-  background-position: -700px -640px;
-}
-    
-.ap-flag-ki {
-  background-position: -700px -660px;
-}
-    
-.ap-flag-km {
-  background-position: -700px -680px;
-}
-    
-.ap-flag-kn {
-  background-position: -700px -700px;
-}
-    
-.ap-flag-kp {
-  background-position: -700px -720px;
-}
-    
-.ap-flag-kr {
-  background-position: -700px -740px;
-}
-    
-.ap-flag-kw {
-  background-position: -700px -760px;
-}
-    
-.ap-flag-ky {
-  background-position: -700px -780px;
-}
-    
-.ap-flag-kz {
-  background-position: -700px -800px;
-}
-    
-.ap-flag-la {
-  background-position: -720px -0px;
-}
-    
-.ap-flag-lb {
-  background-position: -720px -20px;
-}
-    
-.ap-flag-lc {
-  background-position: -720px -40px;
-}
-    
-.ap-flag-li {
-  background-position: -720px -60px;
-}
-    
-.ap-flag-lk {
-  background-position: -720px -80px;
-}
-    
-.ap-flag-lr {
-  background-position: -720px -100px;
-}
-    
-.ap-flag-ls {
-  background-position: -720px -120px;
-}
-    
-.ap-flag-lt {
-  background-position: -720px -140px;
-}
-    
-.ap-flag-lu {
-  background-position: -720px -160px;
-}
-    
-.ap-flag-lv {
-  background-position: -720px -180px;
-}
-    
-.ap-flag-ly {
-  background-position: -720px -200px;
-}
-    
-.ap-flag-ma {
-  background-position: -720px -220px;
-}
-    
-.ap-flag-mc {
-  background-position: -720px -240px;
-}
-    
-.ap-flag-md {
-  background-position: -720px -260px;
-}
-    
-.ap-flag-me {
-  background-position: -720px -280px;
-}
-    
-.ap-flag-mf {
-  background-position: -720px -300px;
-}
-    
-.ap-flag-mg {
-  background-position: -720px -320px;
-}
-    
-.ap-flag-mh {
-  background-position: -720px -340px;
-}
-    
-.ap-flag-mk {
-  background-position: -720px -360px;
-}
-    
-.ap-flag-ml {
-  background-position: -720px -380px;
-}
-    
-.ap-flag-mm {
-  background-position: -720px -400px;
-}
-    
-.ap-flag-mn {
-  background-position: -720px -420px;
-}
-    
-.ap-flag-mo {
-  background-position: -720px -440px;
-}
-    
-.ap-flag-mp {
-  background-position: -720px -460px;
-}
-    
-.ap-flag-mq {
-  background-position: -720px -480px;
-}
-    
-.ap-flag-mr {
-  background-position: -720px -500px;
-}
-    
-.ap-flag-ms {
-  background-position: -720px -520px;
-}
-    
-.ap-flag-mt {
-  background-position: -720px -540px;
-}
-    
-.ap-flag-mu {
-  background-position: -720px -560px;
-}
-    
-.ap-flag-mv {
-  background-position: -720px -580px;
-}
-    
-.ap-flag-mw {
-  background-position: -720px -600px;
-}
-    
-.ap-flag-mx {
-  background-position: -720px -620px;
-}
-    
-.ap-flag-my {
-  background-position: -720px -640px;
-}
-    
-.ap-flag-mz {
-  background-position: -720px -660px;
-}
-    
-.ap-flag-na {
-  background-position: -720px -680px;
-}
-    
-.ap-flag-nc {
-  background-position: -720px -700px;
-}
-    
-.ap-flag-ne {
-  background-position: -720px -720px;
-}
-    
-.ap-flag-nf {
-  background-position: -720px -740px;
-}
-    
-.ap-flag-ng {
-  background-position: -720px -760px;
-}
-    
-.ap-flag-ni {
-  background-position: -720px -780px;
-}
-    
-.ap-flag-nl {
-  background-position: -720px -800px;
-}
-    
-.ap-flag-no {
-  background-position: -740px -0px;
-}
-    
-.ap-flag-np {
-  background-position: -740px -20px;
-}
-    
-.ap-flag-nr {
-  background-position: -740px -40px;
-}
-    
-.ap-flag-nu {
-  background-position: -740px -60px;
-}
-    
-.ap-flag-nz {
-  background-position: -740px -80px;
-}
-    
-.ap-flag-om {
-  background-position: -740px -100px;
-}
-    
-.ap-flag-pa {
-  background-position: -740px -120px;
-}
-    
-.ap-flag-pe {
-  background-position: -740px -140px;
-}
-    
-.ap-flag-pf {
-  background-position: -740px -160px;
-}
-    
-.ap-flag-pg {
-  background-position: -740px -180px;
-}
-    
-.ap-flag-ph {
-  background-position: -740px -200px;
-}
-    
-.ap-flag-pk {
-  background-position: -740px -220px;
-}
-    
-.ap-flag-pl {
-  background-position: -740px -240px;
-}
-    
-.ap-flag-pm {
-  background-position: -740px -260px;
-}
-    
-.ap-flag-pn {
-  background-position: -740px -280px;
-}
-    
-.ap-flag-pr {
-  background-position: -740px -300px;
-}
-    
-.ap-flag-ps {
-  background-position: -740px -320px;
-}
-    
-.ap-flag-pt {
-  background-position: -740px -340px;
-}
-    
-.ap-flag-pw {
-  background-position: -740px -360px;
-}
-    
-.ap-flag-py {
-  background-position: -740px -380px;
-}
-    
-.ap-flag-qa {
-  background-position: -740px -400px;
-}
-    
-.ap-flag-re {
-  background-position: -740px -420px;
-}
-    
-.ap-flag-ro {
-  background-position: -740px -440px;
-}
-    
-.ap-flag-rs {
-  background-position: -740px -460px;
-}
-    
-.ap-flag-ru {
-  background-position: -740px -480px;
-}
-    
-.ap-flag-rw {
-  background-position: -740px -500px;
-}
-    
-.ap-flag-sa {
-  background-position: -740px -520px;
-}
-    
-.ap-flag-sb {
-  background-position: -740px -540px;
-}
-    
-.ap-flag-sc {
-  background-position: -740px -560px;
-}
-    
-.ap-flag-sd {
-  background-position: -740px -580px;
-}
-    
-.ap-flag-se {
-  background-position: -740px -600px;
-}
-    
-.ap-flag-sg {
-  background-position: -740px -620px;
-}
-    
-.ap-flag-sh {
-  background-position: -740px -640px;
-}
-    
-.ap-flag-si {
-  background-position: -740px -660px;
-}
-    
-.ap-flag-sj {
-  background-position: -740px -680px;
-}
-    
-.ap-flag-sk {
-  background-position: -740px -700px;
-}
-    
-.ap-flag-sl {
-  background-position: -740px -720px;
-}
-    
-.ap-flag-sm {
-  background-position: -740px -740px;
-}
-    
-.ap-flag-sn {
-  background-position: -740px -760px;
-}
-    
-.ap-flag-so {
-  background-position: -740px -780px;
-}
-    
-.ap-flag-sr {
-  background-position: -740px -800px;
-}
-    
-.ap-flag-ss {
-  background-position: -760px -0px;
-}
-    
-.ap-flag-st {
-  background-position: -760px -20px;
-}
-    
-.ap-flag-sv {
-  background-position: -760px -40px;
-}
-    
-.ap-flag-sx {
-  background-position: -760px -60px;
-}
-    
-.ap-flag-sy {
-  background-position: -760px -80px;
-}
-    
-.ap-flag-sz {
-  background-position: -760px -100px;
-}
-    
-.ap-flag-ta {
-  background-position: -760px -120px;
-}
-    
-.ap-flag-tc {
-  background-position: -760px -140px;
-}
-    
-.ap-flag-td {
-  background-position: -760px -160px;
-}
-    
-.ap-flag-tf {
-  background-position: -760px -180px;
-}
-    
-.ap-flag-tg {
-  background-position: -760px -200px;
-}
-    
-.ap-flag-th {
-  background-position: -760px -220px;
-}
-    
-.ap-flag-tj {
-  background-position: -760px -240px;
-}
-    
-.ap-flag-tk {
-  background-position: -760px -260px;
-}
-    
-.ap-flag-tl {
-  background-position: -760px -280px;
-}
-    
-.ap-flag-tm {
-  background-position: -760px -300px;
-}
-    
-.ap-flag-tn {
-  background-position: -760px -320px;
-}
-    
-.ap-flag-to {
-  background-position: -760px -340px;
-}
-    
-.ap-flag-tr {
-  background-position: -760px -360px;
-}
-    
-.ap-flag-tt {
-  background-position: -760px -380px;
-}
-    
-.ap-flag-tv {
-  background-position: -760px -400px;
-}
-    
-.ap-flag-tw {
-  background-position: -760px -420px;
-}
-    
-.ap-flag-tz {
-  background-position: -760px -440px;
-}
-    
-.ap-flag-ua {
-  background-position: -760px -460px;
-}
-    
-.ap-flag-ug {
-  background-position: -760px -480px;
-}
-    
-.ap-flag-um {
-  background-position: -760px -500px;
-}
-    
-.ap-flag-us {
-  background-position: -760px -520px;
-}
-    
-.ap-flag-uy {
-  background-position: -760px -540px;
-}
-    
-.ap-flag-uz {
-  background-position: -760px -560px;
-}
-    
-.ap-flag-va {
-  background-position: -760px -580px;
-}
-    
-.ap-flag-vc {
-  background-position: -760px -600px;
-}
-    
-.ap-flag-ve {
-  background-position: -760px -620px;
-}
-    
-.ap-flag-vg {
-  background-position: -760px -640px;
-}
-    
-.ap-flag-vi {
-  background-position: -760px -660px;
-}
-    
-.ap-flag-vn {
-  background-position: -760px -680px;
-}
-    
-.ap-flag-vu {
-  background-position: -760px -700px;
-}
-    
-.ap-flag-wf {
-  background-position: -760px -720px;
-}
-    
-.ap-flag-ws {
-  background-position: -760px -740px;
-}
-    
-.ap-flag-xk {
-  background-position: -760px -760px;
-}
-    
-.ap-flag-ye {
-  background-position: -760px -780px;
-}
-    
-.ap-flag-yt {
-  background-position: -760px -800px;
-}
-    
-.ap-flag-za {
-  background-position: -780px -0px;
-}
-    
-.ap-flag-zm {
-  background-position: -780px -20px;
-}
-    
-.ap-flag-zw {
-  background-position: -780px -40px;
-}
-    
-.ap-man-man-boy {
-  background-position: -780px -60px;
-}
-    
-.ap-man-man-boy-boy {
-  background-position: -780px -80px;
-}
-    
-.ap-man-man-girl {
-  background-position: -780px -100px;
-}
-    
-.ap-man-man-girl-boy {
-  background-position: -780px -120px;
-}
-    
-.ap-man-man-girl-girl {
-  background-position: -780px -140px;
-}
-    
-.ap-man-woman-boy-boy {
-  background-position: -780px -160px;
-}
-    
-.ap-man-woman-girl {
-  background-position: -780px -180px;
-}
-    
-.ap-man-woman-girl-boy {
-  background-position: -780px -200px;
-}
-    
-.ap-man-woman-girl-girl {
-  background-position: -780px -220px;
-}
-    
-.ap-man-heart-man {
-  background-position: -780px -240px;
-}
-    
-.ap-man-kiss-man {
-  background-position: -780px -260px;
-}
-    
-.ap-woman-woman-boy {
-  background-position: -780px -280px;
-}
-    
-.ap-woman-woman-boy-boy {
-  background-position: -780px -300px;
-}
-    
-.ap-woman-woman-girl {
-  background-position: -780px -320px;
-}
-    
-.ap-woman-woman-girl-boy {
-  background-position: -780px -340px;
-}
-    
-.ap-woman-woman-girl-girl {
-  background-position: -780px -360px;
-}
-    
-.ap-woman-heart-woman {
-  background-position: -780px -380px;
-}
-    
-.ap-woman-kiss-woman {
-  background-position: -780px -400px;
-}
-    
+	.em-hash {
+		background-position: -0px -0px;
+	}
+	.em-keycap_star {
+		background-position: -0px -34px;
+	}
+	.em-zero {
+		background-position: -0px -68px;
+	}
+	.em-one {
+		background-position: -0px -102px;
+	}
+	.em-two {
+		background-position: -0px -136px;
+	}
+	.em-three {
+		background-position: -0px -170px;
+	}
+	.em-four {
+		background-position: -0px -204px;
+	}
+	.em-five {
+		background-position: -0px -238px;
+	}
+	.em-six {
+		background-position: -0px -272px;
+	}
+	.em-seven {
+		background-position: -0px -306px;
+	}
+	.em-eight {
+		background-position: -0px -340px;
+	}
+	.em-nine {
+		background-position: -0px -374px;
+	}
+	.em-copyright {
+		background-position: -0px -408px;
+	}
+	.em-registered {
+		background-position: -0px -442px;
+	}
+	.em-mahjong {
+		background-position: -0px -476px;
+	}
+	.em-black_joker {
+		background-position: -0px -510px;
+	}
+	.em-a {
+		background-position: -0px -544px;
+	}
+	.em-b {
+		background-position: -0px -578px;
+	}
+	.em-o2 {
+		background-position: -0px -612px;
+	}
+	.em-parking {
+		background-position: -0px -646px;
+	}
+	.em-ab {
+		background-position: -0px -680px;
+	}
+	.em-cl {
+		background-position: -0px -714px;
+	}
+	.em-cool {
+		background-position: -0px -748px;
+	}
+	.em-free {
+		background-position: -0px -782px;
+	}
+	.em-id {
+		background-position: -0px -816px;
+	}
+	.em-new {
+		background-position: -0px -850px;
+	}
+	.em-ng {
+		background-position: -0px -884px;
+	}
+	.em-ok {
+		background-position: -0px -918px;
+	}
+	.em-sos {
+		background-position: -0px -952px;
+	}
+	.em-up {
+		background-position: -0px -986px;
+	}
+	.em-vs {
+		background-position: -0px -1020px;
+	}
+	.em-flag-ac {
+		background-position: -0px -1054px;
+	}
+	.em-flag-ad {
+		background-position: -0px -1088px;
+	}
+	.em-flag-ae {
+		background-position: -0px -1122px;
+	}
+	.em-flag-af {
+		background-position: -0px -1156px;
+	}
+	.em-flag-ag {
+		background-position: -0px -1190px;
+	}
+	.em-flag-ai {
+		background-position: -0px -1224px;
+	}
+	.em-flag-al {
+		background-position: -0px -1258px;
+	}
+	.em-flag-am {
+		background-position: -0px -1292px;
+	}
+	.em-flag-ao {
+		background-position: -0px -1326px;
+	}
+	.em-flag-aq {
+		background-position: -0px -1360px;
+	}
+	.em-flag-ar {
+		background-position: -0px -1394px;
+	}
+	.em-flag-as {
+		background-position: -0px -1428px;
+	}
+	.em-flag-at {
+		background-position: -0px -1462px;
+	}
+	.em-flag-au {
+		background-position: -0px -1496px;
+	}
+	.em-flag-aw {
+		background-position: -0px -1530px;
+	}
+	.em-flag-ax {
+		background-position: -0px -1564px;
+	}
+	.em-flag-az {
+		background-position: -0px -1598px;
+	}
+	.em-flag-ba {
+		background-position: -0px -1632px;
+	}
+	.em-flag-bb {
+		background-position: -0px -1666px;
+	}
+	.em-flag-bd {
+		background-position: -0px -1700px;
+	}
+	.em-flag-be {
+		background-position: -0px -1734px;
+	}
+	.em-flag-bf {
+		background-position: -0px -1768px;
+	}
+	.em-flag-bg {
+		background-position: -0px -1802px;
+	}
+	.em-flag-bh {
+		background-position: -0px -1836px;
+	}
+	.em-flag-bi {
+		background-position: -0px -1870px;
+	}
+	.em-flag-bj {
+		background-position: -0px -1904px;
+	}
+	.em-flag-bl {
+		background-position: -34px -0px;
+	}
+	.em-flag-bm {
+		background-position: -34px -34px;
+	}
+	.em-flag-bn {
+		background-position: -34px -68px;
+	}
+	.em-flag-bo {
+		background-position: -34px -102px;
+	}
+	.em-flag-bq {
+		background-position: -34px -136px;
+	}
+	.em-flag-br {
+		background-position: -34px -170px;
+	}
+	.em-flag-bs {
+		background-position: -34px -204px;
+	}
+	.em-flag-bt {
+		background-position: -34px -238px;
+	}
+	.em-flag-bv {
+		background-position: -34px -272px;
+	}
+	.em-flag-bw {
+		background-position: -34px -306px;
+	}
+	.em-flag-by {
+		background-position: -34px -340px;
+	}
+	.em-flag-bz {
+		background-position: -34px -374px;
+	}
+	.em-flag-ca {
+		background-position: -34px -408px;
+	}
+	.em-flag-cc {
+		background-position: -34px -442px;
+	}
+	.em-flag-cd {
+		background-position: -34px -476px;
+	}
+	.em-flag-cf {
+		background-position: -34px -510px;
+	}
+	.em-flag-cg {
+		background-position: -34px -544px;
+	}
+	.em-flag-ch {
+		background-position: -34px -578px;
+	}
+	.em-flag-ci {
+		background-position: -34px -612px;
+	}
+	.em-flag-ck {
+		background-position: -34px -646px;
+	}
+	.em-flag-cl {
+		background-position: -34px -680px;
+	}
+	.em-flag-cm {
+		background-position: -34px -714px;
+	}
+	.em-cn {
+		background-position: -34px -748px;
+	}
+	.em-flag-co {
+		background-position: -34px -782px;
+	}
+	.em-flag-cp {
+		background-position: -34px -816px;
+	}
+	.em-flag-cr {
+		background-position: -34px -850px;
+	}
+	.em-flag-cu {
+		background-position: -34px -884px;
+	}
+	.em-flag-cv {
+		background-position: -34px -918px;
+	}
+	.em-flag-cw {
+		background-position: -34px -952px;
+	}
+	.em-flag-cx {
+		background-position: -34px -986px;
+	}
+	.em-flag-cy {
+		background-position: -34px -1020px;
+	}
+	.em-flag-cz {
+		background-position: -34px -1054px;
+	}
+	.em-de {
+		background-position: -34px -1088px;
+	}
+	.em-flag-dg {
+		background-position: -34px -1122px;
+	}
+	.em-flag-dj {
+		background-position: -34px -1156px;
+	}
+	.em-flag-dk {
+		background-position: -34px -1190px;
+	}
+	.em-flag-dm {
+		background-position: -34px -1224px;
+	}
+	.em-flag-do {
+		background-position: -34px -1258px;
+	}
+	.em-flag-dz {
+		background-position: -34px -1292px;
+	}
+	.em-flag-ea {
+		background-position: -34px -1326px;
+	}
+	.em-flag-ec {
+		background-position: -34px -1360px;
+	}
+	.em-flag-ee {
+		background-position: -34px -1394px;
+	}
+	.em-flag-eg {
+		background-position: -34px -1428px;
+	}
+	.em-flag-eh {
+		background-position: -34px -1462px;
+	}
+	.em-flag-er {
+		background-position: -34px -1496px;
+	}
+	.em-es {
+		background-position: -34px -1530px;
+	}
+	.em-flag-et {
+		background-position: -34px -1564px;
+	}
+	.em-flag-eu {
+		background-position: -34px -1598px;
+	}
+	.em-flag-fi {
+		background-position: -34px -1632px;
+	}
+	.em-flag-fj {
+		background-position: -34px -1666px;
+	}
+	.em-flag-fk {
+		background-position: -34px -1700px;
+	}
+	.em-flag-fm {
+		background-position: -34px -1734px;
+	}
+	.em-flag-fo {
+		background-position: -34px -1768px;
+	}
+	.em-fr {
+		background-position: -34px -1802px;
+	}
+	.em-flag-ga {
+		background-position: -34px -1836px;
+	}
+	.em-gb {
+		background-position: -34px -1870px;
+	}
+	.em-flag-gd {
+		background-position: -34px -1904px;
+	}
+	.em-flag-ge {
+		background-position: -68px -0px;
+	}
+	.em-flag-gf {
+		background-position: -68px -34px;
+	}
+	.em-flag-gg {
+		background-position: -68px -68px;
+	}
+	.em-flag-gh {
+		background-position: -68px -102px;
+	}
+	.em-flag-gi {
+		background-position: -68px -136px;
+	}
+	.em-flag-gl {
+		background-position: -68px -170px;
+	}
+	.em-flag-gm {
+		background-position: -68px -204px;
+	}
+	.em-flag-gn {
+		background-position: -68px -238px;
+	}
+	.em-flag-gp {
+		background-position: -68px -272px;
+	}
+	.em-flag-gq {
+		background-position: -68px -306px;
+	}
+	.em-flag-gr {
+		background-position: -68px -340px;
+	}
+	.em-flag-gs {
+		background-position: -68px -374px;
+	}
+	.em-flag-gt {
+		background-position: -68px -408px;
+	}
+	.em-flag-gu {
+		background-position: -68px -442px;
+	}
+	.em-flag-gw {
+		background-position: -68px -476px;
+	}
+	.em-flag-gy {
+		background-position: -68px -510px;
+	}
+	.em-flag-hk {
+		background-position: -68px -544px;
+	}
+	.em-flag-hm {
+		background-position: -68px -578px;
+	}
+	.em-flag-hn {
+		background-position: -68px -612px;
+	}
+	.em-flag-hr {
+		background-position: -68px -646px;
+	}
+	.em-flag-ht {
+		background-position: -68px -680px;
+	}
+	.em-flag-hu {
+		background-position: -68px -714px;
+	}
+	.em-flag-ic {
+		background-position: -68px -748px;
+	}
+	.em-flag-id {
+		background-position: -68px -782px;
+	}
+	.em-flag-ie {
+		background-position: -68px -816px;
+	}
+	.em-flag-il {
+		background-position: -68px -850px;
+	}
+	.em-flag-im {
+		background-position: -68px -884px;
+	}
+	.em-flag-in {
+		background-position: -68px -918px;
+	}
+	.em-flag-io {
+		background-position: -68px -952px;
+	}
+	.em-flag-iq {
+		background-position: -68px -986px;
+	}
+	.em-flag-ir {
+		background-position: -68px -1020px;
+	}
+	.em-flag-is {
+		background-position: -68px -1054px;
+	}
+	.em-it {
+		background-position: -68px -1088px;
+	}
+	.em-flag-je {
+		background-position: -68px -1122px;
+	}
+	.em-flag-jm {
+		background-position: -68px -1156px;
+	}
+	.em-flag-jo {
+		background-position: -68px -1190px;
+	}
+	.em-jp {
+		background-position: -68px -1224px;
+	}
+	.em-flag-ke {
+		background-position: -68px -1258px;
+	}
+	.em-flag-kg {
+		background-position: -68px -1292px;
+	}
+	.em-flag-kh {
+		background-position: -68px -1326px;
+	}
+	.em-flag-ki {
+		background-position: -68px -1360px;
+	}
+	.em-flag-km {
+		background-position: -68px -1394px;
+	}
+	.em-flag-kn {
+		background-position: -68px -1428px;
+	}
+	.em-flag-kp {
+		background-position: -68px -1462px;
+	}
+	.em-kr {
+		background-position: -68px -1496px;
+	}
+	.em-flag-kw {
+		background-position: -68px -1530px;
+	}
+	.em-flag-ky {
+		background-position: -68px -1564px;
+	}
+	.em-flag-kz {
+		background-position: -68px -1598px;
+	}
+	.em-flag-la {
+		background-position: -68px -1632px;
+	}
+	.em-flag-lb {
+		background-position: -68px -1666px;
+	}
+	.em-flag-lc {
+		background-position: -68px -1700px;
+	}
+	.em-flag-li {
+		background-position: -68px -1734px;
+	}
+	.em-flag-lk {
+		background-position: -68px -1768px;
+	}
+	.em-flag-lr {
+		background-position: -68px -1802px;
+	}
+	.em-flag-ls {
+		background-position: -68px -1836px;
+	}
+	.em-flag-lt {
+		background-position: -68px -1870px;
+	}
+	.em-flag-lu {
+		background-position: -68px -1904px;
+	}
+	.em-flag-lv {
+		background-position: -102px -0px;
+	}
+	.em-flag-ly {
+		background-position: -102px -34px;
+	}
+	.em-flag-ma {
+		background-position: -102px -68px;
+	}
+	.em-flag-mc {
+		background-position: -102px -102px;
+	}
+	.em-flag-md {
+		background-position: -102px -136px;
+	}
+	.em-flag-me {
+		background-position: -102px -170px;
+	}
+	.em-flag-mf {
+		background-position: -102px -204px;
+	}
+	.em-flag-mg {
+		background-position: -102px -238px;
+	}
+	.em-flag-mh {
+		background-position: -102px -272px;
+	}
+	.em-flag-mk {
+		background-position: -102px -306px;
+	}
+	.em-flag-ml {
+		background-position: -102px -340px;
+	}
+	.em-flag-mm {
+		background-position: -102px -374px;
+	}
+	.em-flag-mn {
+		background-position: -102px -408px;
+	}
+	.em-flag-mo {
+		background-position: -102px -442px;
+	}
+	.em-flag-mp {
+		background-position: -102px -476px;
+	}
+	.em-flag-mq {
+		background-position: -102px -510px;
+	}
+	.em-flag-mr {
+		background-position: -102px -544px;
+	}
+	.em-flag-ms {
+		background-position: -102px -578px;
+	}
+	.em-flag-mt {
+		background-position: -102px -612px;
+	}
+	.em-flag-mu {
+		background-position: -102px -646px;
+	}
+	.em-flag-mv {
+		background-position: -102px -680px;
+	}
+	.em-flag-mw {
+		background-position: -102px -714px;
+	}
+	.em-flag-mx {
+		background-position: -102px -748px;
+	}
+	.em-flag-my {
+		background-position: -102px -782px;
+	}
+	.em-flag-mz {
+		background-position: -102px -816px;
+	}
+	.em-flag-na {
+		background-position: -102px -850px;
+	}
+	.em-flag-nc {
+		background-position: -102px -884px;
+	}
+	.em-flag-ne {
+		background-position: -102px -918px;
+	}
+	.em-flag-nf {
+		background-position: -102px -952px;
+	}
+	.em-flag-ng {
+		background-position: -102px -986px;
+	}
+	.em-flag-ni {
+		background-position: -102px -1020px;
+	}
+	.em-flag-nl {
+		background-position: -102px -1054px;
+	}
+	.em-flag-no {
+		background-position: -102px -1088px;
+	}
+	.em-flag-np {
+		background-position: -102px -1122px;
+	}
+	.em-flag-nr {
+		background-position: -102px -1156px;
+	}
+	.em-flag-nu {
+		background-position: -102px -1190px;
+	}
+	.em-flag-nz {
+		background-position: -102px -1224px;
+	}
+	.em-flag-om {
+		background-position: -102px -1258px;
+	}
+	.em-flag-pa {
+		background-position: -102px -1292px;
+	}
+	.em-flag-pe {
+		background-position: -102px -1326px;
+	}
+	.em-flag-pf {
+		background-position: -102px -1360px;
+	}
+	.em-flag-pg {
+		background-position: -102px -1394px;
+	}
+	.em-flag-ph {
+		background-position: -102px -1428px;
+	}
+	.em-flag-pk {
+		background-position: -102px -1462px;
+	}
+	.em-flag-pl {
+		background-position: -102px -1496px;
+	}
+	.em-flag-pm {
+		background-position: -102px -1530px;
+	}
+	.em-flag-pn {
+		background-position: -102px -1564px;
+	}
+	.em-flag-pr {
+		background-position: -102px -1598px;
+	}
+	.em-flag-ps {
+		background-position: -102px -1632px;
+	}
+	.em-flag-pt {
+		background-position: -102px -1666px;
+	}
+	.em-flag-pw {
+		background-position: -102px -1700px;
+	}
+	.em-flag-py {
+		background-position: -102px -1734px;
+	}
+	.em-flag-qa {
+		background-position: -102px -1768px;
+	}
+	.em-flag-re {
+		background-position: -102px -1802px;
+	}
+	.em-flag-ro {
+		background-position: -102px -1836px;
+	}
+	.em-flag-rs {
+		background-position: -102px -1870px;
+	}
+	.em-ru {
+		background-position: -102px -1904px;
+	}
+	.em-flag-rw {
+		background-position: -136px -0px;
+	}
+	.em-flag-sa {
+		background-position: -136px -34px;
+	}
+	.em-flag-sb {
+		background-position: -136px -68px;
+	}
+	.em-flag-sc {
+		background-position: -136px -102px;
+	}
+	.em-flag-sd {
+		background-position: -136px -136px;
+	}
+	.em-flag-se {
+		background-position: -136px -170px;
+	}
+	.em-flag-sg {
+		background-position: -136px -204px;
+	}
+	.em-flag-sh {
+		background-position: -136px -238px;
+	}
+	.em-flag-si {
+		background-position: -136px -272px;
+	}
+	.em-flag-sj {
+		background-position: -136px -306px;
+	}
+	.em-flag-sk {
+		background-position: -136px -340px;
+	}
+	.em-flag-sl {
+		background-position: -136px -374px;
+	}
+	.em-flag-sm {
+		background-position: -136px -408px;
+	}
+	.em-flag-sn {
+		background-position: -136px -442px;
+	}
+	.em-flag-so {
+		background-position: -136px -476px;
+	}
+	.em-flag-sr {
+		background-position: -136px -510px;
+	}
+	.em-flag-ss {
+		background-position: -136px -544px;
+	}
+	.em-flag-st {
+		background-position: -136px -578px;
+	}
+	.em-flag-sv {
+		background-position: -136px -612px;
+	}
+	.em-flag-sx {
+		background-position: -136px -646px;
+	}
+	.em-flag-sy {
+		background-position: -136px -680px;
+	}
+	.em-flag-sz {
+		background-position: -136px -714px;
+	}
+	.em-flag-ta {
+		background-position: -136px -748px;
+	}
+	.em-flag-tc {
+		background-position: -136px -782px;
+	}
+	.em-flag-td {
+		background-position: -136px -816px;
+	}
+	.em-flag-tf {
+		background-position: -136px -850px;
+	}
+	.em-flag-tg {
+		background-position: -136px -884px;
+	}
+	.em-flag-th {
+		background-position: -136px -918px;
+	}
+	.em-flag-tj {
+		background-position: -136px -952px;
+	}
+	.em-flag-tk {
+		background-position: -136px -986px;
+	}
+	.em-flag-tl {
+		background-position: -136px -1020px;
+	}
+	.em-flag-tm {
+		background-position: -136px -1054px;
+	}
+	.em-flag-tn {
+		background-position: -136px -1088px;
+	}
+	.em-flag-to {
+		background-position: -136px -1122px;
+	}
+	.em-flag-tr {
+		background-position: -136px -1156px;
+	}
+	.em-flag-tt {
+		background-position: -136px -1190px;
+	}
+	.em-flag-tv {
+		background-position: -136px -1224px;
+	}
+	.em-flag-tw {
+		background-position: -136px -1258px;
+	}
+	.em-flag-tz {
+		background-position: -136px -1292px;
+	}
+	.em-flag-ua {
+		background-position: -136px -1326px;
+	}
+	.em-flag-ug {
+		background-position: -136px -1360px;
+	}
+	.em-flag-um {
+		background-position: -136px -1394px;
+	}
+	.em-flag-un {
+		background-position: -136px -1428px;
+	}
+	.em-us {
+		background-position: -136px -1462px;
+	}
+	.em-flag-uy {
+		background-position: -136px -1496px;
+	}
+	.em-flag-uz {
+		background-position: -136px -1530px;
+	}
+	.em-flag-va {
+		background-position: -136px -1564px;
+	}
+	.em-flag-vc {
+		background-position: -136px -1598px;
+	}
+	.em-flag-ve {
+		background-position: -136px -1632px;
+	}
+	.em-flag-vg {
+		background-position: -136px -1666px;
+	}
+	.em-flag-vi {
+		background-position: -136px -1700px;
+	}
+	.em-flag-vn {
+		background-position: -136px -1734px;
+	}
+	.em-flag-vu {
+		background-position: -136px -1768px;
+	}
+	.em-flag-wf {
+		background-position: -136px -1802px;
+	}
+	.em-flag-ws {
+		background-position: -136px -1836px;
+	}
+	.em-flag-xk {
+		background-position: -136px -1870px;
+	}
+	.em-flag-ye {
+		background-position: -136px -1904px;
+	}
+	.em-flag-yt {
+		background-position: -170px -0px;
+	}
+	.em-flag-za {
+		background-position: -170px -34px;
+	}
+	.em-flag-zm {
+		background-position: -170px -68px;
+	}
+	.em-flag-zw {
+		background-position: -170px -102px;
+	}
+	.em-koko {
+		background-position: -170px -136px;
+	}
+	.em-sa {
+		background-position: -170px -170px;
+	}
+	.em-u7121 {
+		background-position: -170px -204px;
+	}
+	.em-u6307 {
+		background-position: -170px -238px;
+	}
+	.em-u7981 {
+		background-position: -170px -272px;
+	}
+	.em-u7a7a {
+		background-position: -170px -306px;
+	}
+	.em-u5408 {
+		background-position: -170px -340px;
+	}
+	.em-u6e80 {
+		background-position: -170px -374px;
+	}
+	.em-u6709 {
+		background-position: -170px -408px;
+	}
+	.em-u6708 {
+		background-position: -170px -442px;
+	}
+	.em-u7533 {
+		background-position: -170px -476px;
+	}
+	.em-u5272 {
+		background-position: -170px -510px;
+	}
+	.em-u55b6 {
+		background-position: -170px -544px;
+	}
+	.em-ideograph_advantage {
+		background-position: -170px -578px;
+	}
+	.em-accept {
+		background-position: -170px -612px;
+	}
+	.em-cyclone {
+		background-position: -170px -646px;
+	}
+	.em-foggy {
+		background-position: -170px -680px;
+	}
+	.em-closed_umbrella {
+		background-position: -170px -714px;
+	}
+	.em-night_with_stars {
+		background-position: -170px -748px;
+	}
+	.em-sunrise_over_mountains {
+		background-position: -170px -782px;
+	}
+	.em-sunrise {
+		background-position: -170px -816px;
+	}
+	.em-city_sunset {
+		background-position: -170px -850px;
+	}
+	.em-city_sunrise {
+		background-position: -170px -884px;
+	}
+	.em-rainbow {
+		background-position: -170px -918px;
+	}
+	.em-bridge_at_night {
+		background-position: -170px -952px;
+	}
+	.em-ocean {
+		background-position: -170px -986px;
+	}
+	.em-volcano {
+		background-position: -170px -1020px;
+	}
+	.em-milky_way {
+		background-position: -170px -1054px;
+	}
+	.em-earth_africa {
+		background-position: -170px -1088px;
+	}
+	.em-earth_americas {
+		background-position: -170px -1122px;
+	}
+	.em-earth_asia {
+		background-position: -170px -1156px;
+	}
+	.em-globe_with_meridians {
+		background-position: -170px -1190px;
+	}
+	.em-new_moon {
+		background-position: -170px -1224px;
+	}
+	.em-waxing_crescent_moon {
+		background-position: -170px -1258px;
+	}
+	.em-first_quarter_moon {
+		background-position: -170px -1292px;
+	}
+	.em-moon {
+		background-position: -170px -1326px;
+	}
+	.em-full_moon {
+		background-position: -170px -1360px;
+	}
+	.em-waning_gibbous_moon {
+		background-position: -170px -1394px;
+	}
+	.em-last_quarter_moon {
+		background-position: -170px -1428px;
+	}
+	.em-waning_crescent_moon {
+		background-position: -170px -1462px;
+	}
+	.em-crescent_moon {
+		background-position: -170px -1496px;
+	}
+	.em-new_moon_with_face {
+		background-position: -170px -1530px;
+	}
+	.em-first_quarter_moon_with_face {
+		background-position: -170px -1564px;
+	}
+	.em-last_quarter_moon_with_face {
+		background-position: -170px -1598px;
+	}
+	.em-full_moon_with_face {
+		background-position: -170px -1632px;
+	}
+	.em-sun_with_face {
+		background-position: -170px -1666px;
+	}
+	.em-star2 {
+		background-position: -170px -1700px;
+	}
+	.em-stars {
+		background-position: -170px -1734px;
+	}
+	.em-thermometer {
+		background-position: -170px -1768px;
+	}
+	.em-mostly_sunny {
+		background-position: -170px -1802px;
+	}
+	.em-barely_sunny {
+		background-position: -170px -1836px;
+	}
+	.em-partly_sunny_rain {
+		background-position: -170px -1870px;
+	}
+	.em-rain_cloud {
+		background-position: -170px -1904px;
+	}
+	.em-snow_cloud {
+		background-position: -204px -0px;
+	}
+	.em-lightning {
+		background-position: -204px -34px;
+	}
+	.em-tornado {
+		background-position: -204px -68px;
+	}
+	.em-fog {
+		background-position: -204px -102px;
+	}
+	.em-wind_blowing_face {
+		background-position: -204px -136px;
+	}
+	.em-hotdog {
+		background-position: -204px -170px;
+	}
+	.em-taco {
+		background-position: -204px -204px;
+	}
+	.em-burrito {
+		background-position: -204px -238px;
+	}
+	.em-chestnut {
+		background-position: -204px -272px;
+	}
+	.em-seedling {
+		background-position: -204px -306px;
+	}
+	.em-evergreen_tree {
+		background-position: -204px -340px;
+	}
+	.em-deciduous_tree {
+		background-position: -204px -374px;
+	}
+	.em-palm_tree {
+		background-position: -204px -408px;
+	}
+	.em-cactus {
+		background-position: -204px -442px;
+	}
+	.em-hot_pepper {
+		background-position: -204px -476px;
+	}
+	.em-tulip {
+		background-position: -204px -510px;
+	}
+	.em-cherry_blossom {
+		background-position: -204px -544px;
+	}
+	.em-rose {
+		background-position: -204px -578px;
+	}
+	.em-hibiscus {
+		background-position: -204px -612px;
+	}
+	.em-sunflower {
+		background-position: -204px -646px;
+	}
+	.em-blossom {
+		background-position: -204px -680px;
+	}
+	.em-corn {
+		background-position: -204px -714px;
+	}
+	.em-ear_of_rice {
+		background-position: -204px -748px;
+	}
+	.em-herb {
+		background-position: -204px -782px;
+	}
+	.em-four_leaf_clover {
+		background-position: -204px -816px;
+	}
+	.em-maple_leaf {
+		background-position: -204px -850px;
+	}
+	.em-fallen_leaf {
+		background-position: -204px -884px;
+	}
+	.em-leaves {
+		background-position: -204px -918px;
+	}
+	.em-mushroom {
+		background-position: -204px -952px;
+	}
+	.em-tomato {
+		background-position: -204px -986px;
+	}
+	.em-eggplant {
+		background-position: -204px -1020px;
+	}
+	.em-grapes {
+		background-position: -204px -1054px;
+	}
+	.em-melon {
+		background-position: -204px -1088px;
+	}
+	.em-watermelon {
+		background-position: -204px -1122px;
+	}
+	.em-tangerine {
+		background-position: -204px -1156px;
+	}
+	.em-lemon {
+		background-position: -204px -1190px;
+	}
+	.em-banana {
+		background-position: -204px -1224px;
+	}
+	.em-pineapple {
+		background-position: -204px -1258px;
+	}
+	.em-apple {
+		background-position: -204px -1292px;
+	}
+	.em-green_apple {
+		background-position: -204px -1326px;
+	}
+	.em-pear {
+		background-position: -204px -1360px;
+	}
+	.em-peach {
+		background-position: -204px -1394px;
+	}
+	.em-cherries {
+		background-position: -204px -1428px;
+	}
+	.em-strawberry {
+		background-position: -204px -1462px;
+	}
+	.em-hamburger {
+		background-position: -204px -1496px;
+	}
+	.em-pizza {
+		background-position: -204px -1530px;
+	}
+	.em-meat_on_bone {
+		background-position: -204px -1564px;
+	}
+	.em-poultry_leg {
+		background-position: -204px -1598px;
+	}
+	.em-rice_cracker {
+		background-position: -204px -1632px;
+	}
+	.em-rice_ball {
+		background-position: -204px -1666px;
+	}
+	.em-rice {
+		background-position: -204px -1700px;
+	}
+	.em-curry {
+		background-position: -204px -1734px;
+	}
+	.em-ramen {
+		background-position: -204px -1768px;
+	}
+	.em-spaghetti {
+		background-position: -204px -1802px;
+	}
+	.em-bread {
+		background-position: -204px -1836px;
+	}
+	.em-fries {
+		background-position: -204px -1870px;
+	}
+	.em-sweet_potato {
+		background-position: -204px -1904px;
+	}
+	.em-dango {
+		background-position: -238px -0px;
+	}
+	.em-oden {
+		background-position: -238px -34px;
+	}
+	.em-sushi {
+		background-position: -238px -68px;
+	}
+	.em-fried_shrimp {
+		background-position: -238px -102px;
+	}
+	.em-fish_cake {
+		background-position: -238px -136px;
+	}
+	.em-icecream {
+		background-position: -238px -170px;
+	}
+	.em-shaved_ice {
+		background-position: -238px -204px;
+	}
+	.em-ice_cream {
+		background-position: -238px -238px;
+	}
+	.em-doughnut {
+		background-position: -238px -272px;
+	}
+	.em-cookie {
+		background-position: -238px -306px;
+	}
+	.em-chocolate_bar {
+		background-position: -238px -340px;
+	}
+	.em-candy {
+		background-position: -238px -374px;
+	}
+	.em-lollipop {
+		background-position: -238px -408px;
+	}
+	.em-custard {
+		background-position: -238px -442px;
+	}
+	.em-honey_pot {
+		background-position: -238px -476px;
+	}
+	.em-cake {
+		background-position: -238px -510px;
+	}
+	.em-bento {
+		background-position: -238px -544px;
+	}
+	.em-stew {
+		background-position: -238px -578px;
+	}
+	.em-fried_egg {
+		background-position: -238px -612px;
+	}
+	.em-fork_and_knife {
+		background-position: -238px -646px;
+	}
+	.em-tea {
+		background-position: -238px -680px;
+	}
+	.em-sake {
+		background-position: -238px -714px;
+	}
+	.em-wine_glass {
+		background-position: -238px -748px;
+	}
+	.em-cocktail {
+		background-position: -238px -782px;
+	}
+	.em-tropical_drink {
+		background-position: -238px -816px;
+	}
+	.em-beer {
+		background-position: -238px -850px;
+	}
+	.em-beers {
+		background-position: -238px -884px;
+	}
+	.em-baby_bottle {
+		background-position: -238px -918px;
+	}
+	.em-knife_fork_plate {
+		background-position: -238px -952px;
+	}
+	.em-champagne {
+		background-position: -238px -986px;
+	}
+	.em-popcorn {
+		background-position: -238px -1020px;
+	}
+	.em-ribbon {
+		background-position: -238px -1054px;
+	}
+	.em-gift {
+		background-position: -238px -1088px;
+	}
+	.em-birthday {
+		background-position: -238px -1122px;
+	}
+	.em-jack_o_lantern {
+		background-position: -238px -1156px;
+	}
+	.em-christmas_tree {
+		background-position: -238px -1190px;
+	}
+	.em-santa {
+		background-position: -238px -1224px;
+	}
+	.em-fireworks {
+		background-position: -238px -1428px;
+	}
+	.em-sparkler {
+		background-position: -238px -1462px;
+	}
+	.em-balloon {
+		background-position: -238px -1496px;
+	}
+	.em-tada {
+		background-position: -238px -1530px;
+	}
+	.em-confetti_ball {
+		background-position: -238px -1564px;
+	}
+	.em-tanabata_tree {
+		background-position: -238px -1598px;
+	}
+	.em-crossed_flags {
+		background-position: -238px -1632px;
+	}
+	.em-bamboo {
+		background-position: -238px -1666px;
+	}
+	.em-dolls {
+		background-position: -238px -1700px;
+	}
+	.em-flags {
+		background-position: -238px -1734px;
+	}
+	.em-wind_chime {
+		background-position: -238px -1768px;
+	}
+	.em-rice_scene {
+		background-position: -238px -1802px;
+	}
+	.em-school_satchel {
+		background-position: -238px -1836px;
+	}
+	.em-mortar_board {
+		background-position: -238px -1870px;
+	}
+	.em-medal {
+		background-position: -238px -1904px;
+	}
+	.em-reminder_ribbon {
+		background-position: -272px -0px;
+	}
+	.em-studio_microphone {
+		background-position: -272px -34px;
+	}
+	.em-level_slider {
+		background-position: -272px -68px;
+	}
+	.em-control_knobs {
+		background-position: -272px -102px;
+	}
+	.em-film_frames {
+		background-position: -272px -136px;
+	}
+	.em-admission_tickets {
+		background-position: -272px -170px;
+	}
+	.em-carousel_horse {
+		background-position: -272px -204px;
+	}
+	.em-ferris_wheel {
+		background-position: -272px -238px;
+	}
+	.em-roller_coaster {
+		background-position: -272px -272px;
+	}
+	.em-fishing_pole_and_fish {
+		background-position: -272px -306px;
+	}
+	.em-microphone {
+		background-position: -272px -340px;
+	}
+	.em-movie_camera {
+		background-position: -272px -374px;
+	}
+	.em-cinema {
+		background-position: -272px -408px;
+	}
+	.em-headphones {
+		background-position: -272px -442px;
+	}
+	.em-art {
+		background-position: -272px -476px;
+	}
+	.em-tophat {
+		background-position: -272px -510px;
+	}
+	.em-circus_tent {
+		background-position: -272px -544px;
+	}
+	.em-ticket {
+		background-position: -272px -578px;
+	}
+	.em-clapper {
+		background-position: -272px -612px;
+	}
+	.em-performing_arts {
+		background-position: -272px -646px;
+	}
+	.em-video_game {
+		background-position: -272px -680px;
+	}
+	.em-dart {
+		background-position: -272px -714px;
+	}
+	.em-slot_machine {
+		background-position: -272px -748px;
+	}
+	.em-8ball {
+		background-position: -272px -782px;
+	}
+	.em-game_die {
+		background-position: -272px -816px;
+	}
+	.em-bowling {
+		background-position: -272px -850px;
+	}
+	.em-flower_playing_cards {
+		background-position: -272px -884px;
+	}
+	.em-musical_note {
+		background-position: -272px -918px;
+	}
+	.em-notes {
+		background-position: -272px -952px;
+	}
+	.em-saxophone {
+		background-position: -272px -986px;
+	}
+	.em-guitar {
+		background-position: -272px -1020px;
+	}
+	.em-musical_keyboard {
+		background-position: -272px -1054px;
+	}
+	.em-trumpet {
+		background-position: -272px -1088px;
+	}
+	.em-violin {
+		background-position: -272px -1122px;
+	}
+	.em-musical_score {
+		background-position: -272px -1156px;
+	}
+	.em-running_shirt_with_sash {
+		background-position: -272px -1190px;
+	}
+	.em-tennis {
+		background-position: -272px -1224px;
+	}
+	.em-ski {
+		background-position: -272px -1258px;
+	}
+	.em-basketball {
+		background-position: -272px -1292px;
+	}
+	.em-checkered_flag {
+		background-position: -272px -1326px;
+	}
+	.em-snowboarder {
+		background-position: -272px -1360px;
+	}
+	.em-woman-running {
+		background-position: -272px -1564px;
+	}
+	.em-man-running {
+		background-position: -272px -1768px;
+	}
+	.em-runner {
+		background-position: -306px -34px;
+	}
+	.em-woman-surfing {
+		background-position: -306px -238px;
+	}
+	.em-man-surfing {
+		background-position: -306px -442px;
+	}
+	.em-surfer {
+		background-position: -306px -646px;
+	}
+	.em-sports_medal {
+		background-position: -306px -850px;
+	}
+	.em-trophy {
+		background-position: -306px -884px;
+	}
+	.em-horse_racing {
+		background-position: -306px -918px;
+	}
+	.em-football {
+		background-position: -306px -1122px;
+	}
+	.em-rugby_football {
+		background-position: -306px -1156px;
+	}
+	.em-woman-swimming {
+		background-position: -306px -1190px;
+	}
+	.em-man-swimming {
+		background-position: -306px -1394px;
+	}
+	.em-swimmer {
+		background-position: -306px -1598px;
+	}
+	.em-woman-lifting-weights {
+		background-position: -306px -1802px;
+	}
+	.em-man-lifting-weights {
+		background-position: -340px -68px;
+	}
+	.em-weight_lifter {
+		background-position: -340px -272px;
+	}
+	.em-woman-golfing {
+		background-position: -340px -476px;
+	}
+	.em-man-golfing {
+		background-position: -340px -680px;
+	}
+	.em-golfer {
+		background-position: -340px -884px;
+	}
+	.em-racing_motorcycle {
+		background-position: -340px -1088px;
+	}
+	.em-racing_car {
+		background-position: -340px -1122px;
+	}
+	.em-cricket_bat_and_ball {
+		background-position: -340px -1156px;
+	}
+	.em-volleyball {
+		background-position: -340px -1190px;
+	}
+	.em-field_hockey_stick_and_ball {
+		background-position: -340px -1224px;
+	}
+	.em-ice_hockey_stick_and_puck {
+		background-position: -340px -1258px;
+	}
+	.em-table_tennis_paddle_and_ball {
+		background-position: -340px -1292px;
+	}
+	.em-snow_capped_mountain {
+		background-position: -340px -1326px;
+	}
+	.em-camping {
+		background-position: -340px -1360px;
+	}
+	.em-beach_with_umbrella {
+		background-position: -340px -1394px;
+	}
+	.em-building_construction {
+		background-position: -340px -1428px;
+	}
+	.em-house_buildings {
+		background-position: -340px -1462px;
+	}
+	.em-cityscape {
+		background-position: -340px -1496px;
+	}
+	.em-derelict_house_building {
+		background-position: -340px -1530px;
+	}
+	.em-classical_building {
+		background-position: -340px -1564px;
+	}
+	.em-desert {
+		background-position: -340px -1598px;
+	}
+	.em-desert_island {
+		background-position: -340px -1632px;
+	}
+	.em-national_park {
+		background-position: -340px -1666px;
+	}
+	.em-stadium {
+		background-position: -340px -1700px;
+	}
+	.em-house {
+		background-position: -340px -1734px;
+	}
+	.em-house_with_garden {
+		background-position: -340px -1768px;
+	}
+	.em-office {
+		background-position: -340px -1802px;
+	}
+	.em-post_office {
+		background-position: -340px -1836px;
+	}
+	.em-european_post_office {
+		background-position: -340px -1870px;
+	}
+	.em-hospital {
+		background-position: -340px -1904px;
+	}
+	.em-bank {
+		background-position: -374px -0px;
+	}
+	.em-atm {
+		background-position: -374px -34px;
+	}
+	.em-hotel {
+		background-position: -374px -68px;
+	}
+	.em-love_hotel {
+		background-position: -374px -102px;
+	}
+	.em-convenience_store {
+		background-position: -374px -136px;
+	}
+	.em-school {
+		background-position: -374px -170px;
+	}
+	.em-department_store {
+		background-position: -374px -204px;
+	}
+	.em-factory {
+		background-position: -374px -238px;
+	}
+	.em-izakaya_lantern {
+		background-position: -374px -272px;
+	}
+	.em-japanese_castle {
+		background-position: -374px -306px;
+	}
+	.em-european_castle {
+		background-position: -374px -340px;
+	}
+	.em-rainbow-flag {
+		background-position: -374px -374px;
+	}
+	.em-waving_white_flag {
+		background-position: -374px -408px;
+	}
+	.em-pirate_flag {
+		background-position: -374px -442px;
+	}
+	.em-flag-england {
+		background-position: -374px -476px;
+	}
+	.em-flag-scotland {
+		background-position: -374px -510px;
+	}
+	.em-flag-wales {
+		background-position: -374px -544px;
+	}
+	.em-waving_black_flag {
+		background-position: -374px -578px;
+	}
+	.em-rosette {
+		background-position: -374px -612px;
+	}
+	.em-label {
+		background-position: -374px -646px;
+	}
+	.em-badminton_racquet_and_shuttlecock {
+		background-position: -374px -680px;
+	}
+	.em-bow_and_arrow {
+		background-position: -374px -714px;
+	}
+	.em-amphora {
+		background-position: -374px -748px;
+	}
+	.em-skin-tone-2 {
+		background-position: -374px -782px;
+	}
+	.em-skin-tone-3 {
+		background-position: -374px -816px;
+	}
+	.em-skin-tone-4 {
+		background-position: -374px -850px;
+	}
+	.em-skin-tone-5 {
+		background-position: -374px -884px;
+	}
+	.em-skin-tone-6 {
+		background-position: -374px -918px;
+	}
+	.em-rat {
+		background-position: -374px -952px;
+	}
+	.em-mouse2 {
+		background-position: -374px -986px;
+	}
+	.em-ox {
+		background-position: -374px -1020px;
+	}
+	.em-water_buffalo {
+		background-position: -374px -1054px;
+	}
+	.em-cow2 {
+		background-position: -374px -1088px;
+	}
+	.em-tiger2 {
+		background-position: -374px -1122px;
+	}
+	.em-leopard {
+		background-position: -374px -1156px;
+	}
+	.em-rabbit2 {
+		background-position: -374px -1190px;
+	}
+	.em-cat2 {
+		background-position: -374px -1224px;
+	}
+	.em-dragon {
+		background-position: -374px -1258px;
+	}
+	.em-crocodile {
+		background-position: -374px -1292px;
+	}
+	.em-whale2 {
+		background-position: -374px -1326px;
+	}
+	.em-snail {
+		background-position: -374px -1360px;
+	}
+	.em-snake {
+		background-position: -374px -1394px;
+	}
+	.em-racehorse {
+		background-position: -374px -1428px;
+	}
+	.em-ram {
+		background-position: -374px -1462px;
+	}
+	.em-goat {
+		background-position: -374px -1496px;
+	}
+	.em-sheep {
+		background-position: -374px -1530px;
+	}
+	.em-monkey {
+		background-position: -374px -1564px;
+	}
+	.em-rooster {
+		background-position: -374px -1598px;
+	}
+	.em-chicken {
+		background-position: -374px -1632px;
+	}
+	.em-service_dog {
+		background-position: -374px -1666px;
+	}
+	.em-dog2 {
+		background-position: -374px -1700px;
+	}
+	.em-pig2 {
+		background-position: -374px -1734px;
+	}
+	.em-boar {
+		background-position: -374px -1768px;
+	}
+	.em-elephant {
+		background-position: -374px -1802px;
+	}
+	.em-octopus {
+		background-position: -374px -1836px;
+	}
+	.em-shell {
+		background-position: -374px -1870px;
+	}
+	.em-bug {
+		background-position: -374px -1904px;
+	}
+	.em-ant {
+		background-position: -408px -0px;
+	}
+	.em-bee {
+		background-position: -408px -34px;
+	}
+	.em-beetle {
+		background-position: -408px -68px;
+	}
+	.em-fish {
+		background-position: -408px -102px;
+	}
+	.em-tropical_fish {
+		background-position: -408px -136px;
+	}
+	.em-blowfish {
+		background-position: -408px -170px;
+	}
+	.em-turtle {
+		background-position: -408px -204px;
+	}
+	.em-hatching_chick {
+		background-position: -408px -238px;
+	}
+	.em-baby_chick {
+		background-position: -408px -272px;
+	}
+	.em-hatched_chick {
+		background-position: -408px -306px;
+	}
+	.em-bird {
+		background-position: -408px -340px;
+	}
+	.em-penguin {
+		background-position: -408px -374px;
+	}
+	.em-koala {
+		background-position: -408px -408px;
+	}
+	.em-poodle {
+		background-position: -408px -442px;
+	}
+	.em-dromedary_camel {
+		background-position: -408px -476px;
+	}
+	.em-camel {
+		background-position: -408px -510px;
+	}
+	.em-dolphin {
+		background-position: -408px -544px;
+	}
+	.em-mouse {
+		background-position: -408px -578px;
+	}
+	.em-cow {
+		background-position: -408px -612px;
+	}
+	.em-tiger {
+		background-position: -408px -646px;
+	}
+	.em-rabbit {
+		background-position: -408px -680px;
+	}
+	.em-cat {
+		background-position: -408px -714px;
+	}
+	.em-dragon_face {
+		background-position: -408px -748px;
+	}
+	.em-whale {
+		background-position: -408px -782px;
+	}
+	.em-horse {
+		background-position: -408px -816px;
+	}
+	.em-monkey_face {
+		background-position: -408px -850px;
+	}
+	.em-dog {
+		background-position: -408px -884px;
+	}
+	.em-pig {
+		background-position: -408px -918px;
+	}
+	.em-frog {
+		background-position: -408px -952px;
+	}
+	.em-hamster {
+		background-position: -408px -986px;
+	}
+	.em-wolf {
+		background-position: -408px -1020px;
+	}
+	.em-bear {
+		background-position: -408px -1054px;
+	}
+	.em-panda_face {
+		background-position: -408px -1088px;
+	}
+	.em-pig_nose {
+		background-position: -408px -1122px;
+	}
+	.em-feet {
+		background-position: -408px -1156px;
+	}
+	.em-chipmunk {
+		background-position: -408px -1190px;
+	}
+	.em-eyes {
+		background-position: -408px -1224px;
+	}
+	.em-eye-in-speech-bubble {
+		background-position: -408px -1258px;
+	}
+	.em-eye {
+		background-position: -408px -1292px;
+	}
+	.em-ear {
+		background-position: -408px -1326px;
+	}
+	.em-nose {
+		background-position: -408px -1530px;
+	}
+	.em-lips {
+		background-position: -408px -1734px;
+	}
+	.em-tongue {
+		background-position: -408px -1768px;
+	}
+	.em-point_up_2 {
+		background-position: -408px -1802px;
+	}
+	.em-point_down {
+		background-position: -442px -68px;
+	}
+	.em-point_left {
+		background-position: -442px -272px;
+	}
+	.em-point_right {
+		background-position: -442px -476px;
+	}
+	.em-facepunch {
+		background-position: -442px -680px;
+	}
+	.em-wave {
+		background-position: -442px -884px;
+	}
+	.em-ok_hand {
+		background-position: -442px -1088px;
+	}
+	.em-+1 {
+		background-position: -442px -1292px;
+	}
+	.em--1 {
+		background-position: -442px -1496px;
+	}
+	.em-clap {
+		background-position: -442px -1700px;
+	}
+	.em-open_hands {
+		background-position: -442px -1904px;
+	}
+	.em-crown {
+		background-position: -476px -170px;
+	}
+	.em-womans_hat {
+		background-position: -476px -204px;
+	}
+	.em-eyeglasses {
+		background-position: -476px -238px;
+	}
+	.em-necktie {
+		background-position: -476px -272px;
+	}
+	.em-shirt {
+		background-position: -476px -306px;
+	}
+	.em-jeans {
+		background-position: -476px -340px;
+	}
+	.em-dress {
+		background-position: -476px -374px;
+	}
+	.em-kimono {
+		background-position: -476px -408px;
+	}
+	.em-bikini {
+		background-position: -476px -442px;
+	}
+	.em-womans_clothes {
+		background-position: -476px -476px;
+	}
+	.em-purse {
+		background-position: -476px -510px;
+	}
+	.em-handbag {
+		background-position: -476px -544px;
+	}
+	.em-pouch {
+		background-position: -476px -578px;
+	}
+	.em-mans_shoe {
+		background-position: -476px -612px;
+	}
+	.em-athletic_shoe {
+		background-position: -476px -646px;
+	}
+	.em-high_heel {
+		background-position: -476px -680px;
+	}
+	.em-sandal {
+		background-position: -476px -714px;
+	}
+	.em-boot {
+		background-position: -476px -748px;
+	}
+	.em-footprints {
+		background-position: -476px -782px;
+	}
+	.em-bust_in_silhouette {
+		background-position: -476px -816px;
+	}
+	.em-busts_in_silhouette {
+		background-position: -476px -850px;
+	}
+	.em-boy {
+		background-position: -476px -884px;
+	}
+	.em-girl {
+		background-position: -476px -1088px;
+	}
+	.em-male-farmer {
+		background-position: -476px -1292px;
+	}
+	.em-male-cook {
+		background-position: -476px -1496px;
+	}
+	.em-male-student {
+		background-position: -476px -1700px;
+	}
+	.em-male-singer {
+		background-position: -476px -1904px;
+	}
+	.em-male-artist {
+		background-position: -510px -170px;
+	}
+	.em-male-teacher {
+		background-position: -510px -374px;
+	}
+	.em-male-factory-worker {
+		background-position: -510px -578px;
+	}
+	.em-man-boy-boy {
+		background-position: -510px -782px;
+	}
+	.em-man-boy {
+		background-position: -510px -816px;
+	}
+	.em-man-girl-boy {
+		background-position: -510px -850px;
+	}
+	.em-man-girl-girl {
+		background-position: -510px -884px;
+	}
+	.em-man-girl {
+		background-position: -510px -918px;
+	}
+	.em-man-man-boy {
+		background-position: -510px -952px;
+	}
+	.em-man-man-boy-boy {
+		background-position: -510px -986px;
+	}
+	.em-man-man-girl {
+		background-position: -510px -1020px;
+	}
+	.em-man-man-girl-boy {
+		background-position: -510px -1054px;
+	}
+	.em-man-man-girl-girl {
+		background-position: -510px -1088px;
+	}
+	.em-man-woman-boy {
+		background-position: -510px -1122px;
+	}
+	.em-man-woman-boy-boy {
+		background-position: -510px -1156px;
+	}
+	.em-man-woman-girl {
+		background-position: -510px -1190px;
+	}
+	.em-man-woman-girl-boy {
+		background-position: -510px -1224px;
+	}
+	.em-man-woman-girl-girl {
+		background-position: -510px -1258px;
+	}
+	.em-male-technologist {
+		background-position: -510px -1292px;
+	}
+	.em-male-office-worker {
+		background-position: -510px -1496px;
+	}
+	.em-male-mechanic {
+		background-position: -510px -1700px;
+	}
+	.em-male-scientist {
+		background-position: -510px -1904px;
+	}
+	.em-male-astronaut {
+		background-position: -544px -170px;
+	}
+	.em-male-firefighter {
+		background-position: -544px -374px;
+	}
+	.em-man_with_probing_cane {
+		background-position: -544px -578px;
+	}
+	.em-red_haired_man {
+		background-position: -544px -782px;
+	}
+	.em-curly_haired_man {
+		background-position: -544px -986px;
+	}
+	.em-bald_man {
+		background-position: -544px -1190px;
+	}
+	.em-white_haired_man {
+		background-position: -544px -1394px;
+	}
+	.em-man_in_motorized_wheelchair {
+		background-position: -544px -1598px;
+	}
+	.em-man_in_manual_wheelchair {
+		background-position: -544px -1802px;
+	}
+	.em-male-doctor {
+		background-position: -578px -68px;
+	}
+	.em-male-judge {
+		background-position: -578px -272px;
+	}
+	.em-male-pilot {
+		background-position: -578px -476px;
+	}
+	.em-man-heart-man {
+		background-position: -578px -680px;
+	}
+	.em-man-kiss-man {
+		background-position: -578px -714px;
+	}
+	.em-man {
+		background-position: -578px -748px;
+	}
+	.em-female-farmer {
+		background-position: -578px -952px;
+	}
+	.em-female-cook {
+		background-position: -578px -1156px;
+	}
+	.em-female-student {
+		background-position: -578px -1360px;
+	}
+	.em-female-singer {
+		background-position: -578px -1564px;
+	}
+	.em-female-artist {
+		background-position: -578px -1768px;
+	}
+	.em-female-teacher {
+		background-position: -612px -34px;
+	}
+	.em-female-factory-worker {
+		background-position: -612px -238px;
+	}
+	.em-woman-boy-boy {
+		background-position: -612px -442px;
+	}
+	.em-woman-boy {
+		background-position: -612px -476px;
+	}
+	.em-woman-girl-boy {
+		background-position: -612px -510px;
+	}
+	.em-woman-girl-girl {
+		background-position: -612px -544px;
+	}
+	.em-woman-girl {
+		background-position: -612px -578px;
+	}
+	.em-woman-woman-boy {
+		background-position: -612px -612px;
+	}
+	.em-woman-woman-boy-boy {
+		background-position: -612px -646px;
+	}
+	.em-woman-woman-girl {
+		background-position: -612px -680px;
+	}
+	.em-woman-woman-girl-boy {
+		background-position: -612px -714px;
+	}
+	.em-woman-woman-girl-girl {
+		background-position: -612px -748px;
+	}
+	.em-female-technologist {
+		background-position: -612px -782px;
+	}
+	.em-female-office-worker {
+		background-position: -612px -986px;
+	}
+	.em-female-mechanic {
+		background-position: -612px -1190px;
+	}
+	.em-female-scientist {
+		background-position: -612px -1394px;
+	}
+	.em-female-astronaut {
+		background-position: -612px -1598px;
+	}
+	.em-female-firefighter {
+		background-position: -612px -1802px;
+	}
+	.em-woman_with_probing_cane {
+		background-position: -646px -68px;
+	}
+	.em-red_haired_woman {
+		background-position: -646px -272px;
+	}
+	.em-curly_haired_woman {
+		background-position: -646px -476px;
+	}
+	.em-bald_woman {
+		background-position: -646px -680px;
+	}
+	.em-white_haired_woman {
+		background-position: -646px -884px;
+	}
+	.em-woman_in_motorized_wheelchair {
+		background-position: -646px -1088px;
+	}
+	.em-woman_in_manual_wheelchair {
+		background-position: -646px -1292px;
+	}
+	.em-female-doctor {
+		background-position: -646px -1496px;
+	}
+	.em-female-judge {
+		background-position: -646px -1700px;
+	}
+	.em-female-pilot {
+		background-position: -646px -1904px;
+	}
+	.em-woman-heart-man {
+		background-position: -680px -170px;
+	}
+	.em-woman-heart-woman {
+		background-position: -680px -204px;
+	}
+	.em-woman-kiss-man {
+		background-position: -680px -238px;
+	}
+	.em-woman-kiss-woman {
+		background-position: -680px -272px;
+	}
+	.em-woman {
+		background-position: -680px -306px;
+	}
+	.em-family {
+		background-position: -680px -510px;
+	}
+	.em-couple {
+		background-position: -680px -544px;
+	}
+	.em-two_men_holding_hands {
+		background-position: -680px -1428px;
+	}
+	.em-two_women_holding_hands {
+		background-position: -714px -374px;
+	}
+	.em-female-police-officer {
+		background-position: -714px -1258px;
+	}
+	.em-male-police-officer {
+		background-position: -714px -1462px;
+	}
+	.em-cop {
+		background-position: -714px -1666px;
+	}
+	.em-woman-with-bunny-ears-partying {
+		background-position: -714px -1870px;
+	}
+	.em-man-with-bunny-ears-partying {
+		background-position: -714px -1904px;
+	}
+	.em-dancers {
+		background-position: -748px -0px;
+	}
+	.em-bride_with_veil {
+		background-position: -748px -34px;
+	}
+	.em-blond-haired-woman {
+		background-position: -748px -238px;
+	}
+	.em-blond-haired-man {
+		background-position: -748px -442px;
+	}
+	.em-person_with_blond_hair {
+		background-position: -748px -646px;
+	}
+	.em-man_with_gua_pi_mao {
+		background-position: -748px -850px;
+	}
+	.em-woman-wearing-turban {
+		background-position: -748px -1054px;
+	}
+	.em-man-wearing-turban {
+		background-position: -748px -1258px;
+	}
+	.em-man_with_turban {
+		background-position: -748px -1462px;
+	}
+	.em-older_man {
+		background-position: -748px -1666px;
+	}
+	.em-older_woman {
+		background-position: -748px -1870px;
+	}
+	.em-baby {
+		background-position: -782px -136px;
+	}
+	.em-female-construction-worker {
+		background-position: -782px -340px;
+	}
+	.em-male-construction-worker {
+		background-position: -782px -544px;
+	}
+	.em-construction_worker {
+		background-position: -782px -748px;
+	}
+	.em-princess {
+		background-position: -782px -952px;
+	}
+	.em-japanese_ogre {
+		background-position: -782px -1156px;
+	}
+	.em-japanese_goblin {
+		background-position: -782px -1190px;
+	}
+	.em-ghost {
+		background-position: -782px -1224px;
+	}
+	.em-angel {
+		background-position: -782px -1258px;
+	}
+	.em-alien {
+		background-position: -782px -1462px;
+	}
+	.em-space_invader {
+		background-position: -782px -1496px;
+	}
+	.em-imp {
+		background-position: -782px -1530px;
+	}
+	.em-skull {
+		background-position: -782px -1564px;
+	}
+	.em-woman-tipping-hand {
+		background-position: -782px -1598px;
+	}
+	.em-man-tipping-hand {
+		background-position: -782px -1802px;
+	}
+	.em-information_desk_person {
+		background-position: -816px -68px;
+	}
+	.em-female-guard {
+		background-position: -816px -272px;
+	}
+	.em-male-guard {
+		background-position: -816px -476px;
+	}
+	.em-guardsman {
+		background-position: -816px -680px;
+	}
+	.em-dancer {
+		background-position: -816px -884px;
+	}
+	.em-lipstick {
+		background-position: -816px -1088px;
+	}
+	.em-nail_care {
+		background-position: -816px -1122px;
+	}
+	.em-woman-getting-massage {
+		background-position: -816px -1326px;
+	}
+	.em-man-getting-massage {
+		background-position: -816px -1530px;
+	}
+	.em-massage {
+		background-position: -816px -1734px;
+	}
+	.em-woman-getting-haircut {
+		background-position: -850px -0px;
+	}
+	.em-man-getting-haircut {
+		background-position: -850px -204px;
+	}
+	.em-haircut {
+		background-position: -850px -408px;
+	}
+	.em-barber {
+		background-position: -850px -612px;
+	}
+	.em-syringe {
+		background-position: -850px -646px;
+	}
+	.em-pill {
+		background-position: -850px -680px;
+	}
+	.em-kiss {
+		background-position: -850px -714px;
+	}
+	.em-love_letter {
+		background-position: -850px -748px;
+	}
+	.em-ring {
+		background-position: -850px -782px;
+	}
+	.em-gem {
+		background-position: -850px -816px;
+	}
+	.em-couplekiss {
+		background-position: -850px -850px;
+	}
+	.em-bouquet {
+		background-position: -850px -884px;
+	}
+	.em-couple_with_heart {
+		background-position: -850px -918px;
+	}
+	.em-wedding {
+		background-position: -850px -952px;
+	}
+	.em-heartbeat {
+		background-position: -850px -986px;
+	}
+	.em-broken_heart {
+		background-position: -850px -1020px;
+	}
+	.em-two_hearts {
+		background-position: -850px -1054px;
+	}
+	.em-sparkling_heart {
+		background-position: -850px -1088px;
+	}
+	.em-heartpulse {
+		background-position: -850px -1122px;
+	}
+	.em-cupid {
+		background-position: -850px -1156px;
+	}
+	.em-blue_heart {
+		background-position: -850px -1190px;
+	}
+	.em-green_heart {
+		background-position: -850px -1224px;
+	}
+	.em-yellow_heart {
+		background-position: -850px -1258px;
+	}
+	.em-purple_heart {
+		background-position: -850px -1292px;
+	}
+	.em-gift_heart {
+		background-position: -850px -1326px;
+	}
+	.em-revolving_hearts {
+		background-position: -850px -1360px;
+	}
+	.em-heart_decoration {
+		background-position: -850px -1394px;
+	}
+	.em-diamond_shape_with_a_dot_inside {
+		background-position: -850px -1428px;
+	}
+	.em-bulb {
+		background-position: -850px -1462px;
+	}
+	.em-anger {
+		background-position: -850px -1496px;
+	}
+	.em-bomb {
+		background-position: -850px -1530px;
+	}
+	.em-zzz {
+		background-position: -850px -1564px;
+	}
+	.em-boom {
+		background-position: -850px -1598px;
+	}
+	.em-sweat_drops {
+		background-position: -850px -1632px;
+	}
+	.em-droplet {
+		background-position: -850px -1666px;
+	}
+	.em-dash {
+		background-position: -850px -1700px;
+	}
+	.em-hankey {
+		background-position: -850px -1734px;
+	}
+	.em-muscle {
+		background-position: -850px -1768px;
+	}
+	.em-dizzy {
+		background-position: -884px -34px;
+	}
+	.em-speech_balloon {
+		background-position: -884px -68px;
+	}
+	.em-thought_balloon {
+		background-position: -884px -102px;
+	}
+	.em-white_flower {
+		background-position: -884px -136px;
+	}
+	.em-100 {
+		background-position: -884px -170px;
+	}
+	.em-moneybag {
+		background-position: -884px -204px;
+	}
+	.em-currency_exchange {
+		background-position: -884px -238px;
+	}
+	.em-heavy_dollar_sign {
+		background-position: -884px -272px;
+	}
+	.em-credit_card {
+		background-position: -884px -306px;
+	}
+	.em-yen {
+		background-position: -884px -340px;
+	}
+	.em-dollar {
+		background-position: -884px -374px;
+	}
+	.em-euro {
+		background-position: -884px -408px;
+	}
+	.em-pound {
+		background-position: -884px -442px;
+	}
+	.em-money_with_wings {
+		background-position: -884px -476px;
+	}
+	.em-chart {
+		background-position: -884px -510px;
+	}
+	.em-seat {
+		background-position: -884px -544px;
+	}
+	.em-computer {
+		background-position: -884px -578px;
+	}
+	.em-briefcase {
+		background-position: -884px -612px;
+	}
+	.em-minidisc {
+		background-position: -884px -646px;
+	}
+	.em-floppy_disk {
+		background-position: -884px -680px;
+	}
+	.em-cd {
+		background-position: -884px -714px;
+	}
+	.em-dvd {
+		background-position: -884px -748px;
+	}
+	.em-file_folder {
+		background-position: -884px -782px;
+	}
+	.em-open_file_folder {
+		background-position: -884px -816px;
+	}
+	.em-page_with_curl {
+		background-position: -884px -850px;
+	}
+	.em-page_facing_up {
+		background-position: -884px -884px;
+	}
+	.em-date {
+		background-position: -884px -918px;
+	}
+	.em-calendar {
+		background-position: -884px -952px;
+	}
+	.em-card_index {
+		background-position: -884px -986px;
+	}
+	.em-chart_with_upwards_trend {
+		background-position: -884px -1020px;
+	}
+	.em-chart_with_downwards_trend {
+		background-position: -884px -1054px;
+	}
+	.em-bar_chart {
+		background-position: -884px -1088px;
+	}
+	.em-clipboard {
+		background-position: -884px -1122px;
+	}
+	.em-pushpin {
+		background-position: -884px -1156px;
+	}
+	.em-round_pushpin {
+		background-position: -884px -1190px;
+	}
+	.em-paperclip {
+		background-position: -884px -1224px;
+	}
+	.em-straight_ruler {
+		background-position: -884px -1258px;
+	}
+	.em-triangular_ruler {
+		background-position: -884px -1292px;
+	}
+	.em-bookmark_tabs {
+		background-position: -884px -1326px;
+	}
+	.em-ledger {
+		background-position: -884px -1360px;
+	}
+	.em-notebook {
+		background-position: -884px -1394px;
+	}
+	.em-notebook_with_decorative_cover {
+		background-position: -884px -1428px;
+	}
+	.em-closed_book {
+		background-position: -884px -1462px;
+	}
+	.em-book {
+		background-position: -884px -1496px;
+	}
+	.em-green_book {
+		background-position: -884px -1530px;
+	}
+	.em-blue_book {
+		background-position: -884px -1564px;
+	}
+	.em-orange_book {
+		background-position: -884px -1598px;
+	}
+	.em-books {
+		background-position: -884px -1632px;
+	}
+	.em-name_badge {
+		background-position: -884px -1666px;
+	}
+	.em-scroll {
+		background-position: -884px -1700px;
+	}
+	.em-memo {
+		background-position: -884px -1734px;
+	}
+	.em-telephone_receiver {
+		background-position: -884px -1768px;
+	}
+	.em-pager {
+		background-position: -884px -1802px;
+	}
+	.em-fax {
+		background-position: -884px -1836px;
+	}
+	.em-satellite_antenna {
+		background-position: -884px -1870px;
+	}
+	.em-loudspeaker {
+		background-position: -884px -1904px;
+	}
+	.em-mega {
+		background-position: -918px -0px;
+	}
+	.em-outbox_tray {
+		background-position: -918px -34px;
+	}
+	.em-inbox_tray {
+		background-position: -918px -68px;
+	}
+	.em-package {
+		background-position: -918px -102px;
+	}
+	.em-e-mail {
+		background-position: -918px -136px;
+	}
+	.em-incoming_envelope {
+		background-position: -918px -170px;
+	}
+	.em-envelope_with_arrow {
+		background-position: -918px -204px;
+	}
+	.em-mailbox_closed {
+		background-position: -918px -238px;
+	}
+	.em-mailbox {
+		background-position: -918px -272px;
+	}
+	.em-mailbox_with_mail {
+		background-position: -918px -306px;
+	}
+	.em-mailbox_with_no_mail {
+		background-position: -918px -340px;
+	}
+	.em-postbox {
+		background-position: -918px -374px;
+	}
+	.em-postal_horn {
+		background-position: -918px -408px;
+	}
+	.em-newspaper {
+		background-position: -918px -442px;
+	}
+	.em-iphone {
+		background-position: -918px -476px;
+	}
+	.em-calling {
+		background-position: -918px -510px;
+	}
+	.em-vibration_mode {
+		background-position: -918px -544px;
+	}
+	.em-mobile_phone_off {
+		background-position: -918px -578px;
+	}
+	.em-no_mobile_phones {
+		background-position: -918px -612px;
+	}
+	.em-signal_strength {
+		background-position: -918px -646px;
+	}
+	.em-camera {
+		background-position: -918px -680px;
+	}
+	.em-camera_with_flash {
+		background-position: -918px -714px;
+	}
+	.em-video_camera {
+		background-position: -918px -748px;
+	}
+	.em-tv {
+		background-position: -918px -782px;
+	}
+	.em-radio {
+		background-position: -918px -816px;
+	}
+	.em-vhs {
+		background-position: -918px -850px;
+	}
+	.em-film_projector {
+		background-position: -918px -884px;
+	}
+	.em-prayer_beads {
+		background-position: -918px -918px;
+	}
+	.em-twisted_rightwards_arrows {
+		background-position: -918px -952px;
+	}
+	.em-repeat {
+		background-position: -918px -986px;
+	}
+	.em-repeat_one {
+		background-position: -918px -1020px;
+	}
+	.em-arrows_clockwise {
+		background-position: -918px -1054px;
+	}
+	.em-arrows_counterclockwise {
+		background-position: -918px -1088px;
+	}
+	.em-low_brightness {
+		background-position: -918px -1122px;
+	}
+	.em-high_brightness {
+		background-position: -918px -1156px;
+	}
+	.em-mute {
+		background-position: -918px -1190px;
+	}
+	.em-speaker {
+		background-position: -918px -1224px;
+	}
+	.em-sound {
+		background-position: -918px -1258px;
+	}
+	.em-loud_sound {
+		background-position: -918px -1292px;
+	}
+	.em-battery {
+		background-position: -918px -1326px;
+	}
+	.em-electric_plug {
+		background-position: -918px -1360px;
+	}
+	.em-mag {
+		background-position: -918px -1394px;
+	}
+	.em-mag_right {
+		background-position: -918px -1428px;
+	}
+	.em-lock_with_ink_pen {
+		background-position: -918px -1462px;
+	}
+	.em-closed_lock_with_key {
+		background-position: -918px -1496px;
+	}
+	.em-key {
+		background-position: -918px -1530px;
+	}
+	.em-lock {
+		background-position: -918px -1564px;
+	}
+	.em-unlock {
+		background-position: -918px -1598px;
+	}
+	.em-bell {
+		background-position: -918px -1632px;
+	}
+	.em-no_bell {
+		background-position: -918px -1666px;
+	}
+	.em-bookmark {
+		background-position: -918px -1700px;
+	}
+	.em-link {
+		background-position: -918px -1734px;
+	}
+	.em-radio_button {
+		background-position: -918px -1768px;
+	}
+	.em-back {
+		background-position: -918px -1802px;
+	}
+	.em-end {
+		background-position: -918px -1836px;
+	}
+	.em-on {
+		background-position: -918px -1870px;
+	}
+	.em-soon {
+		background-position: -918px -1904px;
+	}
+	.em-top {
+		background-position: -952px -0px;
+	}
+	.em-underage {
+		background-position: -952px -34px;
+	}
+	.em-keycap_ten {
+		background-position: -952px -68px;
+	}
+	.em-capital_abcd {
+		background-position: -952px -102px;
+	}
+	.em-abcd {
+		background-position: -952px -136px;
+	}
+	.em-1234 {
+		background-position: -952px -170px;
+	}
+	.em-symbols {
+		background-position: -952px -204px;
+	}
+	.em-abc {
+		background-position: -952px -238px;
+	}
+	.em-fire {
+		background-position: -952px -272px;
+	}
+	.em-flashlight {
+		background-position: -952px -306px;
+	}
+	.em-wrench {
+		background-position: -952px -340px;
+	}
+	.em-hammer {
+		background-position: -952px -374px;
+	}
+	.em-nut_and_bolt {
+		background-position: -952px -408px;
+	}
+	.em-hocho {
+		background-position: -952px -442px;
+	}
+	.em-gun {
+		background-position: -952px -476px;
+	}
+	.em-microscope {
+		background-position: -952px -510px;
+	}
+	.em-telescope {
+		background-position: -952px -544px;
+	}
+	.em-crystal_ball {
+		background-position: -952px -578px;
+	}
+	.em-six_pointed_star {
+		background-position: -952px -612px;
+	}
+	.em-beginner {
+		background-position: -952px -646px;
+	}
+	.em-trident {
+		background-position: -952px -680px;
+	}
+	.em-black_square_button {
+		background-position: -952px -714px;
+	}
+	.em-white_square_button {
+		background-position: -952px -748px;
+	}
+	.em-red_circle {
+		background-position: -952px -782px;
+	}
+	.em-large_blue_circle {
+		background-position: -952px -816px;
+	}
+	.em-large_orange_diamond {
+		background-position: -952px -850px;
+	}
+	.em-large_blue_diamond {
+		background-position: -952px -884px;
+	}
+	.em-small_orange_diamond {
+		background-position: -952px -918px;
+	}
+	.em-small_blue_diamond {
+		background-position: -952px -952px;
+	}
+	.em-small_red_triangle {
+		background-position: -952px -986px;
+	}
+	.em-small_red_triangle_down {
+		background-position: -952px -1020px;
+	}
+	.em-arrow_up_small {
+		background-position: -952px -1054px;
+	}
+	.em-arrow_down_small {
+		background-position: -952px -1088px;
+	}
+	.em-om_symbol {
+		background-position: -952px -1122px;
+	}
+	.em-dove_of_peace {
+		background-position: -952px -1156px;
+	}
+	.em-kaaba {
+		background-position: -952px -1190px;
+	}
+	.em-mosque {
+		background-position: -952px -1224px;
+	}
+	.em-synagogue {
+		background-position: -952px -1258px;
+	}
+	.em-menorah_with_nine_branches {
+		background-position: -952px -1292px;
+	}
+	.em-clock1 {
+		background-position: -952px -1326px;
+	}
+	.em-clock2 {
+		background-position: -952px -1360px;
+	}
+	.em-clock3 {
+		background-position: -952px -1394px;
+	}
+	.em-clock4 {
+		background-position: -952px -1428px;
+	}
+	.em-clock5 {
+		background-position: -952px -1462px;
+	}
+	.em-clock6 {
+		background-position: -952px -1496px;
+	}
+	.em-clock7 {
+		background-position: -952px -1530px;
+	}
+	.em-clock8 {
+		background-position: -952px -1564px;
+	}
+	.em-clock9 {
+		background-position: -952px -1598px;
+	}
+	.em-clock10 {
+		background-position: -952px -1632px;
+	}
+	.em-clock11 {
+		background-position: -952px -1666px;
+	}
+	.em-clock12 {
+		background-position: -952px -1700px;
+	}
+	.em-clock130 {
+		background-position: -952px -1734px;
+	}
+	.em-clock230 {
+		background-position: -952px -1768px;
+	}
+	.em-clock330 {
+		background-position: -952px -1802px;
+	}
+	.em-clock430 {
+		background-position: -952px -1836px;
+	}
+	.em-clock530 {
+		background-position: -952px -1870px;
+	}
+	.em-clock630 {
+		background-position: -952px -1904px;
+	}
+	.em-clock730 {
+		background-position: -986px -0px;
+	}
+	.em-clock830 {
+		background-position: -986px -34px;
+	}
+	.em-clock930 {
+		background-position: -986px -68px;
+	}
+	.em-clock1030 {
+		background-position: -986px -102px;
+	}
+	.em-clock1130 {
+		background-position: -986px -136px;
+	}
+	.em-clock1230 {
+		background-position: -986px -170px;
+	}
+	.em-candle {
+		background-position: -986px -204px;
+	}
+	.em-mantelpiece_clock {
+		background-position: -986px -238px;
+	}
+	.em-hole {
+		background-position: -986px -272px;
+	}
+	.em-man_in_business_suit_levitating {
+		background-position: -986px -306px;
+	}
+	.em-female-detective {
+		background-position: -986px -510px;
+	}
+	.em-male-detective {
+		background-position: -986px -714px;
+	}
+	.em-sleuth_or_spy {
+		background-position: -986px -918px;
+	}
+	.em-dark_sunglasses {
+		background-position: -986px -1122px;
+	}
+	.em-spider {
+		background-position: -986px -1156px;
+	}
+	.em-spider_web {
+		background-position: -986px -1190px;
+	}
+	.em-joystick {
+		background-position: -986px -1224px;
+	}
+	.em-man_dancing {
+		background-position: -986px -1258px;
+	}
+	.em-linked_paperclips {
+		background-position: -986px -1462px;
+	}
+	.em-lower_left_ballpoint_pen {
+		background-position: -986px -1496px;
+	}
+	.em-lower_left_fountain_pen {
+		background-position: -986px -1530px;
+	}
+	.em-lower_left_paintbrush {
+		background-position: -986px -1564px;
+	}
+	.em-lower_left_crayon {
+		background-position: -986px -1598px;
+	}
+	.em-raised_hand_with_fingers_splayed {
+		background-position: -986px -1632px;
+	}
+	.em-middle_finger {
+		background-position: -986px -1836px;
+	}
+	.em-spock-hand {
+		background-position: -1020px -102px;
+	}
+	.em-black_heart {
+		background-position: -1020px -306px;
+	}
+	.em-desktop_computer {
+		background-position: -1020px -340px;
+	}
+	.em-printer {
+		background-position: -1020px -374px;
+	}
+	.em-three_button_mouse {
+		background-position: -1020px -408px;
+	}
+	.em-trackball {
+		background-position: -1020px -442px;
+	}
+	.em-frame_with_picture {
+		background-position: -1020px -476px;
+	}
+	.em-card_index_dividers {
+		background-position: -1020px -510px;
+	}
+	.em-card_file_box {
+		background-position: -1020px -544px;
+	}
+	.em-file_cabinet {
+		background-position: -1020px -578px;
+	}
+	.em-wastebasket {
+		background-position: -1020px -612px;
+	}
+	.em-spiral_note_pad {
+		background-position: -1020px -646px;
+	}
+	.em-spiral_calendar_pad {
+		background-position: -1020px -680px;
+	}
+	.em-compression {
+		background-position: -1020px -714px;
+	}
+	.em-old_key {
+		background-position: -1020px -748px;
+	}
+	.em-rolled_up_newspaper {
+		background-position: -1020px -782px;
+	}
+	.em-dagger_knife {
+		background-position: -1020px -816px;
+	}
+	.em-speaking_head_in_silhouette {
+		background-position: -1020px -850px;
+	}
+	.em-left_speech_bubble {
+		background-position: -1020px -884px;
+	}
+	.em-right_anger_bubble {
+		background-position: -1020px -918px;
+	}
+	.em-ballot_box_with_ballot {
+		background-position: -1020px -952px;
+	}
+	.em-world_map {
+		background-position: -1020px -986px;
+	}
+	.em-mount_fuji {
+		background-position: -1020px -1020px;
+	}
+	.em-tokyo_tower {
+		background-position: -1020px -1054px;
+	}
+	.em-statue_of_liberty {
+		background-position: -1020px -1088px;
+	}
+	.em-japan {
+		background-position: -1020px -1122px;
+	}
+	.em-moyai {
+		background-position: -1020px -1156px;
+	}
+	.em-grinning {
+		background-position: -1020px -1190px;
+	}
+	.em-grin {
+		background-position: -1020px -1224px;
+	}
+	.em-joy {
+		background-position: -1020px -1258px;
+	}
+	.em-smiley {
+		background-position: -1020px -1292px;
+	}
+	.em-smile {
+		background-position: -1020px -1326px;
+	}
+	.em-sweat_smile {
+		background-position: -1020px -1360px;
+	}
+	.em-laughing {
+		background-position: -1020px -1394px;
+	}
+	.em-innocent {
+		background-position: -1020px -1428px;
+	}
+	.em-smiling_imp {
+		background-position: -1020px -1462px;
+	}
+	.em-wink {
+		background-position: -1020px -1496px;
+	}
+	.em-blush {
+		background-position: -1020px -1530px;
+	}
+	.em-yum {
+		background-position: -1020px -1564px;
+	}
+	.em-relieved {
+		background-position: -1020px -1598px;
+	}
+	.em-heart_eyes {
+		background-position: -1020px -1632px;
+	}
+	.em-sunglasses {
+		background-position: -1020px -1666px;
+	}
+	.em-smirk {
+		background-position: -1020px -1700px;
+	}
+	.em-neutral_face {
+		background-position: -1020px -1734px;
+	}
+	.em-expressionless {
+		background-position: -1020px -1768px;
+	}
+	.em-unamused {
+		background-position: -1020px -1802px;
+	}
+	.em-sweat {
+		background-position: -1020px -1836px;
+	}
+	.em-pensive {
+		background-position: -1020px -1870px;
+	}
+	.em-confused {
+		background-position: -1020px -1904px;
+	}
+	.em-confounded {
+		background-position: -1054px -0px;
+	}
+	.em-kissing {
+		background-position: -1054px -34px;
+	}
+	.em-kissing_heart {
+		background-position: -1054px -68px;
+	}
+	.em-kissing_smiling_eyes {
+		background-position: -1054px -102px;
+	}
+	.em-kissing_closed_eyes {
+		background-position: -1054px -136px;
+	}
+	.em-stuck_out_tongue {
+		background-position: -1054px -170px;
+	}
+	.em-stuck_out_tongue_winking_eye {
+		background-position: -1054px -204px;
+	}
+	.em-stuck_out_tongue_closed_eyes {
+		background-position: -1054px -238px;
+	}
+	.em-disappointed {
+		background-position: -1054px -272px;
+	}
+	.em-worried {
+		background-position: -1054px -306px;
+	}
+	.em-angry {
+		background-position: -1054px -340px;
+	}
+	.em-rage {
+		background-position: -1054px -374px;
+	}
+	.em-cry {
+		background-position: -1054px -408px;
+	}
+	.em-persevere {
+		background-position: -1054px -442px;
+	}
+	.em-triumph {
+		background-position: -1054px -476px;
+	}
+	.em-disappointed_relieved {
+		background-position: -1054px -510px;
+	}
+	.em-frowning {
+		background-position: -1054px -544px;
+	}
+	.em-anguished {
+		background-position: -1054px -578px;
+	}
+	.em-fearful {
+		background-position: -1054px -612px;
+	}
+	.em-weary {
+		background-position: -1054px -646px;
+	}
+	.em-sleepy {
+		background-position: -1054px -680px;
+	}
+	.em-tired_face {
+		background-position: -1054px -714px;
+	}
+	.em-grimacing {
+		background-position: -1054px -748px;
+	}
+	.em-sob {
+		background-position: -1054px -782px;
+	}
+	.em-open_mouth {
+		background-position: -1054px -816px;
+	}
+	.em-hushed {
+		background-position: -1054px -850px;
+	}
+	.em-cold_sweat {
+		background-position: -1054px -884px;
+	}
+	.em-scream {
+		background-position: -1054px -918px;
+	}
+	.em-astonished {
+		background-position: -1054px -952px;
+	}
+	.em-flushed {
+		background-position: -1054px -986px;
+	}
+	.em-sleeping {
+		background-position: -1054px -1020px;
+	}
+	.em-dizzy_face {
+		background-position: -1054px -1054px;
+	}
+	.em-no_mouth {
+		background-position: -1054px -1088px;
+	}
+	.em-mask {
+		background-position: -1054px -1122px;
+	}
+	.em-smile_cat {
+		background-position: -1054px -1156px;
+	}
+	.em-joy_cat {
+		background-position: -1054px -1190px;
+	}
+	.em-smiley_cat {
+		background-position: -1054px -1224px;
+	}
+	.em-heart_eyes_cat {
+		background-position: -1054px -1258px;
+	}
+	.em-smirk_cat {
+		background-position: -1054px -1292px;
+	}
+	.em-kissing_cat {
+		background-position: -1054px -1326px;
+	}
+	.em-pouting_cat {
+		background-position: -1054px -1360px;
+	}
+	.em-crying_cat_face {
+		background-position: -1054px -1394px;
+	}
+	.em-scream_cat {
+		background-position: -1054px -1428px;
+	}
+	.em-slightly_frowning_face {
+		background-position: -1054px -1462px;
+	}
+	.em-slightly_smiling_face {
+		background-position: -1054px -1496px;
+	}
+	.em-upside_down_face {
+		background-position: -1054px -1530px;
+	}
+	.em-face_with_rolling_eyes {
+		background-position: -1054px -1564px;
+	}
+	.em-woman-gesturing-no {
+		background-position: -1054px -1598px;
+	}
+	.em-man-gesturing-no {
+		background-position: -1054px -1802px;
+	}
+	.em-no_good {
+		background-position: -1088px -68px;
+	}
+	.em-woman-gesturing-ok {
+		background-position: -1088px -272px;
+	}
+	.em-man-gesturing-ok {
+		background-position: -1088px -476px;
+	}
+	.em-ok_woman {
+		background-position: -1088px -680px;
+	}
+	.em-woman-bowing {
+		background-position: -1088px -884px;
+	}
+	.em-man-bowing {
+		background-position: -1088px -1088px;
+	}
+	.em-bow {
+		background-position: -1088px -1292px;
+	}
+	.em-see_no_evil {
+		background-position: -1088px -1496px;
+	}
+	.em-hear_no_evil {
+		background-position: -1088px -1530px;
+	}
+	.em-speak_no_evil {
+		background-position: -1088px -1564px;
+	}
+	.em-woman-raising-hand {
+		background-position: -1088px -1598px;
+	}
+	.em-man-raising-hand {
+		background-position: -1088px -1802px;
+	}
+	.em-raising_hand {
+		background-position: -1122px -68px;
+	}
+	.em-raised_hands {
+		background-position: -1122px -272px;
+	}
+	.em-woman-frowning {
+		background-position: -1122px -476px;
+	}
+	.em-man-frowning {
+		background-position: -1122px -680px;
+	}
+	.em-person_frowning {
+		background-position: -1122px -884px;
+	}
+	.em-woman-pouting {
+		background-position: -1122px -1088px;
+	}
+	.em-man-pouting {
+		background-position: -1122px -1292px;
+	}
+	.em-person_with_pouting_face {
+		background-position: -1122px -1496px;
+	}
+	.em-pray {
+		background-position: -1122px -1700px;
+	}
+	.em-rocket {
+		background-position: -1122px -1904px;
+	}
+	.em-helicopter {
+		background-position: -1156px -0px;
+	}
+	.em-steam_locomotive {
+		background-position: -1156px -34px;
+	}
+	.em-railway_car {
+		background-position: -1156px -68px;
+	}
+	.em-bullettrain_side {
+		background-position: -1156px -102px;
+	}
+	.em-bullettrain_front {
+		background-position: -1156px -136px;
+	}
+	.em-train2 {
+		background-position: -1156px -170px;
+	}
+	.em-metro {
+		background-position: -1156px -204px;
+	}
+	.em-light_rail {
+		background-position: -1156px -238px;
+	}
+	.em-station {
+		background-position: -1156px -272px;
+	}
+	.em-tram {
+		background-position: -1156px -306px;
+	}
+	.em-train {
+		background-position: -1156px -340px;
+	}
+	.em-bus {
+		background-position: -1156px -374px;
+	}
+	.em-oncoming_bus {
+		background-position: -1156px -408px;
+	}
+	.em-trolleybus {
+		background-position: -1156px -442px;
+	}
+	.em-busstop {
+		background-position: -1156px -476px;
+	}
+	.em-minibus {
+		background-position: -1156px -510px;
+	}
+	.em-ambulance {
+		background-position: -1156px -544px;
+	}
+	.em-fire_engine {
+		background-position: -1156px -578px;
+	}
+	.em-police_car {
+		background-position: -1156px -612px;
+	}
+	.em-oncoming_police_car {
+		background-position: -1156px -646px;
+	}
+	.em-taxi {
+		background-position: -1156px -680px;
+	}
+	.em-oncoming_taxi {
+		background-position: -1156px -714px;
+	}
+	.em-car {
+		background-position: -1156px -748px;
+	}
+	.em-oncoming_automobile {
+		background-position: -1156px -782px;
+	}
+	.em-blue_car {
+		background-position: -1156px -816px;
+	}
+	.em-truck {
+		background-position: -1156px -850px;
+	}
+	.em-articulated_lorry {
+		background-position: -1156px -884px;
+	}
+	.em-tractor {
+		background-position: -1156px -918px;
+	}
+	.em-monorail {
+		background-position: -1156px -952px;
+	}
+	.em-mountain_railway {
+		background-position: -1156px -986px;
+	}
+	.em-suspension_railway {
+		background-position: -1156px -1020px;
+	}
+	.em-mountain_cableway {
+		background-position: -1156px -1054px;
+	}
+	.em-aerial_tramway {
+		background-position: -1156px -1088px;
+	}
+	.em-ship {
+		background-position: -1156px -1122px;
+	}
+	.em-woman-rowing-boat {
+		background-position: -1156px -1156px;
+	}
+	.em-man-rowing-boat {
+		background-position: -1156px -1360px;
+	}
+	.em-rowboat {
+		background-position: -1156px -1564px;
+	}
+	.em-speedboat {
+		background-position: -1156px -1768px;
+	}
+	.em-traffic_light {
+		background-position: -1156px -1802px;
+	}
+	.em-vertical_traffic_light {
+		background-position: -1156px -1836px;
+	}
+	.em-construction {
+		background-position: -1156px -1870px;
+	}
+	.em-rotating_light {
+		background-position: -1156px -1904px;
+	}
+	.em-triangular_flag_on_post {
+		background-position: -1190px -0px;
+	}
+	.em-door {
+		background-position: -1190px -34px;
+	}
+	.em-no_entry_sign {
+		background-position: -1190px -68px;
+	}
+	.em-smoking {
+		background-position: -1190px -102px;
+	}
+	.em-no_smoking {
+		background-position: -1190px -136px;
+	}
+	.em-put_litter_in_its_place {
+		background-position: -1190px -170px;
+	}
+	.em-do_not_litter {
+		background-position: -1190px -204px;
+	}
+	.em-potable_water {
+		background-position: -1190px -238px;
+	}
+	.em-non-potable_water {
+		background-position: -1190px -272px;
+	}
+	.em-bike {
+		background-position: -1190px -306px;
+	}
+	.em-no_bicycles {
+		background-position: -1190px -340px;
+	}
+	.em-woman-biking {
+		background-position: -1190px -374px;
+	}
+	.em-man-biking {
+		background-position: -1190px -578px;
+	}
+	.em-bicyclist {
+		background-position: -1190px -782px;
+	}
+	.em-woman-mountain-biking {
+		background-position: -1190px -986px;
+	}
+	.em-man-mountain-biking {
+		background-position: -1190px -1190px;
+	}
+	.em-mountain_bicyclist {
+		background-position: -1190px -1394px;
+	}
+	.em-woman-walking {
+		background-position: -1190px -1598px;
+	}
+	.em-man-walking {
+		background-position: -1190px -1802px;
+	}
+	.em-walking {
+		background-position: -1224px -68px;
+	}
+	.em-no_pedestrians {
+		background-position: -1224px -272px;
+	}
+	.em-children_crossing {
+		background-position: -1224px -306px;
+	}
+	.em-mens {
+		background-position: -1224px -340px;
+	}
+	.em-womens {
+		background-position: -1224px -374px;
+	}
+	.em-restroom {
+		background-position: -1224px -408px;
+	}
+	.em-baby_symbol {
+		background-position: -1224px -442px;
+	}
+	.em-toilet {
+		background-position: -1224px -476px;
+	}
+	.em-wc {
+		background-position: -1224px -510px;
+	}
+	.em-shower {
+		background-position: -1224px -544px;
+	}
+	.em-bath {
+		background-position: -1224px -578px;
+	}
+	.em-bathtub {
+		background-position: -1224px -782px;
+	}
+	.em-passport_control {
+		background-position: -1224px -816px;
+	}
+	.em-customs {
+		background-position: -1224px -850px;
+	}
+	.em-baggage_claim {
+		background-position: -1224px -884px;
+	}
+	.em-left_luggage {
+		background-position: -1224px -918px;
+	}
+	.em-couch_and_lamp {
+		background-position: -1224px -952px;
+	}
+	.em-sleeping_accommodation {
+		background-position: -1224px -986px;
+	}
+	.em-shopping_bags {
+		background-position: -1224px -1190px;
+	}
+	.em-bellhop_bell {
+		background-position: -1224px -1224px;
+	}
+	.em-bed {
+		background-position: -1224px -1258px;
+	}
+	.em-place_of_worship {
+		background-position: -1224px -1292px;
+	}
+	.em-octagonal_sign {
+		background-position: -1224px -1326px;
+	}
+	.em-shopping_trolley {
+		background-position: -1224px -1360px;
+	}
+	.em-hindu_temple {
+		background-position: -1224px -1394px;
+	}
+	.em-hammer_and_wrench {
+		background-position: -1224px -1428px;
+	}
+	.em-shield {
+		background-position: -1224px -1462px;
+	}
+	.em-oil_drum {
+		background-position: -1224px -1496px;
+	}
+	.em-motorway {
+		background-position: -1224px -1530px;
+	}
+	.em-railway_track {
+		background-position: -1224px -1564px;
+	}
+	.em-motor_boat {
+		background-position: -1224px -1598px;
+	}
+	.em-small_airplane {
+		background-position: -1224px -1632px;
+	}
+	.em-airplane_departure {
+		background-position: -1224px -1666px;
+	}
+	.em-airplane_arriving {
+		background-position: -1224px -1700px;
+	}
+	.em-satellite {
+		background-position: -1224px -1734px;
+	}
+	.em-passenger_ship {
+		background-position: -1224px -1768px;
+	}
+	.em-scooter {
+		background-position: -1224px -1802px;
+	}
+	.em-motor_scooter {
+		background-position: -1224px -1836px;
+	}
+	.em-canoe {
+		background-position: -1224px -1870px;
+	}
+	.em-sled {
+		background-position: -1224px -1904px;
+	}
+	.em-flying_saucer {
+		background-position: -1258px -0px;
+	}
+	.em-skateboard {
+		background-position: -1258px -34px;
+	}
+	.em-auto_rickshaw {
+		background-position: -1258px -68px;
+	}
+	.em-large_orange_circle {
+		background-position: -1258px -102px;
+	}
+	.em-large_yellow_circle {
+		background-position: -1258px -136px;
+	}
+	.em-large_green_circle {
+		background-position: -1258px -170px;
+	}
+	.em-large_purple_circle {
+		background-position: -1258px -204px;
+	}
+	.em-large_brown_circle {
+		background-position: -1258px -238px;
+	}
+	.em-large_red_square {
+		background-position: -1258px -272px;
+	}
+	.em-large_blue_square {
+		background-position: -1258px -306px;
+	}
+	.em-large_orange_square {
+		background-position: -1258px -340px;
+	}
+	.em-large_yellow_square {
+		background-position: -1258px -374px;
+	}
+	.em-large_green_square {
+		background-position: -1258px -408px;
+	}
+	.em-large_purple_square {
+		background-position: -1258px -442px;
+	}
+	.em-large_brown_square {
+		background-position: -1258px -476px;
+	}
+	.em-white_heart {
+		background-position: -1258px -510px;
+	}
+	.em-brown_heart {
+		background-position: -1258px -544px;
+	}
+	.em-pinching_hand {
+		background-position: -1258px -578px;
+	}
+	.em-zipper_mouth_face {
+		background-position: -1258px -782px;
+	}
+	.em-money_mouth_face {
+		background-position: -1258px -816px;
+	}
+	.em-face_with_thermometer {
+		background-position: -1258px -850px;
+	}
+	.em-nerd_face {
+		background-position: -1258px -884px;
+	}
+	.em-thinking_face {
+		background-position: -1258px -918px;
+	}
+	.em-face_with_head_bandage {
+		background-position: -1258px -952px;
+	}
+	.em-robot_face {
+		background-position: -1258px -986px;
+	}
+	.em-hugging_face {
+		background-position: -1258px -1020px;
+	}
+	.em-the_horns {
+		background-position: -1258px -1054px;
+	}
+	.em-call_me_hand {
+		background-position: -1258px -1258px;
+	}
+	.em-raised_back_of_hand {
+		background-position: -1258px -1462px;
+	}
+	.em-left-facing_fist {
+		background-position: -1258px -1666px;
+	}
+	.em-right-facing_fist {
+		background-position: -1258px -1870px;
+	}
+	.em-handshake {
+		background-position: -1292px -136px;
+	}
+	.em-crossed_fingers {
+		background-position: -1292px -170px;
+	}
+	.em-i_love_you_hand_sign {
+		background-position: -1292px -374px;
+	}
+	.em-face_with_cowboy_hat {
+		background-position: -1292px -578px;
+	}
+	.em-clown_face {
+		background-position: -1292px -612px;
+	}
+	.em-nauseated_face {
+		background-position: -1292px -646px;
+	}
+	.em-rolling_on_the_floor_laughing {
+		background-position: -1292px -680px;
+	}
+	.em-drooling_face {
+		background-position: -1292px -714px;
+	}
+	.em-lying_face {
+		background-position: -1292px -748px;
+	}
+	.em-woman-facepalming {
+		background-position: -1292px -782px;
+	}
+	.em-man-facepalming {
+		background-position: -1292px -986px;
+	}
+	.em-face_palm {
+		background-position: -1292px -1190px;
+	}
+	.em-sneezing_face {
+		background-position: -1292px -1394px;
+	}
+	.em-face_with_raised_eyebrow {
+		background-position: -1292px -1428px;
+	}
+	.em-star-struck {
+		background-position: -1292px -1462px;
+	}
+	.em-zany_face {
+		background-position: -1292px -1496px;
+	}
+	.em-shushing_face {
+		background-position: -1292px -1530px;
+	}
+	.em-face_with_symbols_on_mouth {
+		background-position: -1292px -1564px;
+	}
+	.em-face_with_hand_over_mouth {
+		background-position: -1292px -1598px;
+	}
+	.em-face_vomiting {
+		background-position: -1292px -1632px;
+	}
+	.em-exploding_head {
+		background-position: -1292px -1666px;
+	}
+	.em-pregnant_woman {
+		background-position: -1292px -1700px;
+	}
+	.em-breast-feeding {
+		background-position: -1292px -1904px;
+	}
+	.em-palms_up_together {
+		background-position: -1326px -170px;
+	}
+	.em-selfie {
+		background-position: -1326px -374px;
+	}
+	.em-prince {
+		background-position: -1326px -578px;
+	}
+	.em-man_in_tuxedo {
+		background-position: -1326px -782px;
+	}
+	.em-mrs_claus {
+		background-position: -1326px -986px;
+	}
+	.em-woman-shrugging {
+		background-position: -1326px -1190px;
+	}
+	.em-man-shrugging {
+		background-position: -1326px -1394px;
+	}
+	.em-shrug {
+		background-position: -1326px -1598px;
+	}
+	.em-woman-cartwheeling {
+		background-position: -1326px -1802px;
+	}
+	.em-man-cartwheeling {
+		background-position: -1360px -68px;
+	}
+	.em-person_doing_cartwheel {
+		background-position: -1360px -272px;
+	}
+	.em-woman-juggling {
+		background-position: -1360px -476px;
+	}
+	.em-man-juggling {
+		background-position: -1360px -680px;
+	}
+	.em-juggling {
+		background-position: -1360px -884px;
+	}
+	.em-fencer {
+		background-position: -1360px -1088px;
+	}
+	.em-woman-wrestling {
+		background-position: -1360px -1122px;
+	}
+	.em-man-wrestling {
+		background-position: -1360px -1156px;
+	}
+	.em-wrestlers {
+		background-position: -1360px -1190px;
+	}
+	.em-woman-playing-water-polo {
+		background-position: -1360px -1224px;
+	}
+	.em-man-playing-water-polo {
+		background-position: -1360px -1428px;
+	}
+	.em-water_polo {
+		background-position: -1360px -1632px;
+	}
+	.em-woman-playing-handball {
+		background-position: -1360px -1836px;
+	}
+	.em-man-playing-handball {
+		background-position: -1394px -102px;
+	}
+	.em-handball {
+		background-position: -1394px -306px;
+	}
+	.em-diving_mask {
+		background-position: -1394px -510px;
+	}
+	.em-wilted_flower {
+		background-position: -1394px -544px;
+	}
+	.em-drum_with_drumsticks {
+		background-position: -1394px -578px;
+	}
+	.em-clinking_glasses {
+		background-position: -1394px -612px;
+	}
+	.em-tumbler_glass {
+		background-position: -1394px -646px;
+	}
+	.em-spoon {
+		background-position: -1394px -680px;
+	}
+	.em-goal_net {
+		background-position: -1394px -714px;
+	}
+	.em-first_place_medal {
+		background-position: -1394px -748px;
+	}
+	.em-second_place_medal {
+		background-position: -1394px -782px;
+	}
+	.em-third_place_medal {
+		background-position: -1394px -816px;
+	}
+	.em-boxing_glove {
+		background-position: -1394px -850px;
+	}
+	.em-martial_arts_uniform {
+		background-position: -1394px -884px;
+	}
+	.em-curling_stone {
+		background-position: -1394px -918px;
+	}
+	.em-lacrosse {
+		background-position: -1394px -952px;
+	}
+	.em-softball {
+		background-position: -1394px -986px;
+	}
+	.em-flying_disc {
+		background-position: -1394px -1020px;
+	}
+	.em-croissant {
+		background-position: -1394px -1054px;
+	}
+	.em-avocado {
+		background-position: -1394px -1088px;
+	}
+	.em-cucumber {
+		background-position: -1394px -1122px;
+	}
+	.em-bacon {
+		background-position: -1394px -1156px;
+	}
+	.em-potato {
+		background-position: -1394px -1190px;
+	}
+	.em-carrot {
+		background-position: -1394px -1224px;
+	}
+	.em-baguette_bread {
+		background-position: -1394px -1258px;
+	}
+	.em-green_salad {
+		background-position: -1394px -1292px;
+	}
+	.em-shallow_pan_of_food {
+		background-position: -1394px -1326px;
+	}
+	.em-stuffed_flatbread {
+		background-position: -1394px -1360px;
+	}
+	.em-egg {
+		background-position: -1394px -1394px;
+	}
+	.em-glass_of_milk {
+		background-position: -1394px -1428px;
+	}
+	.em-peanuts {
+		background-position: -1394px -1462px;
+	}
+	.em-kiwifruit {
+		background-position: -1394px -1496px;
+	}
+	.em-pancakes {
+		background-position: -1394px -1530px;
+	}
+	.em-dumpling {
+		background-position: -1394px -1564px;
+	}
+	.em-fortune_cookie {
+		background-position: -1394px -1598px;
+	}
+	.em-takeout_box {
+		background-position: -1394px -1632px;
+	}
+	.em-chopsticks {
+		background-position: -1394px -1666px;
+	}
+	.em-bowl_with_spoon {
+		background-position: -1394px -1700px;
+	}
+	.em-cup_with_straw {
+		background-position: -1394px -1734px;
+	}
+	.em-coconut {
+		background-position: -1394px -1768px;
+	}
+	.em-broccoli {
+		background-position: -1394px -1802px;
+	}
+	.em-pie {
+		background-position: -1394px -1836px;
+	}
+	.em-pretzel {
+		background-position: -1394px -1870px;
+	}
+	.em-cut_of_meat {
+		background-position: -1394px -1904px;
+	}
+	.em-sandwich {
+		background-position: -1428px -0px;
+	}
+	.em-canned_food {
+		background-position: -1428px -34px;
+	}
+	.em-leafy_green {
+		background-position: -1428px -68px;
+	}
+	.em-mango {
+		background-position: -1428px -102px;
+	}
+	.em-moon_cake {
+		background-position: -1428px -136px;
+	}
+	.em-bagel {
+		background-position: -1428px -170px;
+	}
+	.em-smiling_face_with_3_hearts {
+		background-position: -1428px -204px;
+	}
+	.em-yawning_face {
+		background-position: -1428px -238px;
+	}
+	.em-partying_face {
+		background-position: -1428px -272px;
+	}
+	.em-woozy_face {
+		background-position: -1428px -306px;
+	}
+	.em-hot_face {
+		background-position: -1428px -340px;
+	}
+	.em-cold_face {
+		background-position: -1428px -374px;
+	}
+	.em-pleading_face {
+		background-position: -1428px -408px;
+	}
+	.em-sari {
+		background-position: -1428px -442px;
+	}
+	.em-lab_coat {
+		background-position: -1428px -476px;
+	}
+	.em-goggles {
+		background-position: -1428px -510px;
+	}
+	.em-hiking_boot {
+		background-position: -1428px -544px;
+	}
+	.em-womans_flat_shoe {
+		background-position: -1428px -578px;
+	}
+	.em-crab {
+		background-position: -1428px -612px;
+	}
+	.em-lion_face {
+		background-position: -1428px -646px;
+	}
+	.em-scorpion {
+		background-position: -1428px -680px;
+	}
+	.em-turkey {
+		background-position: -1428px -714px;
+	}
+	.em-unicorn_face {
+		background-position: -1428px -748px;
+	}
+	.em-eagle {
+		background-position: -1428px -782px;
+	}
+	.em-duck {
+		background-position: -1428px -816px;
+	}
+	.em-bat {
+		background-position: -1428px -850px;
+	}
+	.em-shark {
+		background-position: -1428px -884px;
+	}
+	.em-owl {
+		background-position: -1428px -918px;
+	}
+	.em-fox_face {
+		background-position: -1428px -952px;
+	}
+	.em-butterfly {
+		background-position: -1428px -986px;
+	}
+	.em-deer {
+		background-position: -1428px -1020px;
+	}
+	.em-gorilla {
+		background-position: -1428px -1054px;
+	}
+	.em-lizard {
+		background-position: -1428px -1088px;
+	}
+	.em-rhinoceros {
+		background-position: -1428px -1122px;
+	}
+	.em-shrimp {
+		background-position: -1428px -1156px;
+	}
+	.em-squid {
+		background-position: -1428px -1190px;
+	}
+	.em-giraffe_face {
+		background-position: -1428px -1224px;
+	}
+	.em-zebra_face {
+		background-position: -1428px -1258px;
+	}
+	.em-hedgehog {
+		background-position: -1428px -1292px;
+	}
+	.em-sauropod {
+		background-position: -1428px -1326px;
+	}
+	.em-t-rex {
+		background-position: -1428px -1360px;
+	}
+	.em-cricket {
+		background-position: -1428px -1394px;
+	}
+	.em-kangaroo {
+		background-position: -1428px -1428px;
+	}
+	.em-llama {
+		background-position: -1428px -1462px;
+	}
+	.em-peacock {
+		background-position: -1428px -1496px;
+	}
+	.em-hippopotamus {
+		background-position: -1428px -1530px;
+	}
+	.em-parrot {
+		background-position: -1428px -1564px;
+	}
+	.em-raccoon {
+		background-position: -1428px -1598px;
+	}
+	.em-lobster {
+		background-position: -1428px -1632px;
+	}
+	.em-mosquito {
+		background-position: -1428px -1666px;
+	}
+	.em-microbe {
+		background-position: -1428px -1700px;
+	}
+	.em-badger {
+		background-position: -1428px -1734px;
+	}
+	.em-swan {
+		background-position: -1428px -1768px;
+	}
+	.em-sloth {
+		background-position: -1428px -1802px;
+	}
+	.em-otter {
+		background-position: -1428px -1836px;
+	}
+	.em-orangutan {
+		background-position: -1428px -1870px;
+	}
+	.em-skunk {
+		background-position: -1428px -1904px;
+	}
+	.em-flamingo {
+		background-position: -1462px -0px;
+	}
+	.em-oyster {
+		background-position: -1462px -34px;
+	}
+	.em-guide_dog {
+		background-position: -1462px -68px;
+	}
+	.em-probing_cane {
+		background-position: -1462px -102px;
+	}
+	.em-bone {
+		background-position: -1462px -136px;
+	}
+	.em-leg {
+		background-position: -1462px -170px;
+	}
+	.em-foot {
+		background-position: -1462px -374px;
+	}
+	.em-tooth {
+		background-position: -1462px -578px;
+	}
+	.em-female_superhero {
+		background-position: -1462px -612px;
+	}
+	.em-male_superhero {
+		background-position: -1462px -816px;
+	}
+	.em-superhero {
+		background-position: -1462px -1020px;
+	}
+	.em-female_supervillain {
+		background-position: -1462px -1224px;
+	}
+	.em-male_supervillain {
+		background-position: -1462px -1428px;
+	}
+	.em-supervillain {
+		background-position: -1462px -1632px;
+	}
+	.em-safety_vest {
+		background-position: -1462px -1836px;
+	}
+	.em-ear_with_hearing_aid {
+		background-position: -1462px -1870px;
+	}
+	.em-motorized_wheelchair {
+		background-position: -1496px -136px;
+	}
+	.em-manual_wheelchair {
+		background-position: -1496px -170px;
+	}
+	.em-mechanical_arm {
+		background-position: -1496px -204px;
+	}
+	.em-mechanical_leg {
+		background-position: -1496px -238px;
+	}
+	.em-cheese_wedge {
+		background-position: -1496px -272px;
+	}
+	.em-cupcake {
+		background-position: -1496px -306px;
+	}
+	.em-salt {
+		background-position: -1496px -340px;
+	}
+	.em-beverage_box {
+		background-position: -1496px -374px;
+	}
+	.em-garlic {
+		background-position: -1496px -408px;
+	}
+	.em-onion {
+		background-position: -1496px -442px;
+	}
+	.em-falafel {
+		background-position: -1496px -476px;
+	}
+	.em-waffle {
+		background-position: -1496px -510px;
+	}
+	.em-butter {
+		background-position: -1496px -544px;
+	}
+	.em-mate_drink {
+		background-position: -1496px -578px;
+	}
+	.em-ice_cube {
+		background-position: -1496px -612px;
+	}
+	.em-woman_standing {
+		background-position: -1496px -646px;
+	}
+	.em-man_standing {
+		background-position: -1496px -850px;
+	}
+	.em-standing_person {
+		background-position: -1496px -1054px;
+	}
+	.em-woman_kneeling {
+		background-position: -1496px -1258px;
+	}
+	.em-man_kneeling {
+		background-position: -1496px -1462px;
+	}
+	.em-kneeling_person {
+		background-position: -1496px -1666px;
+	}
+	.em-deaf_woman {
+		background-position: -1496px -1870px;
+	}
+	.em-deaf_man {
+		background-position: -1530px -136px;
+	}
+	.em-deaf_person {
+		background-position: -1530px -340px;
+	}
+	.em-face_with_monocle {
+		background-position: -1530px -544px;
+	}
+	.em-farmer {
+		background-position: -1530px -578px;
+	}
+	.em-cook {
+		background-position: -1530px -782px;
+	}
+	.em-student {
+		background-position: -1530px -986px;
+	}
+	.em-singer {
+		background-position: -1530px -1190px;
+	}
+	.em-artist {
+		background-position: -1530px -1394px;
+	}
+	.em-teacher {
+		background-position: -1530px -1598px;
+	}
+	.em-factory_worker {
+		background-position: -1530px -1802px;
+	}
+	.em-technologist {
+		background-position: -1564px -68px;
+	}
+	.em-office_worker {
+		background-position: -1564px -272px;
+	}
+	.em-mechanic {
+		background-position: -1564px -476px;
+	}
+	.em-scientist {
+		background-position: -1564px -680px;
+	}
+	.em-astronaut {
+		background-position: -1564px -884px;
+	}
+	.em-firefighter {
+		background-position: -1564px -1088px;
+	}
+	.em-people_holding_hands {
+		background-position: -1564px -1292px;
+	}
+	.em-person_with_probing_cane {
+		background-position: -1598px -238px;
+	}
+	.em-red_haired_person {
+		background-position: -1598px -442px;
+	}
+	.em-curly_haired_person {
+		background-position: -1598px -646px;
+	}
+	.em-bald_person {
+		background-position: -1598px -850px;
+	}
+	.em-white_haired_person {
+		background-position: -1598px -1054px;
+	}
+	.em-person_in_motorized_wheelchair {
+		background-position: -1598px -1258px;
+	}
+	.em-person_in_manual_wheelchair {
+		background-position: -1598px -1462px;
+	}
+	.em-health_worker {
+		background-position: -1598px -1666px;
+	}
+	.em-judge {
+		background-position: -1598px -1870px;
+	}
+	.em-pilot {
+		background-position: -1632px -136px;
+	}
+	.em-adult {
+		background-position: -1632px -340px;
+	}
+	.em-child {
+		background-position: -1632px -544px;
+	}
+	.em-older_adult {
+		background-position: -1632px -748px;
+	}
+	.em-bearded_person {
+		background-position: -1632px -952px;
+	}
+	.em-person_with_headscarf {
+		background-position: -1632px -1156px;
+	}
+	.em-woman_in_steamy_room {
+		background-position: -1632px -1360px;
+	}
+	.em-man_in_steamy_room {
+		background-position: -1632px -1564px;
+	}
+	.em-person_in_steamy_room {
+		background-position: -1632px -1768px;
+	}
+	.em-woman_climbing {
+		background-position: -1666px -34px;
+	}
+	.em-man_climbing {
+		background-position: -1666px -238px;
+	}
+	.em-person_climbing {
+		background-position: -1666px -442px;
+	}
+	.em-woman_in_lotus_position {
+		background-position: -1666px -646px;
+	}
+	.em-man_in_lotus_position {
+		background-position: -1666px -850px;
+	}
+	.em-person_in_lotus_position {
+		background-position: -1666px -1054px;
+	}
+	.em-female_mage {
+		background-position: -1666px -1258px;
+	}
+	.em-male_mage {
+		background-position: -1666px -1462px;
+	}
+	.em-mage {
+		background-position: -1666px -1666px;
+	}
+	.em-female_fairy {
+		background-position: -1666px -1870px;
+	}
+	.em-male_fairy {
+		background-position: -1700px -136px;
+	}
+	.em-fairy {
+		background-position: -1700px -340px;
+	}
+	.em-female_vampire {
+		background-position: -1700px -544px;
+	}
+	.em-male_vampire {
+		background-position: -1700px -748px;
+	}
+	.em-vampire {
+		background-position: -1700px -952px;
+	}
+	.em-mermaid {
+		background-position: -1700px -1156px;
+	}
+	.em-merman {
+		background-position: -1700px -1360px;
+	}
+	.em-merperson {
+		background-position: -1700px -1564px;
+	}
+	.em-female_elf {
+		background-position: -1700px -1768px;
+	}
+	.em-male_elf {
+		background-position: -1734px -34px;
+	}
+	.em-elf {
+		background-position: -1734px -238px;
+	}
+	.em-female_genie {
+		background-position: -1734px -442px;
+	}
+	.em-male_genie {
+		background-position: -1734px -476px;
+	}
+	.em-genie {
+		background-position: -1734px -510px;
+	}
+	.em-female_zombie {
+		background-position: -1734px -544px;
+	}
+	.em-male_zombie {
+		background-position: -1734px -578px;
+	}
+	.em-zombie {
+		background-position: -1734px -612px;
+	}
+	.em-brain {
+		background-position: -1734px -646px;
+	}
+	.em-orange_heart {
+		background-position: -1734px -680px;
+	}
+	.em-billed_cap {
+		background-position: -1734px -714px;
+	}
+	.em-scarf {
+		background-position: -1734px -748px;
+	}
+	.em-gloves {
+		background-position: -1734px -782px;
+	}
+	.em-coat {
+		background-position: -1734px -816px;
+	}
+	.em-socks {
+		background-position: -1734px -850px;
+	}
+	.em-red_envelope {
+		background-position: -1734px -884px;
+	}
+	.em-firecracker {
+		background-position: -1734px -918px;
+	}
+	.em-jigsaw {
+		background-position: -1734px -952px;
+	}
+	.em-test_tube {
+		background-position: -1734px -986px;
+	}
+	.em-petri_dish {
+		background-position: -1734px -1020px;
+	}
+	.em-dna {
+		background-position: -1734px -1054px;
+	}
+	.em-compass {
+		background-position: -1734px -1088px;
+	}
+	.em-abacus {
+		background-position: -1734px -1122px;
+	}
+	.em-fire_extinguisher {
+		background-position: -1734px -1156px;
+	}
+	.em-toolbox {
+		background-position: -1734px -1190px;
+	}
+	.em-bricks {
+		background-position: -1734px -1224px;
+	}
+	.em-magnet {
+		background-position: -1734px -1258px;
+	}
+	.em-luggage {
+		background-position: -1734px -1292px;
+	}
+	.em-lotion_bottle {
+		background-position: -1734px -1326px;
+	}
+	.em-thread {
+		background-position: -1734px -1360px;
+	}
+	.em-yarn {
+		background-position: -1734px -1394px;
+	}
+	.em-safety_pin {
+		background-position: -1734px -1428px;
+	}
+	.em-teddy_bear {
+		background-position: -1734px -1462px;
+	}
+	.em-broom {
+		background-position: -1734px -1496px;
+	}
+	.em-basket {
+		background-position: -1734px -1530px;
+	}
+	.em-roll_of_paper {
+		background-position: -1734px -1564px;
+	}
+	.em-soap {
+		background-position: -1734px -1598px;
+	}
+	.em-sponge {
+		background-position: -1734px -1632px;
+	}
+	.em-receipt {
+		background-position: -1734px -1666px;
+	}
+	.em-nazar_amulet {
+		background-position: -1734px -1700px;
+	}
+	.em-ballet_shoes {
+		background-position: -1734px -1734px;
+	}
+	.em-one-piece_swimsuit {
+		background-position: -1734px -1768px;
+	}
+	.em-briefs {
+		background-position: -1734px -1802px;
+	}
+	.em-shorts {
+		background-position: -1734px -1836px;
+	}
+	.em-drop_of_blood {
+		background-position: -1734px -1870px;
+	}
+	.em-adhesive_bandage {
+		background-position: -1734px -1904px;
+	}
+	.em-stethoscope {
+		background-position: -1768px -0px;
+	}
+	.em-yo-yo {
+		background-position: -1768px -34px;
+	}
+	.em-kite {
+		background-position: -1768px -68px;
+	}
+	.em-parachute {
+		background-position: -1768px -102px;
+	}
+	.em-ringed_planet {
+		background-position: -1768px -136px;
+	}
+	.em-chair {
+		background-position: -1768px -170px;
+	}
+	.em-razor {
+		background-position: -1768px -204px;
+	}
+	.em-axe {
+		background-position: -1768px -238px;
+	}
+	.em-diya_lamp {
+		background-position: -1768px -272px;
+	}
+	.em-banjo {
+		background-position: -1768px -306px;
+	}
+	.em-bangbang {
+		background-position: -1768px -340px;
+	}
+	.em-interrobang {
+		background-position: -1768px -374px;
+	}
+	.em-tm {
+		background-position: -1768px -408px;
+	}
+	.em-information_source {
+		background-position: -1768px -442px;
+	}
+	.em-left_right_arrow {
+		background-position: -1768px -476px;
+	}
+	.em-arrow_up_down {
+		background-position: -1768px -510px;
+	}
+	.em-arrow_upper_left {
+		background-position: -1768px -544px;
+	}
+	.em-arrow_upper_right {
+		background-position: -1768px -578px;
+	}
+	.em-arrow_lower_right {
+		background-position: -1768px -612px;
+	}
+	.em-arrow_lower_left {
+		background-position: -1768px -646px;
+	}
+	.em-leftwards_arrow_with_hook {
+		background-position: -1768px -680px;
+	}
+	.em-arrow_right_hook {
+		background-position: -1768px -714px;
+	}
+	.em-watch {
+		background-position: -1768px -748px;
+	}
+	.em-hourglass {
+		background-position: -1768px -782px;
+	}
+	.em-keyboard {
+		background-position: -1768px -816px;
+	}
+	.em-eject {
+		background-position: -1768px -850px;
+	}
+	.em-fast_forward {
+		background-position: -1768px -884px;
+	}
+	.em-rewind {
+		background-position: -1768px -918px;
+	}
+	.em-arrow_double_up {
+		background-position: -1768px -952px;
+	}
+	.em-arrow_double_down {
+		background-position: -1768px -986px;
+	}
+	.em-black_right_pointing_double_triangle_with_vertical_bar {
+		background-position: -1768px -1020px;
+	}
+	.em-black_left_pointing_double_triangle_with_vertical_bar {
+		background-position: -1768px -1054px;
+	}
+	.em-black_right_pointing_triangle_with_double_vertical_bar {
+		background-position: -1768px -1088px;
+	}
+	.em-alarm_clock {
+		background-position: -1768px -1122px;
+	}
+	.em-stopwatch {
+		background-position: -1768px -1156px;
+	}
+	.em-timer_clock {
+		background-position: -1768px -1190px;
+	}
+	.em-hourglass_flowing_sand {
+		background-position: -1768px -1224px;
+	}
+	.em-double_vertical_bar {
+		background-position: -1768px -1258px;
+	}
+	.em-black_square_for_stop {
+		background-position: -1768px -1292px;
+	}
+	.em-black_circle_for_record {
+		background-position: -1768px -1326px;
+	}
+	.em-m {
+		background-position: -1768px -1360px;
+	}
+	.em-black_small_square {
+		background-position: -1768px -1394px;
+	}
+	.em-white_small_square {
+		background-position: -1768px -1428px;
+	}
+	.em-arrow_forward {
+		background-position: -1768px -1462px;
+	}
+	.em-arrow_backward {
+		background-position: -1768px -1496px;
+	}
+	.em-white_medium_square {
+		background-position: -1768px -1530px;
+	}
+	.em-black_medium_square {
+		background-position: -1768px -1564px;
+	}
+	.em-white_medium_small_square {
+		background-position: -1768px -1598px;
+	}
+	.em-black_medium_small_square {
+		background-position: -1768px -1632px;
+	}
+	.em-sunny {
+		background-position: -1768px -1666px;
+	}
+	.em-cloud {
+		background-position: -1768px -1700px;
+	}
+	.em-umbrella {
+		background-position: -1768px -1734px;
+	}
+	.em-snowman {
+		background-position: -1768px -1768px;
+	}
+	.em-comet {
+		background-position: -1768px -1802px;
+	}
+	.em-phone {
+		background-position: -1768px -1836px;
+	}
+	.em-ballot_box_with_check {
+		background-position: -1768px -1870px;
+	}
+	.em-umbrella_with_rain_drops {
+		background-position: -1768px -1904px;
+	}
+	.em-coffee {
+		background-position: -1802px -0px;
+	}
+	.em-shamrock {
+		background-position: -1802px -34px;
+	}
+	.em-point_up {
+		background-position: -1802px -68px;
+	}
+	.em-skull_and_crossbones {
+		background-position: -1802px -272px;
+	}
+	.em-radioactive_sign {
+		background-position: -1802px -306px;
+	}
+	.em-biohazard_sign {
+		background-position: -1802px -340px;
+	}
+	.em-orthodox_cross {
+		background-position: -1802px -374px;
+	}
+	.em-star_and_crescent {
+		background-position: -1802px -408px;
+	}
+	.em-peace_symbol {
+		background-position: -1802px -442px;
+	}
+	.em-yin_yang {
+		background-position: -1802px -476px;
+	}
+	.em-wheel_of_dharma {
+		background-position: -1802px -510px;
+	}
+	.em-white_frowning_face {
+		background-position: -1802px -544px;
+	}
+	.em-relaxed {
+		background-position: -1802px -578px;
+	}
+	.em-female_sign {
+		background-position: -1802px -612px;
+	}
+	.em-male_sign {
+		background-position: -1802px -646px;
+	}
+	.em-aries {
+		background-position: -1802px -680px;
+	}
+	.em-taurus {
+		background-position: -1802px -714px;
+	}
+	.em-gemini {
+		background-position: -1802px -748px;
+	}
+	.em-cancer {
+		background-position: -1802px -782px;
+	}
+	.em-leo {
+		background-position: -1802px -816px;
+	}
+	.em-virgo {
+		background-position: -1802px -850px;
+	}
+	.em-libra {
+		background-position: -1802px -884px;
+	}
+	.em-scorpius {
+		background-position: -1802px -918px;
+	}
+	.em-sagittarius {
+		background-position: -1802px -952px;
+	}
+	.em-capricorn {
+		background-position: -1802px -986px;
+	}
+	.em-aquarius {
+		background-position: -1802px -1020px;
+	}
+	.em-pisces {
+		background-position: -1802px -1054px;
+	}
+	.em-chess_pawn {
+		background-position: -1802px -1088px;
+	}
+	.em-spades {
+		background-position: -1802px -1122px;
+	}
+	.em-clubs {
+		background-position: -1802px -1156px;
+	}
+	.em-hearts {
+		background-position: -1802px -1190px;
+	}
+	.em-diamonds {
+		background-position: -1802px -1224px;
+	}
+	.em-hotsprings {
+		background-position: -1802px -1258px;
+	}
+	.em-recycle {
+		background-position: -1802px -1292px;
+	}
+	.em-infinity {
+		background-position: -1802px -1326px;
+	}
+	.em-wheelchair {
+		background-position: -1802px -1360px;
+	}
+	.em-hammer_and_pick {
+		background-position: -1802px -1394px;
+	}
+	.em-anchor {
+		background-position: -1802px -1428px;
+	}
+	.em-crossed_swords {
+		background-position: -1802px -1462px;
+	}
+	.em-medical_symbol {
+		background-position: -1802px -1496px;
+	}
+	.em-scales {
+		background-position: -1802px -1530px;
+	}
+	.em-alembic {
+		background-position: -1802px -1564px;
+	}
+	.em-gear {
+		background-position: -1802px -1598px;
+	}
+	.em-atom_symbol {
+		background-position: -1802px -1632px;
+	}
+	.em-fleur_de_lis {
+		background-position: -1802px -1666px;
+	}
+	.em-warning {
+		background-position: -1802px -1700px;
+	}
+	.em-zap {
+		background-position: -1802px -1734px;
+	}
+	.em-white_circle {
+		background-position: -1802px -1768px;
+	}
+	.em-black_circle {
+		background-position: -1802px -1802px;
+	}
+	.em-coffin {
+		background-position: -1802px -1836px;
+	}
+	.em-funeral_urn {
+		background-position: -1802px -1870px;
+	}
+	.em-soccer {
+		background-position: -1802px -1904px;
+	}
+	.em-baseball {
+		background-position: -1836px -0px;
+	}
+	.em-snowman_without_snow {
+		background-position: -1836px -34px;
+	}
+	.em-partly_sunny {
+		background-position: -1836px -68px;
+	}
+	.em-thunder_cloud_and_rain {
+		background-position: -1836px -102px;
+	}
+	.em-ophiuchus {
+		background-position: -1836px -136px;
+	}
+	.em-pick {
+		background-position: -1836px -170px;
+	}
+	.em-helmet_with_white_cross {
+		background-position: -1836px -204px;
+	}
+	.em-chains {
+		background-position: -1836px -238px;
+	}
+	.em-no_entry {
+		background-position: -1836px -272px;
+	}
+	.em-shinto_shrine {
+		background-position: -1836px -306px;
+	}
+	.em-church {
+		background-position: -1836px -340px;
+	}
+	.em-mountain {
+		background-position: -1836px -374px;
+	}
+	.em-umbrella_on_ground {
+		background-position: -1836px -408px;
+	}
+	.em-fountain {
+		background-position: -1836px -442px;
+	}
+	.em-golf {
+		background-position: -1836px -476px;
+	}
+	.em-ferry {
+		background-position: -1836px -510px;
+	}
+	.em-boat {
+		background-position: -1836px -544px;
+	}
+	.em-skier {
+		background-position: -1836px -578px;
+	}
+	.em-ice_skate {
+		background-position: -1836px -612px;
+	}
+	.em-woman-bouncing-ball {
+		background-position: -1836px -646px;
+	}
+	.em-man-bouncing-ball {
+		background-position: -1836px -850px;
+	}
+	.em-person_with_ball {
+		background-position: -1836px -1054px;
+	}
+	.em-tent {
+		background-position: -1836px -1258px;
+	}
+	.em-fuelpump {
+		background-position: -1836px -1292px;
+	}
+	.em-scissors {
+		background-position: -1836px -1326px;
+	}
+	.em-white_check_mark {
+		background-position: -1836px -1360px;
+	}
+	.em-airplane {
+		background-position: -1836px -1394px;
+	}
+	.em-email {
+		background-position: -1836px -1428px;
+	}
+	.em-fist {
+		background-position: -1836px -1462px;
+	}
+	.em-hand {
+		background-position: -1836px -1666px;
+	}
+	.em-v {
+		background-position: -1836px -1870px;
+	}
+	.em-writing_hand {
+		background-position: -1870px -136px;
+	}
+	.em-pencil2 {
+		background-position: -1870px -340px;
+	}
+	.em-black_nib {
+		background-position: -1870px -374px;
+	}
+	.em-heavy_check_mark {
+		background-position: -1870px -408px;
+	}
+	.em-heavy_multiplication_x {
+		background-position: -1870px -442px;
+	}
+	.em-latin_cross {
+		background-position: -1870px -476px;
+	}
+	.em-star_of_david {
+		background-position: -1870px -510px;
+	}
+	.em-sparkles {
+		background-position: -1870px -544px;
+	}
+	.em-eight_spoked_asterisk {
+		background-position: -1870px -578px;
+	}
+	.em-eight_pointed_black_star {
+		background-position: -1870px -612px;
+	}
+	.em-snowflake {
+		background-position: -1870px -646px;
+	}
+	.em-sparkle {
+		background-position: -1870px -680px;
+	}
+	.em-x {
+		background-position: -1870px -714px;
+	}
+	.em-negative_squared_cross_mark {
+		background-position: -1870px -748px;
+	}
+	.em-question {
+		background-position: -1870px -782px;
+	}
+	.em-grey_question {
+		background-position: -1870px -816px;
+	}
+	.em-grey_exclamation {
+		background-position: -1870px -850px;
+	}
+	.em-exclamation {
+		background-position: -1870px -884px;
+	}
+	.em-heavy_heart_exclamation_mark_ornament {
+		background-position: -1870px -918px;
+	}
+	.em-heart {
+		background-position: -1870px -952px;
+	}
+	.em-heavy_plus_sign {
+		background-position: -1870px -986px;
+	}
+	.em-heavy_minus_sign {
+		background-position: -1870px -1020px;
+	}
+	.em-heavy_division_sign {
+		background-position: -1870px -1054px;
+	}
+	.em-arrow_right {
+		background-position: -1870px -1088px;
+	}
+	.em-curly_loop {
+		background-position: -1870px -1122px;
+	}
+	.em-loop {
+		background-position: -1870px -1156px;
+	}
+	.em-arrow_heading_up {
+		background-position: -1870px -1190px;
+	}
+	.em-arrow_heading_down {
+		background-position: -1870px -1224px;
+	}
+	.em-arrow_left {
+		background-position: -1870px -1258px;
+	}
+	.em-arrow_up {
+		background-position: -1870px -1292px;
+	}
+	.em-arrow_down {
+		background-position: -1870px -1326px;
+	}
+	.em-black_large_square {
+		background-position: -1870px -1360px;
+	}
+	.em-white_large_square {
+		background-position: -1870px -1394px;
+	}
+	.em-star {
+		background-position: -1870px -1428px;
+	}
+	.em-o {
+		background-position: -1870px -1462px;
+	}
+	.em-wavy_dash {
+		background-position: -1870px -1496px;
+	}
+	.em-part_alternation_mark {
+		background-position: -1870px -1530px;
+	}
+	.em-congratulations {
+		background-position: -1870px -1564px;
+	}
+	.em-secret {
+		background-position: -1870px -1598px;
+	}
