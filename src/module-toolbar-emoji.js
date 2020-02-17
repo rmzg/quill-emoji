@@ -109,7 +109,7 @@ function fn_showEmojiPalatte(quill) {
 		document.getElementById("emoji-close-div").style.display = "block";
 	}
 
-	emojiType.map(function(emojiType) {
+	emojiType.forEach(function(emojiType) {
 		//add tab bar
 		let tabElement = document.createElement("li");
 		tabElement.classList.add("emoji-tab");

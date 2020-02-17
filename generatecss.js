@@ -13,7 +13,7 @@ fs.writeSync(
 	width: ${size}px;
 	height: ${size}px;
 	display: inline-block;
-	text-indent: -999px;
+	text-indent: -9999px;
 }
 `
 );
