@@ -1,6 +1,8 @@
 import Quill from "quill";
 import Fuse from "fuse.js";
-import emojiList from "./emoji-list.js";
+//import emojiList from "./emoji-list.js";
+
+const emojiList = require("emoji-datasource/emoji.json");
 
 const Delta = Quill.import("delta");
 const Module = Quill.import("core/module");
@@ -68,20 +70,34 @@ class ToolbarEmoji extends Module {
 		ele_emoji_area.appendChild(panel);
 
 		//prettier-ignore
-		var emojiType = [
-			{ type: "p", name: "people", content: '<div class="i-people"></div>' },
-			{ type: "n", name: "nature", content: '<div class="i-nature"></div>' },
-			{ type: "d", name: "food", content: '<div class="i-food"></div>' },
-			{ type: "s", name: "symbols", content: '<div class="i-symbols"></div>' },
-			{ type: "a", name: "activity", content: '<div class="i-activity"></div>' },
-			{ type: "t", name: "travel", content: '<div class="i-travel"></div>' },
-			{ type: "o", name: "objects", content: '<div class="i-objects"></div>' },
-			{ type: "f", name: "flags", content: '<div class="i-flags"></div>' }
+		let emojiType = [
+			{ category: "Activities", content: '<div class="i-activity"></div>' },
+			{ category: "Animals & Nature", content: '<div class="i-nature"></div>' },
+			{ category: "Flags", content: '<div class="i-flags"></div>' },
+			{ category: "Food & Drink", content: '<div class="i-food"></div>' },
+			{ category: "Objects", content: '<div class="i-objects"></div>' },
+			{ category: "People & Body", content: '<div class="i-people"></div>' },
+			{ category: "Smileys & Emotion", content: '<div class="i-people"></div>' },
+			{ category: "Symbols", content: '<div class="i-symbols"></div>' },
+			{ category: "Travel & Places", content: '<div class="i-travel"></div>' }
 		];
 
 		let tabElementHolder = document.createElement("ul");
+
+		emojiType.forEach(type => {
+			let tabElement = document.createElement("li");
+			tabElement.classList.add("emoji-tab");
+			tabElement.innerHTML = type.content;
+			tabElementHolder.appendChild(tabElement);
+			tabElement.dataset.category = type.category;
+
+			tabElement.addEventListener("click", () => {
+				this.activateTab(tabElement);
+			});
+		});
 		tabToolbar.appendChild(tabElementHolder);
 
+		//TODO Move this to the right spot
 		if (document.getElementById("emoji-close-div") === null) {
 			let closeDiv = document.createElement("div");
 			closeDiv.id = "emoji-close-div";
@@ -91,73 +107,62 @@ class ToolbarEmoji extends Module {
 			document.getElementById("emoji-close-div").style.display = "block";
 		}
 
-		emojiType.forEach(emojiType => {
-			//add tab bar
-			let tabElement = document.createElement("li");
-			tabElement.classList.add("emoji-tab");
-			tabElement.classList.add("filter-" + emojiType.name);
-			let tabValue = emojiType.content;
-			tabElement.innerHTML = tabValue;
-			tabElement.dataset.filter = emojiType.type;
-			tabElementHolder.appendChild(tabElement);
-
-			tabElement.addEventListener("click", () => {
-				let tab = document.querySelector("#emoji-palette .emoji-tab.active");
-				if (tab) {
-					tab.classList.remove("active");
-				}
-				emojiFilter.classList.toggle("active");
-				this.updateEmojiContainer(emojiFilter);
-			});
-		});
-		this.emojiPanelInit();
-	}
-
-	emojiPanelInit() {
-		this.emojiElementsToPanel("p");
-		document.querySelector(".filter-people").classList.add("active");
-	}
-
-	emojiElementsToPanel(type) {
-		let fuseOptions = {
-			shouldSort: true,
-			matchAllTokens: true,
-			threshold: 0.3,
-			location: 0,
-			distance: 100,
-			maxPatternLength: 32,
-			minMatchCharLength: 3,
-			keys: ["category"]
-		};
-		let fuse = new Fuse(emojiList, fuseOptions);
-		let result = fuse.search(type);
-		result.sort((a, b) => a.emoji_order - b.emoji_order);
-
-		result.forEach(emoji => {
+		emojiList.forEach(emoji => {
 			let span = document.createElement("span");
-			let t = document.createTextNode(emoji.shortname);
-			span.appendChild(t);
 			span.classList.add("em");
-			span.classList.add("em-" + emoji.name);
-			let output = "" + emoji.code_decimal + "";
-			span.innerHTML = output + " ";
+			span.classList.add("em-" + emoji.short_name);
+			let grapheme = String.fromCodePoint(
+				...emoji.unified.split("-").map(x => parseInt(x, 16))
+			);
+			span.innerHTML = `:${emoji.short_name}: ${grapheme}`;
+			span.dataset.category = emoji.category;
 			this.panel.appendChild(span);
 
 			span.addEventListener("click", () => {
 				let range = this.quill.getSelection(true);
+				console.log("Attempting to insert!");
 				this.quill.insertEmbed(range.index, "emoji", emoji, Quill.sources.USER);
 				setTimeout(() => this.quill.setSelection(range.index + 1), 0);
 				this.hidePalette();
 			});
 		});
+
+		//Set starting point
+		this.activateTab(tabElementHolder.children[0]);
 	}
 
-	updateEmojiContainer(emojiFilter) {
-		while (this.panel.firstChild) {
-			this.panel.removeChild(this.panel.firstChild);
+	activateTab(tab) {
+		let oldTab = document.querySelector("#emoji-palette .emoji-tab.active");
+		if (oldTab) {
+			oldTab.classList.remove("active");
 		}
-		let type = emojiFilter.dataset.filter;
-		this.emojiElementsToPanel(type);
+		tab.classList.add("active");
+		this.emojiElementsToPanel(tab.dataset.category);
+	}
+
+	emojiElementsToPanel(type) {
+		//let fuseOptions = {
+		//shouldSort: true,
+		//matchAllTokens: true,
+		//threshold: 0.3,
+		//location: 0,
+		//distance: 100,
+		//maxPatternLength: 32,
+		//minMatchCharLength: 3,
+		//keys: ["category"]
+		//};
+		//let fuse = new Fuse(emojiList, fuseOptions);
+		//let result = fuse.search(type);
+		//result.sort((a, b) => a.emoji_order - b.emoji_order);
+
+		let children = this.panel.children;
+		for (let i = 0; i < children.length; i++) {
+			if (children[i].dataset.category === type) {
+				children[i].style.display = "inline-block";
+			} else {
+				children[i].style.display = "none";
+			}
+		}
 	}
 }
 

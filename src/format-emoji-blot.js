@@ -1,20 +1,33 @@
 import Quill from "quill";
-import emojiMap from "./emoji-map";
 
 const Embed = Quill.import("blots/embed");
 
 class EmojiBlot extends Embed {
-	static create(value) {
-		let node = super.create();
-		if (typeof value === "object") {
-			EmojiBlot.buildSpan(value, node);
-		} else if (typeof value === "string") {
-			const valueObj = emojiMap[value];
+	static blotName = "emoji";
+	static className = "ql-emojiblot";
+	static tagName = "span";
+	static emojiClass = "em";
+	static emojiPrefix = "em-";
 
-			if (valueObj) {
-				EmojiBlot.buildSpan(valueObj, node);
-			}
-		}
+	static create(emoji) {
+		console.log("CREATE IS HERE");
+		let node = super.create();
+		console.log("Created ", node, " with ", emoji);
+
+		//TODO Make overridable
+
+		node.dataset.name = emoji.short_name;
+		let span = document.createElement(EmojiBlot.tagName);
+		span.classList.add(
+			EmojiBlot.className,
+			EmojiBlot.emojiClass,
+			EmojiBlot.emojiPrefix + emoji.short_name
+		);
+		// unicode can be '1f1f5-1f1ea',see emoji-list.js.
+		span.innerText = String.fromCodePoint(
+			...emoji.unified.split("-").map(str => parseInt(str, 16))
+		);
+		node.appendChild(span);
 
 		return node;
 	}
@@ -22,27 +35,6 @@ class EmojiBlot extends Embed {
 	static value(node) {
 		return node.dataset.name;
 	}
-
-	static buildSpan(value, node) {
-		node.setAttribute("data-name", value.name);
-		let emojiSpan = document.createElement("span");
-		emojiSpan.classList.add(this.emojiClass);
-		emojiSpan.classList.add(this.emojiPrefix + value.name);
-		// unicode can be '1f1f5-1f1ea',see emoji-list.js.
-		emojiSpan.innerText = String.fromCodePoint(
-			...EmojiBlot.parseUnicode(value.unicode)
-		);
-		node.appendChild(emojiSpan);
-	}
-	static parseUnicode(string) {
-		return string.split("-").map(str => parseInt(str, 16));
-	}
 }
-
-EmojiBlot.blotName = "emoji";
-EmojiBlot.className = "ql-emojiblot";
-EmojiBlot.tagName = "span";
-EmojiBlot.emojiClass = "em";
-EmojiBlot.emojiPrefix = "em-";
 
 export default EmojiBlot;
