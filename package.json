@@ -1,6 +1,6 @@
 {
 	"name": "quill-emoji-picker",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Emoji Picker for Quill Text Editor",
 	"main": "dist/quill-emoji.js",
 	"devDependencies": {
@@ -30,7 +30,12 @@
 		"type": "git",
 		"url": "git+https://github.com/rmzg/quill-emoji.git"
 	},
-	"keywords": ["emoji", "quill", "editor", "emoji-picker"],
+	"keywords": [
+		"emoji",
+		"quill",
+		"editor",
+		"emoji-picker"
+	],
 	"author": "rmzg",
 	"license": "MIT",
 	"bugs": {
@@ -53,7 +58,10 @@
 			}
 		},
 		"rules": {
-			"eqeqeq": [2, "allow-null"],
+			"eqeqeq": [
+				2,
+				"allow-null"
+			],
 			"no-unused-vars": [
 				1,
 				{
@@ -68,5 +76,7 @@
 			"node": true
 		}
 	},
-	"files": ["dist/"]
+	"files": [
+		"dist/"
+	]
 }
