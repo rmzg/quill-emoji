@@ -120,7 +120,6 @@ class ToolbarEmoji extends Module {
 
 			span.addEventListener("click", () => {
 				let range = this.quill.getSelection(true);
-				console.log("Attempting to insert!");
 				this.quill.insertEmbed(range.index, "emoji", emoji, Quill.sources.USER);
 				setTimeout(() => this.quill.setSelection(range.index + 1), 0);
 				this.hidePalette();

@@ -121,6 +121,7 @@
 	width: 34px;
 	display: inline-block;
 	text-align: center;
+	cursor: pointer;
 	margin: 2px;
 }
 #tab-filters {
@@ -156,6 +157,10 @@
 	overflow-y: scroll;
 	padding: 2px;
 	background: $white;
+}
+
+#tab-panel span {
+	cursor: pointer;
 }
 
 #quill-editor x-contain,
@@ -287,5 +292,5 @@ button.ql-table[value="append-col"]::after {
 
 .ql-emojiblot {
 	display: inline-block;
-	vertical-align: text-top;
+	vertical-align: middle;
 }
