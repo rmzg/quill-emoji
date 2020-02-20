@@ -1,0 +1,20 @@
+Update README
+- Change name
+- Better examples
+- New screenshots
+- Republish to npm
+
+Fix editor shortcodes
+- Port to use Toolbar code
+- Make toolbar repositionable
+- Add search by name
+
+Fix Toolbar
+- Update size
+- Fix placement
+
+Update Generate script
+- Make sheet source selectable
+- Do something useful with sprite sizes
+
+
