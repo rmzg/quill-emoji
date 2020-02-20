@@ -1,6 +1,6 @@
 {
 	"name": "quill-emoji-picker",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Emoji Picker for Quill Text Editor",
 	"main": "dist/quill-emoji.js",
 	"devDependencies": {
