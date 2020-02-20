@@ -10,9 +10,7 @@ class EmojiBlot extends Embed {
 	static emojiPrefix = "em-";
 
 	static create(emoji) {
-		console.log("CREATE IS HERE");
 		let node = super.create();
-		console.log("Created ", node, " with ", emoji);
 
 		//TODO Make overridable
 

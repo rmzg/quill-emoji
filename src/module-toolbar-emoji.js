@@ -15,8 +15,18 @@ class ToolbarEmoji extends Module {
 		this.toolbar = quill.getModule("toolbar");
 		this.buildPalette();
 		this.hidePalette();
-		if (typeof this.toolbar !== "undefined")
-			this.toolbar.addHandler("emoji", this.showPalette.bind(this));
+		this.toolbar.addHandler("emoji", () => {
+			// This should always exist...
+			let button = document.querySelector("button.ql-emoji");
+			// This button is part of the toolbar node which is part of a different hierachy than the ql-container
+			// that the palette is attached to, this means that the button's offsetTop is relative to some other
+			// element and we can't use its value for the palette. However, we don't actually need to since the
+			// ql-container *should* be directly below the toolbar div. Which means we can just use the button's
+			// offsetLeft to move our palette horizontally to line it up with the button then add a small amount
+			// of padding via style.top. Note that if style.top isn't set then the palette shows up *below* the
+			// container...
+			this.showPalette(button.offsetLeft, 2);
+		});
 
 		this.quill.on("text-change", (delta, oldDelta, source) => {
 			if (source === "user") {
@@ -29,45 +39,36 @@ class ToolbarEmoji extends Module {
 		}
 	}
 
-	showPalette() {
+	showPalette(left, top) {
 		//TODO this should be a toggle
 		// TODO Add code to relocate the box?
+		this.closeDiv.style.display = "block";
 		this.palette.style.display = "block";
+		this.palette.style.left = left + "px";
+		this.palette.style.top = top + "px";
 	}
 
 	hidePalette() {
-		document.getElementById("emoji-close-div").style.display = "none";
+		this.closeDiv.style.display = "none";
 		this.palette.style.display = "none";
+		this.quill.focus();
 	}
 
 	buildPalette() {
-		let ele_emoji_area = document.createElement("div");
-		// This places the palette someplace
-		// TODO Figure out where to put it
-		// TODO Update max width sanely
-		const atSignBounds = { left: 100, top: 10, height: 20 };
-		this.palette = ele_emoji_area;
-
-		this.quill.container.appendChild(ele_emoji_area);
-		let paletteMaxPos = atSignBounds.left + 250; //palette max width is 250
-		ele_emoji_area.id = "emoji-palette";
-		ele_emoji_area.style.top =
-			10 + atSignBounds.top + atSignBounds.height + "px";
-		if (paletteMaxPos > this.quill.container.offsetWidth) {
-			ele_emoji_area.style.left = atSignBounds.left - 250 + "px";
-		} else {
-			ele_emoji_area.style.left = atSignBounds.left + "px";
-		}
+		let palette = document.createElement("div");
+		this.palette = palette;
+		this.quill.container.appendChild(palette);
+		palette.id = "emoji-palette";
 
 		let tabToolbar = document.createElement("div");
 		tabToolbar.id = "tab-toolbar";
-		ele_emoji_area.appendChild(tabToolbar);
+		palette.appendChild(tabToolbar);
 
 		//panel
 		let panel = document.createElement("div");
 		this.panel = panel;
 		panel.id = "tab-panel";
-		ele_emoji_area.appendChild(panel);
+		palette.appendChild(panel);
 
 		//prettier-ignore
 		let emojiType = [
@@ -97,15 +98,11 @@ class ToolbarEmoji extends Module {
 		});
 		tabToolbar.appendChild(tabElementHolder);
 
-		//TODO Move this to the right spot
-		if (document.getElementById("emoji-close-div") === null) {
-			let closeDiv = document.createElement("div");
-			closeDiv.id = "emoji-close-div";
-			closeDiv.addEventListener("click", close, false);
-			this.quill.container.appendChild(closeDiv);
-		} else {
-			document.getElementById("emoji-close-div").style.display = "block";
-		}
+		let closeDiv = document.createElement("div");
+		closeDiv.id = "emoji-close-div";
+		closeDiv.addEventListener("click", () => this.hidePalette(), false);
+		this.quill.container.appendChild(closeDiv);
+		this.closeDiv = closeDiv;
 
 		emojiList.forEach(emoji => {
 			let span = document.createElement("span");
