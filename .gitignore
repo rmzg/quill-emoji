@@ -1,5 +1,9 @@
-dist/
+# Generated files
 src/sheet.png
+src/new-emoji-list.json
+dist/
+
+# Random crap
 .DS_Store
 .classpath
 .project

@@ -10,6 +10,9 @@ const desiredSize = 20; // The size to resize the each sprite to
 
 const newSize = EmojiDataSourceCount * desiredSize;
 
+//TODO Rename to generate.js
+
+// ******** Create the new css
 fs.writeSync(
 	out,
 	`.em {
@@ -34,9 +37,25 @@ emojis.forEach(e => {
 
 console.log("Created _emoji.scss");
 
+// ******** Copy the png
 fs.copyFileSync(
 	"./node_modules/emoji-datasource/img/twitter/sheets/32.png",
 	"./src/sheet.png"
 );
 
 console.log("Copied sheet.png");
+
+// ************ Create a slim version of the json
+
+let newEmojis = emojis.map(_ => {
+	return {
+		name: _.name,
+		unified: _.unified,
+		short_name: _.short_name,
+		category: _.category
+	};
+});
+
+fs.writeFileSync("./src/new-emoji-list.json", JSON.stringify(newEmojis));
+
+console.log("Created emoji list");

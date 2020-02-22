@@ -1,6 +1,9 @@
 import Quill from "quill";
 import Fuse from "fuse.js";
-import emojiList from "./emoji-list.js";
+import EmojiPalette from "./emoji-palette";
+
+//import Keyboard from "quill/modules/keyboard";
+//console.log(Keyboard.keys.BACKSPACE);
 
 const Module = Quill.import("core/module");
 
@@ -8,17 +11,10 @@ class ShortNameEmoji extends Module {
 	constructor(quill, options) {
 		super(quill, options);
 
-		this.emojiList = options.emojiList;
+		this.palette = EmojiPalette.getPalette();
 		this.fuse = new Fuse(options.emojiList, options.fuse);
 
 		this.quill = quill;
-		this.onClose = options.onClose;
-		this.onOpen = options.onOpen;
-		this.container = document.createElement("ul");
-		this.container.classList.add("emoji_completions");
-		this.quill.container.appendChild(this.container);
-		this.container.style.position = "absolute";
-		this.container.style.display = "none";
 
 		this.onSelectionChange = this.maybeUnfocus.bind(this);
 		this.onTextChange = this.update.bind(this);
@@ -82,24 +78,25 @@ class ShortNameEmoji extends Module {
 			"emoji-shortname",
 			Quill.sources.USER
 		);
-		const atSignBounds = this.quill.getBounds(range.index);
+		const bounds = this.quill.getBounds(range.index);
 		this.quill.setSelection(range.index + 1, Quill.sources.SILENT);
 
-		this.atIndex = range.index;
+		this.palette.show(bounds.left, bounds.top);
 
-		let paletteMaxPos = atSignBounds.left + 250;
-		if (paletteMaxPos > this.quill.container.offsetWidth) {
-			this.container.style.left = atSignBounds.left - 250 + "px";
-		} else {
-			this.container.style.left = atSignBounds.left + "px";
-		}
+		//this.atIndex = range.index;
 
-		this.container.style.top = atSignBounds.top + atSignBounds.height + "px";
-		this.open = true;
+		//let paletteMaxPos = atSignBounds.left + 250;
+		//if (paletteMaxPos > this.quill.container.offsetWidth) {
+		//this.container.style.left = atSignBounds.left - 250 + "px";
+		//} else {
+		//this.container.style.left = atSignBounds.left + "px";
+		//}
+
+		//this.container.style.top = atSignBounds.top + atSignBounds.height + "px";
+		//this.open = true;
 
 		this.quill.on("text-change", this.onTextChange);
 		this.quill.once("selection-change", this.onSelectionChange);
-		this.onOpen && this.onOpen();
 	}
 
 	handleArrow() {
@@ -114,7 +111,7 @@ class ShortNameEmoji extends Module {
 	update() {
 		const sel = this.quill.getSelection().index;
 		if (this.atIndex >= sel) {
-			// Deleted the at character
+			// Deleted the start character
 			return this.close(null);
 		}
 		//Using: fuse.js

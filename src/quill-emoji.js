@@ -1,6 +1,6 @@
 import Quill from "quill";
 import EmojiBlot from "./format-emoji-blot";
-import ShortNameEmoji from "./module-emoji";
+import ShortNameEmoji from "./emoji-shortname";
 import ToolbarEmoji from "./module-toolbar-emoji";
 import "./scss/quill-emoji.scss";
 
