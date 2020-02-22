@@ -16,7 +16,7 @@ const newSize = EmojiDataSourceCount * desiredSize;
 fs.writeSync(
 	out,
 	`.em {
-	background: url("../../sheet.png") no-repeat;
+	background: url("../sheet.png") no-repeat;
 	background-size: ${newSize}px ${newSize}px;
 	width: ${desiredSize}px;
 	height: ${desiredSize}px;
