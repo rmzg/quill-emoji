@@ -1,6 +1,9 @@
 import Quill from "quill";
+import Keyboard from "quill/modules/keyboard";
 const emojiList = require("./new-emoji-list.json");
 import Fuse from "fuse.js";
+
+//console.log(Keyboard.keys.LEFT);
 
 let _pallette;
 class EmojiPalette {
