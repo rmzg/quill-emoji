@@ -1,9 +1,7 @@
 import Quill from "quill";
-import Keyboard from "quill/modules/keyboard";
-const emojiList = require("./new-emoji-list.json");
+//const emojiList = require("./new-emoji-list.json");
+import { data as emojiList } from "./new-emoji-list.json";
 import Fuse from "fuse.js";
-
-//console.log(Keyboard.keys.LEFT);
 
 let _pallette;
 class EmojiPalette {
@@ -14,7 +12,7 @@ class EmojiPalette {
 	}
 
 	constructor(quill) {
-		this.quill = quill; // This sucks!
+		this.quill = quill;
 		let container = document.createElement("div");
 		this.container = container;
 		this.quill.container.appendChild(container);
@@ -83,6 +81,8 @@ class EmojiPalette {
 			});
 		});
 
+		this.addKeyBindings();
+
 		//Set starting point
 		this.activateTab(tabElementHolder.children[0]);
 	}
@@ -103,12 +103,14 @@ class EmojiPalette {
 		this.container.style.display = "block";
 		this.container.style.left = left + "px";
 		this.container.style.top = top + "px";
+		this.visible = true;
 	}
 
 	hide() {
 		this.closeDiv.style.display = "none";
 		this.container.style.display = "none";
 		this.quill.focus();
+		this.visible = false;
 	}
 	emojiElementsToPanel(type) {
 		//let fuseOptions = {
@@ -134,6 +136,33 @@ class EmojiPalette {
 			}
 		}
 	}
+
+	addKeyBindings() {
+		let kb = this.quill.keyboard;
+
+		kb.addBinding(
+			{
+				key: KeyNames.RIGHT
+			},
+			this.keyRight.bind(this)
+		);
+	}
+
+	keyRight(range, context) {
+		if (!this.visible) return true;
+		console.log("Right key!");
+	}
 }
+const KeyNames = {
+	BACKSPACE: 8,
+	TAB: 9,
+	ENTER: 13,
+	ESCAPE: 27,
+	LEFT: 37,
+	UP: 38,
+	RIGHT: 39,
+	DOWN: 40,
+	DELETE: 46
+};
 
 export default EmojiPalette;

@@ -1,5 +1,6 @@
 const path = require("path");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+//const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
@@ -59,25 +60,9 @@ const config = {
 		]
 	},
 	optimization: {
+		minimize: true,
 		minimizer: [
-			new UglifyJsPlugin({
-				uglifyOptions: {
-					warnings: false,
-					compress: {
-						conditionals: true,
-						unused: true,
-						comparisons: true,
-						sequences: true,
-						dead_code: true,
-						evaluate: true,
-						join_vars: true,
-						if_return: true
-					},
-					output: {
-						comments: false
-					}
-				}
-			}),
+			new TerserPlugin({ cache: true }),
 			new OptimizeCSSAssetsPlugin({})
 		]
 	},
