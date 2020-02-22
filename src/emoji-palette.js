@@ -1,6 +1,6 @@
 import Quill from "quill";
-//const emojiList = require("./new-emoji-list.json");
-import { data as emojiList } from "./new-emoji-list.json";
+const emojiList = require("./new-emoji-list.json");
+//s emojiList from "./new-emoji-list.json";
 import Fuse from "fuse.js";
 
 let _pallette;
